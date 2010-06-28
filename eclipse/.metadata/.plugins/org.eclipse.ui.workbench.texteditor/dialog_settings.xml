@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="325" key="DIALOG_WIDTH"/>
+		<item value="294" key="DIALOG_Y_ORIGIN"/>
+		<item value="28" key="DIALOG_X_ORIGIN"/>
+		<item value="410" key="DIALOG_HEIGHT"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="true" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="httplib" key="selection"/>
+		<list key="findhistory">
+			<item value="httplib"/>
+			<item value="lock"/>
+			<item value="threading"/>
+			<item value="time"/>
+			<item value="sensors"/>
+			<item value="logging"/>
+			<item value="appuifw"/>
+			<item value="api"/>
+		</list>
+		<list key="replacehistory">
+			<item value="now"/>
+			<item value="0.0"/>
+			<item value="sync"/>
+			<item value="&quot;"/>
+			<item value="channelID"/>
+			<item value="elif"/>
+		</list>
+	</section>
+</section>

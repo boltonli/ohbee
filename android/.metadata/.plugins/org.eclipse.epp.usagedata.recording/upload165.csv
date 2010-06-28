@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+processors,sysinfo,,,"1",1258629868414
+java.runtime.name,sysinfo,,,"OpenJDK  Runtime Environment",1258629868414
+java.runtime.version,sysinfo,,,"1.6.0_0-b11",1258629868414
+java.specification.name,sysinfo,,,"Java Platform API Specification",1258629868414
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1258629868414
+java.specification.version,sysinfo,,,"1.6",1258629868414
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1258629868414
+java.version,sysinfo,,,"1.6.0_0",1258629868414
+java.vm.info,sysinfo,,,"mixed mode, sharing",1258629868414
+java.vm.name,sysinfo,,,"OpenJDK Client VM",1258629868414
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1258629868414
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1258629868414
+java.vm.specification.version,sysinfo,,,"1.0",1258629868414
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1258629868414
+java.vm.version,sysinfo,,,"1.6.0_0-b11",1258629868414
+started,bundle,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui",1258629868703
+started,bundle,org.eclipse.php.server.core,2.1.0.v20090610-1903,"org.eclipse.php.server.core",1258629868704
+started,bundle,org.eclipse.emf.ecore,2.5.0.v200906151043,"org.eclipse.emf.ecore",1258629868967
+started,bundle,org.eclipse.jem.util,2.0.200.v200905140200,"org.eclipse.jem.util",1258629869000
+started,bundle,org.eclipse.wst.common.frameworks,1.1.300.v200904160730,"org.eclipse.wst.common.frameworks",1258629869062
+started,bundle,org.eclipse.php.core,2.1.0.v20090617-2341,"org.eclipse.php.core",1258629869623
+started,bundle,org.eclipse.jsch.core,1.1.100.I20090430-0408,"org.eclipse.jsch.core",1258629869623
+started,bundle,org.eclipse.team.cvs.core,3.3.200.I20090430-0408,"org.eclipse.team.cvs.core",1258629869773
+started,bundle,org.eclipse.jst.jsf.common,1.1.7.v20090903,"org.eclipse.jst.jsf.common",1258629869810
+started,bundle,org.eclipse.jst.jsf.core,1.2.2.v20090903,"org.eclipse.jst.jsf.core",1258629869967

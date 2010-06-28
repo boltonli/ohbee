@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.ui.views,3.4.0.I20090525-2000,"org.eclipse.ui.views",1256928486487
+started,bundle,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"org.eclipse.ui.workbench",1256928486488
+started,bundle,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.workbench.texteditor",1256928486490
+started,bundle,org.eclipse.update.configurator,3.3.0.v20090312,"org.eclipse.update.configurator",1256928486491
+started,bundle,org.eclipse.wst.common.emf,1.1.300.v200905060430,"org.eclipse.wst.common.emf",1256928486491
+started,bundle,org.eclipse.wst.common.emfworkbench.integration,1.1.300.v200811200330,"org.eclipse.wst.common.emfworkbench.integration",1256928486492
+started,bundle,org.eclipse.wst.common.frameworks,1.1.300.v200904160730,"org.eclipse.wst.common.frameworks",1256928486536
+started,bundle,org.eclipse.wst.common.project.facet.core,1.4.0.v200906080535,"org.eclipse.wst.common.project.facet.core",1256928486537
+started,bundle,org.eclipse.wst.common.uriresolver,1.1.301.v200805140415,"org.eclipse.wst.common.uriresolver",1256928486538
+started,bundle,org.eclipse.wst.dtd.core,1.1.300.v200904181727,"org.eclipse.wst.dtd.core",1256928486539
+started,bundle,org.eclipse.wst.dtd.ui,1.0.400.v200904300717,"org.eclipse.wst.dtd.ui",1256928486552
+started,bundle,org.eclipse.wst.sse.core,1.1.400.v200905141750,"org.eclipse.wst.sse.core",1256928486553
+started,bundle,org.eclipse.wst.sse.ui,1.1.100.v200905141750,"org.eclipse.wst.sse.ui",1256928486560
+started,bundle,org.eclipse.wst.validation,1.2.102.v200905201610,"org.eclipse.wst.validation",1256928486583
+started,bundle,org.eclipse.wst.xml.core,1.1.400.v200904300540,"org.eclipse.wst.xml.core",1256928486585
+started,bundle,org.eclipse.wst.xml.ui,1.1.0.v200905242047,"org.eclipse.wst.xml.ui",1256928486585
+started,bundle,org.eclipse.wst.xsd.core,1.1.401.v200903020335,"org.eclipse.wst.xsd.core",1256928486585
+started,bundle,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.adt",1256928486585
+started,bundle,com.android.ide.eclipse.ddms,0.9.1.v200905011822-1621,"com.android.ide.eclipse.ddms",1256928486585
+os,sysinfo,,,"linux",1256928486591
+arch,sysinfo,,,"x86",1256928486591
+ws,sysinfo,,,"gtk",1256928486591
+locale,sysinfo,,,"en_GB",1256928486591
+processors,sysinfo,,,"2",1256928486592
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1256928486592

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.php.debug.ui,2.1.0.v20090607-1526,"org.eclipse.php.debug.ui",1248727015818
+started,bundle,org.eclipse.php.server.ui,2.1.0.v20090610-1903,"org.eclipse.php.server.ui",1248727015836
+started,bundle,org.python.pydev.debug,1.4.7.2843,"org.python.pydev.debug",1248727015865
+started,bundle,org.python.pydev.customizations,1.4.7.2843,"org.python.pydev.customizations",1248727015882
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248727019508
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.export",1248727026678
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248727026931
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1248727099329
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1248727116378
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1248727121195
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1248727126802
+activated,view,org.eclipse.ui.views,3.4.0.I20090525-2000,"org.eclipse.ui.views.ContentOutline",1248727166766
+closed,editor,org.eclipse.mtj.ui,1.0.0.v200906121354,"org.eclipse.mtj.ui.editor.JadEditor",1248727166766
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1248727169453
+opened,editor,org.eclipse.mtj.ui,1.0.0.v200906121354,"org.eclipse.mtj.ui.editor.BuildProperties",1248727169632
+activated,editor,org.eclipse.mtj.ui,1.0.0.v200906121354,"org.eclipse.mtj.ui.editor.BuildProperties",1248727169670
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1248727172609
+closed,editor,org.eclipse.mtj.ui,1.0.0.v200906121354,"org.eclipse.mtj.ui.editor.BuildProperties",1248727172610
+started,bundle,org.eclipse.ltk.ui.refactoring,3.4.100.v20090604,"org.eclipse.ltk.ui.refactoring",1248727180763
+started,bundle,org.eclipse.compare,3.5.0.I20090514-0808,"org.eclipse.compare",1248727181823
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248727190518
+started,bundle,org.eclipse.mtj.eswt.templates,1.0.0.v200906121354,"org.eclipse.mtj.eswt.templates",1248727226124
+error,log,,,"Ignoring template 'getterbody' since validation failed.",1248727259687
+error,log,,,"Ignoring template 'setterbody' since validation failed.",1248727259689
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248727261863

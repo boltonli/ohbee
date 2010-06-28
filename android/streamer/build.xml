@@ -1,0 +1,43 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<project name="streamer-javah" default="javah" basedir=".">
+	
+	<description>
+		Generates JNI header files from compiled Java sources.
+    </description>
+    
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+    <typedef resource="cpptasks.tasks" />
+    
+    <property name="java-bin-dir" location="bin" />
+    <property name="jni-header-dir" location="jni/streamer/jni-include" />
+    
+    <target name="init" description="Performs build initialisation">
+        <mkdir dir="${jni-header-dir}" />
+    </target>
+	
+    <target name="javah" depends="init" description="Generates the JNI header files">
+        <foreach target="generate-header" param="classfile">
+            <path>
+                <fileset dir="${java-bin-dir}">
+                    <include name="**/*.class" />
+                </fileset>
+            </path>
+        </foreach>
+    </target>
+        
+    <target name="generate-header"
+            description="Generates a header file for the class file denoted by the property 'classfile'">
+        <propertyregex property="classname" input="${classfile}" replace="\1" 
+                regexp="${java-bin-dir}${file.separator}(.*)\.class" />
+        <propertyregex property="classname" input="${classname}" replace="."
+                override="true" regexp="${file.separator}" />
+        <javah destdir="${jni-header-dir}" force="true">
+            <class name="${classname}" />
+            <classpath>
+                <pathelement location="${java-bin-dir}" />
+                <pathelement location="/opt/android-sdk-linux_86/platforms/android-1.5/android.jar" />
+            </classpath>
+        </javah>
+    </target>
+
+</project>

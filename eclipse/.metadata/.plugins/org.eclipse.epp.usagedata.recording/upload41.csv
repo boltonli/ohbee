@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1248805310074
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248805311275
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248805334149
+started,bundle,org.python.pydev.core,1.4.7.2843,"org.python.pydev.core",1248805335264
+started,bundle,org.python.pydev.debug,1.4.7.2843,"org.python.pydev.debug",1248805335285
+started,bundle,org.eclipse.wst.xsl.debug.ui,1.0.0.v200904240436,"org.eclipse.wst.xsl.debug.ui",1248805335352
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1248805340193
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1248805341546
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1248805345023
+activated,view,org.eclipse.ui.views,3.4.0.I20090525-2000,"org.eclipse.ui.views.ContentOutline",1248805348733
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1248805351349
+opened,view,org.eclipse.ui.ide,3.5.0.I20090525-2000,"org.eclipse.ui.views.ProblemView",1248805352747
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1248805352826
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1248805358031
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1248805388432
+started,bundle,org.eclipse.pde.api.tools,1.0.100.v20090526,"org.eclipse.pde.api.tools",1248805394752
+started,bundle,org.eclipse.pde.api.tools.ui,1.0.100.v20090526,"org.eclipse.pde.api.tools.ui",1248805394760
+started,bundle,org.eclipse.mylyn.java.ui,3.2.1.v20090722-0200-e3x,"org.eclipse.mylyn.java.ui",1248805394785
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1248805396748
+started,bundle,org.eclipse.jdt.junit,3.5.0.v20090526-2000,"org.eclipse.jdt.junit",1248805396946
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1248805413684
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1248805418159
+error,log,,,"Ignoring template 'getterbody' since validation failed.",1248805420509
+error,log,,,"Ignoring template 'setterbody' since validation failed.",1248805420511
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1248805438762

@@ -1,0 +1,48 @@
+package jnix;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+
+public class Test
+{
+	static
+	{
+		System.load("/home/djp/projects/ob/android/jnix-native/Debug/libjnix-native.so");
+	}
+	
+	public static void main(String[] args)
+	throws Exception
+	{
+		final Pipe pipe = new Pipe();
+		new Thread(new Runnable(){
+			public void run()
+			{
+				System.out.println("Reader started");
+				InputStream in = new FileInputStream(pipe.getInputFileDescriptor());
+				int c;
+				try
+				{
+					while((c = in.read()) != -1)
+						System.out.println((char)c);
+				} 
+				catch(IOException e)
+				{
+					throw new RuntimeException(e);
+				}
+			}
+		}).start();
+		
+		OutputStreamWriter out = new OutputStreamWriter(
+				new FileOutputStream(pipe.getOutputFileDescriptor()));
+		int i = 0;
+		while(true)
+		{
+			out.write(String.valueOf(i++));
+			//System.out.println("Writing");
+			Thread.sleep(1000);
+		}
+	}
+}

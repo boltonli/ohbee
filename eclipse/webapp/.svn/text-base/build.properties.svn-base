@@ -1,0 +1,38 @@
+######################################################################
+# Build Configuration                                                #
+# This Java properties file configures the build process, You should #
+# edit this file to meet your requirements.                          #
+######################################################################
+
+# Change this to where the equip2 source distribution is stored
+equip2.base=../equip2
+
+# Change this to where the equip2 web application source distribution is stored
+equip2webapp.base=../equip2webapp
+
+# Change this to where the Xalan distribution is stored (or . if not required)
+xalan.home=.
+
+# Change this to the file that contains the application configuration properties
+config.properties=etc/config.properties
+
+# Change this to the version of Java the application should be compiled for
+java.target.version=1.6
+
+# Change this to false if debugging symbols should be disabled in the Java code 
+java.debug.enable=true
+
+# Change this to true to enabled AspectJ support
+aspectj.support.enable=false
+
+# Uncomment this to enable the use of a proxy during the build process
+#proxy.enabled=true
+
+# Set the proxy host to use
+proxy.host=
+
+# Set this to the proxy port to use
+proxy.port=
+
+# optional tomcat installation if deploying direct into tomcat
+webapps.dir=d:/work/jetty-6.1.15/webapps

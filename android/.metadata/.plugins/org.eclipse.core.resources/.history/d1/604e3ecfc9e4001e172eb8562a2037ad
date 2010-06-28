@@ -1,0 +1,129 @@
+package ob.streamer;
+
+import java.io.IOException;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+
+public class Streamer 
+extends Activity 
+{
+	private static Logger logger = Logger.getLogger(Streamer.class);
+	
+    @Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		Log.d(LOG_TAG, "onCreate");
+	}
+	
+	@Override
+	protected void onDestroy()
+	{
+		super.onDestroy();
+		Log.d(LOG_TAG, "onDestroy");
+	}
+
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		Log.d(LOG_TAG, "onPause");
+		if(isRecording)
+			stopRecording(null);
+	}
+
+	@Override
+	protected void onRestart()
+	{
+		super.onRestart();
+		Log.d(LOG_TAG, "onRestart");
+	}
+
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		Log.d(LOG_TAG, "onResume");
+		
+		LocationManager locMan = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+		List<String> providers = locMan.getAllProviders();
+		for(String provider : providers)
+			Log.i("streamer", "Provider: " + provider);
+		
+		try
+		{
+			debug("Opening sockets");
+			socketSet = new SocketSet(VIDEO_SOCKET_NAME);
+		}
+		catch(Exception e)
+		{
+			error("Unable to open the sockets", e);
+			throw new RuntimeException(e);
+		}
+		
+		videoSettings = new VideoSettings();
+		videoSettings.setFrameRate(15);
+		
+		cameraPreview = new CameraPreview(this, videoSettings);
+	
+		final Button button = new Button(this);
+		button.setText("Start");
+		button.setWidth(100);
+		button.setHeight(50);
+		button.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(View v)
+			{
+				if(isRecording)
+					stopRecording(button);
+				else
+					startRecording(button);
+			}
+		});
+		
+		FrameLayout layout = new FrameLayout(this);
+		LinearLayout layout2 = new LinearLayout(this);
+		layout.addView(cameraPreview);
+		layout.addView(layout2);
+		layout2.addView(button);
+		setContentView(layout);
+			
+		new Thread(new Runnable()
+		{
+			public void run()
+			{
+				try
+				{
+					cameraPreview.startPreview();
+				} 
+				catch (IOException e)
+				{
+					error("Could not start the camera preview", e);
+				}
+			}
+		}).start();
+	}
+
+	@Override
+	protected void onStart()
+	{
+		super.onStart();
+		Log.d(LOG_TAG, "onStart");
+	}
+
+	@Override
+	protected void onStop()
+	{
+		super.onStop();
+		Log.d(LOG_TAG, "onStop");
+	}
+}

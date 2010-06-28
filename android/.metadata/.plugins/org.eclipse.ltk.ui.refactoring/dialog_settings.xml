@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="RefactoringWizard.preview">
+		<item value="420" key="height"/>
+		<item value="620" key="width"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="*" key="patterns"/>
+		<item value="false" key="moveWizard.updateQualifiedNames"/>
+	</section>
+	<section name="RefactoringPropertyPage">
+		<item value="true" key="org.eclipse.ltk.ui.refactoring.sortRefactorings"/>
+	</section>
+</section>

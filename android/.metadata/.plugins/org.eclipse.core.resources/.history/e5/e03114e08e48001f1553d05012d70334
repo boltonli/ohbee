@@ -1,0 +1,165 @@
+package ob.android;
+
+import java.io.IOException;
+
+import jnix.Pipe;
+
+import ob.android.view.CameraPreview;
+
+import android.app.Activity;
+import android.media.MediaRecorder;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
+
+import static ob.android.Constants.*;
+
+public class MainActivity
+extends Activity
+{	
+    static
+    {
+        try
+        {
+            System.loadLibrary("jnix");
+            System.loadLibrary("streamer");
+        }
+        catch(Throwable e)
+        {
+            error(e.getMessage(), e);
+            throw new RuntimeException(e);
+        }
+    }
+    
+    private CameraPreview cameraPreview;
+	
+	private MediaRecorder videoRecorder;
+		
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		debug("onCreate");
+		
+        cameraPreview = new CameraPreview(this);
+          
+                
+        FrameLayout mainLayout = new FrameLayout(this);
+        mainLayout.addView(cameraPreview);
+        
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+                                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        
+        setContentView(mainLayout);
+	}
+	
+	@Override
+	protected void onDestroy()
+	{
+		super.onDestroy();
+		debug("onDestroy");
+	}
+
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		debug("onPause");
+		System.exit(0);
+	}
+
+	@Override
+	protected void onRestart()
+	{
+		super.onRestart();
+		debug("onRestart");
+		new Thread(new Runnable()
+        {
+            
+            public void run()
+            {
+                try { Thread.sleep(5000); }
+                catch(InterruptedException e){}
+                debug("Starting to record");
+                startRecording();                
+            }
+        }).start();
+	}
+
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		debug("onResume");
+		try
+        {
+            cameraPreview.startPreview();
+        }
+		catch(IOException e)
+        {
+            error("Unable to start the camera preview", e);
+            throw new RuntimeException(e);
+        }
+	}
+
+	@Override
+	protected void onStart()
+	{
+		super.onStart();
+		debug("onStart");
+		
+	}
+
+	@Override
+	protected void onStop()
+	{
+		super.onStop();
+		debug("onStop");
+	}
+	
+	
+	
+	private void startRecording()
+    {
+        /*Thread t = new Thread(new Stream(videoPipe, audioPipe));
+        t.setPriority(Thread.MAX_PRIORITY);
+        t.start();*/
+                
+        try
+        {
+            cameraPreview.stopPreview();
+            
+            videoRecorder = new MediaRecorder();
+            videoRecorder.setPreviewDisplay(cameraPreview.getHolder().getSurface());
+            videoRecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+            videoRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+            videoRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
+            videoRecorder.setVideoSize(160, 120);
+            videoRecorder.setVideoFrameRate(15);
+            videoRecorder.setOutputFile("/sdcard/out.mp4");
+            //videoRecorder.setOutputFile(videoPipe.getOutput());
+            videoRecorder.prepare();
+            videoRecorder.start();
+        }
+        catch(Exception e)
+        {
+            error("Unable to start recording", e);
+        }
+    }
+    
+    private void stopRecording()
+    {
+        videoRecorder.stop();
+        videoRecorder.release();
+        //videoPipe.closeOutput();
+        try
+        {
+            cameraPreview.startPreview();
+        } catch (IOException e)
+        {
+            error("Unable to start camera preview", e);
+        }
+    }
+}

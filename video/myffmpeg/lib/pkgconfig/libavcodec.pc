@@ -1,0 +1,14 @@
+prefix=/home/pszdp1/video/myffmpeg
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 52.59.0
+Requires: libavutil = 50.12.0
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavcodec -lz -lm -lfaac -lopencore-amrnb -lm -lopencore-amrwb -lm -lx264 -lm
+Libs.private: 
+Cflags: -I${includedir}

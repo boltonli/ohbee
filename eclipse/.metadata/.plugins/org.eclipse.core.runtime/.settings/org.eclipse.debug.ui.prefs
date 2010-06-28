@@ -1,0 +1,5 @@
+#Thu Oct 22 11:35:29 BST 2009
+eclipse.preferences.version=1
+preferredTargets=default\:default|org.eclipse.cdt.debug.ui.toggleCBreakpointTarget\:org.eclipse.cdt.debug.ui.toggleCBreakpointTarget|
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<launchPerspectives>\n<launchPerspective configurationType\="MTJ.emulatorLaunchConfigurationType" mode\="debug" perspective\="org.eclipse.debug.ui.DebugPerspective"/>\n</launchPerspectives>\n
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<viewBindings>\n<view id\="org.eclipse.ui.console.ConsoleView">\n<perspective id\="org.python.pydev.ui.PythonPerspective" userAction\="opened"/>\n<perspective id\="org.eclipse.mtj.ui.MtjPerspective" userAction\="opened"/>\n</view>\n</viewBindings>\n

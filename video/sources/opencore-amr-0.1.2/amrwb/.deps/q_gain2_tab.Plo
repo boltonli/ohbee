@@ -1,0 +1,30 @@
+q_gain2_tab.lo: \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/q_gain2_tab.cpp \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qisf_ns.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h \
+ ../oscl/oscl_base.h /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/wchar.h
+
+../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qisf_ns.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h:
+
+../oscl/oscl_base.h:
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/predefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/wchar.h:

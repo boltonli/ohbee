@@ -1,0 +1,7 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1258629880270
+started,bundle,org.eclipse.team.svn.mylyn,0.7.8.I20090506-1500,"org.eclipse.team.svn.mylyn",1258629880913
+started,bundle,org.eclipse.team.svn.core,0.7.8.I20090506-1500,"org.eclipse.team.svn.core",1258629881585
+started,bundle,org.eclipse.core.variables,3.2.200.v20090521,"org.eclipse.core.variables",1258629882490
+started,bundle,org.eclipse.team.svn.ui,0.7.8.I20090506-1500,"org.eclipse.team.svn.ui",1258629882716
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1258629883318

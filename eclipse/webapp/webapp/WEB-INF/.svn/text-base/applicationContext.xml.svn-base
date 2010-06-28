@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<!--
+		Generic EQUIP2 configuration.
+		You should not normally need to modify any of these settings.
+	-->
+
+	<!--
+		The (non-default) object helper registry to be used by EQUIP2. Must be
+		the J2SE one to support float, double and Set
+	-->
+	<bean class="equip2.core.objectsupport.impl.j2se.J2SEObjectHelperRegistry" id="objectHelperRegistry"/>
+
+	<!-- The EQUIP2 global naming context - equivalent to a simple JNDI -->
+	<bean class="equip2.naming.InitialContext" id="equip2InitialContext"/>
+
+	<!--
+		Register objectHelperRegitry with equip2InitialContext as name
+		'java:/app/env/provider/IObjectHelperRegistry'
+		(IObjectHelperRegistry.JNDI_DEFAULT_NAME)
+	-->
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean" id="force-register">
+		<property name="targetObject" ref="equip2InitialContext"/>
+		<property name="targetMethod" value="rebind"/>
+		<property name="arguments">
+			<list>
+				<value>java:/app/env/provider/IObjectHelperRegistry</value>
+				<ref bean="objectHelperRegistry"/>
+			</list>
+		</property>
+	</bean>
+
+	<!--
+		The (single) persistent EQUIP2 dataspace, which currently by default
+		will read hibernate configuration from classes/hibernate.cfg.xml
+	-->
+	<bean class="equip2.persist.hibernate.j2se.PersistentDataspace" destroy-method="shutdown" id="dataspace"/>
+
+	<!-- equip2 scheduler -->
+	<bean class="equip2.core.tasks.Scheduler" destroy-method="shutdown" id="equip2scheduler"/>
+
+	<!-- Attach the equip2 scheduler to dataspace -->
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean" id="dataspaceTask">
+		<property name="targetObject">
+			<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+				<property name="targetObject" ref="dataspace"/>
+				<property name="targetMethod" value="getEventManagement"/>
+				<property name="arguments">
+					<list/>
+				</property>
+			</bean>
+		</property>
+		<property name="targetMethod" value="getTask"/>
+		<property name="arguments">
+			<list/>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean" id="force-schedule">
+		<property name="targetObject" ref="equip2scheduler"/>
+		<property name="targetMethod" value="scheduleAsynchronous"/>
+		<property name="arguments">
+			<list>
+				<ref bean="dataspaceTask"/>
+				<value>0</value>
+				<value>0</value>
+				<value>true</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="equip2.spring.EquipSessionReleaseInterceptor" id="equipSessionReleaseInterceptor">
+		<property name="dataspace" ref="dataspace"/>
+	</bean>
+
+	<!--
+		Register dataspace with equip2InitialContext as name
+		'java:/app/env/provider/IDataspace' (equip2 taglib v.2 default)
+	-->
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean" id="force-register-dataspace">
+		<property name="targetObject" ref="equip2InitialContext"/>
+		<property name="targetMethod" value="rebind"/>
+		<property name="arguments">
+			<list>
+				<value>java:/app/env/provider/IDataspace</value>
+				<ref bean="dataspace"/>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Dataspace ID allocator -->
+	<bean class="equip2.spring.DbGenericIDAllocator" id="dbIdAllocator">
+		<property name="dataspace" ref="dataspace"/>
+		<property name="idAllocations">
+			<map>
+<entry key="ob.webapp.db.Camera">
+<bean class="equip2.spring.IDAllocationBean">
+<property name="fixedPrefix" value="C"/>
+</bean>
+</entry>
+<entry key="ob.webapp.db.Annotation">
+<bean class="equip2.spring.IDAllocationBean">
+<property name="fixedPrefix" value="AN"/>
+</bean>
+</entry>
+<entry key="ob.webapp.db.Person">
+<bean class="equip2.spring.IDAllocationBean">
+<property name="fixedPrefix" value="P"/>
+</bean>
+</entry>
+</map>
+		</property>
+	</bean>
+
+	<!-- 
+		Application specific configuration.
+		Add your own application configuration here.
+	-->
+	
+	<bean id="stateController" class="ob.webapp.controller.StateController">
+		<property name="dataspace"><ref bean="dataspace"/></property>
+	</bean>
+    
+</beans>

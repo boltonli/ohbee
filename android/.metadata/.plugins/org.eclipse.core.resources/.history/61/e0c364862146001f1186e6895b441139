@@ -1,0 +1,38 @@
+LOCAL_PATH 			:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    	:= client
+LOCAL_SRC_FILES		:= \
+		x264/common/mc.c 			x264/common/predict.c \
+		x264/common/pixel.c 		x264/common/macroblock.c \
+		x264/common/frame.c 		x264/common/dct.c \
+		x264/common/cpu.c			x264/common/cabac.c \
+		x264/common/common.c 		x264/common/mdate.c \
+		x264/common/rectangle.c 	x264/common/set.c \
+		x264/common/quant.c			x264/common/vlc.c \
+		x264/encoder/analyse.c		x264/encoder/me.c \
+		x264/encoder/ratecontrol.c 	x264/encoder/set.c \
+		x264/encoder/macroblock.c	x264/encoder/cabac.c \
+		x264/encoder/cavlc.c 		x264/encoder/encoder.c \
+		x264/encoder/lookahead.c
+LOCAL_LDLIBS 		:= 
+LOCAL_C_INCLUDES 	:= $(NDK_APP_PROJECT_PATH)/jni/x264/x264
+LOCAL_CFLAGS 		:= $(CFLAGS)
+LOCAL_LDFLAGS		:= $(LDFLAGS)
+
+x264-configure:
+	cd $(NDK_APP_PROJECT_PATH)/jni/x264/x264; \
+	./configure --disable-avs-input \
+            --disable-lavf-input \
+            --disable-ffms-input \
+            --disable-mp4-output \
+            --disable-pthread \
+            --disable-asm \
+            --enable-pic \
+            --host=arm-linux-gnu; \
+	cat config.h | sed -e 's/#define HAVE_LOG2F/#undef HAVE_LOG2F/' \
+			> config.h.tmp; \
+	mv config.h.tmp config.h 
+	
+include $(BUILD_STATIC_LIBRARY)

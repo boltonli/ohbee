@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.rpc"
+		class="Scene">
+
+	<description>
+		Collection of objects in the scene
+	</description>
+	
+	<property name="annotations" javatype="ob.webapp.db.Annotation[]">
+		<description>Array of Annotations</description>
+	</property>
+	
+	<property name="cameras" javatype="ob.webapp.db.Camera[]">
+		<description>Array of Cameras</description>
+	</property>
+	
+	<property name="persons" javatype="ob.webapp.db.Person[]">
+		<description>Array of Persons</description>
+	</property>
+	
+</bean>

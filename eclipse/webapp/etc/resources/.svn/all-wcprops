@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ob/!svn/ver/10/trunk/webapp/etc/resources
+END
+equip2.spring.db.NextID.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ob/!svn/ver/10/trunk/webapp/etc/resources/equip2.spring.db.NextID.xml
+END
+NextID.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ob/!svn/ver/10/trunk/webapp/etc/resources/NextID.hbm.xml
+END
+configuration.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ob/!svn/ver/10/trunk/webapp/etc/resources/configuration.jsp
+END

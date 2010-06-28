@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.db"
+		class="Tag"
+		id="ID"
+		primarykey="ID"
+		primarykeygenerator="assigned">
+
+	<idallocation fixedPrefix="T" />
+
+	<type name="IDType" javatype="java.lang.String" maxlength="20" />
+
+	<property name="ID" type="IDType">
+		<description>Database unique ID.</description>
+	</property>
+	
+	<property name="name" javatype="java.lang.String">
+		<description>Friendly name.</description>
+	</property>
+
+</bean>

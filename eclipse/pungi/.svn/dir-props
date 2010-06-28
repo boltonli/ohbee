@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 48
+etc
+
+.project
+
+.pydevproject
+
+s60-compat
+
+trash
+
+END

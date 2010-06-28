@@ -1,0 +1,8 @@
+MIDlet-1: Trumpet,/icon.png,Trumpet
+MIDlet-Jar-Size: 20824
+MIDlet-Jar-URL: trumpet.jar
+MIDlet-Name: Trumpet Instrumentation Service
+MIDlet-Vendor: Mixed Reality Lab, University of Nottingham
+MIDlet-Version: 0.1.5
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

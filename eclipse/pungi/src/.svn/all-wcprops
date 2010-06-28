@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/ob/!svn/ver/5/trunk/pungi/src
+END
+ui.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/ob/!svn/ver/5/trunk/pungi/src/ui.py
+END
+test.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ob/!svn/ver/5/trunk/pungi/src/test.py
+END
+misc.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ob/!svn/ver/5/trunk/pungi/src/misc.py
+END
+gui.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ob/!svn/ver/5/trunk/pungi/src/gui.py
+END
+pungi.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ob/!svn/ver/5/trunk/pungi/src/pungi.py
+END
+sensors.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ob/!svn/ver/5/trunk/pungi/src/sensors.py
+END

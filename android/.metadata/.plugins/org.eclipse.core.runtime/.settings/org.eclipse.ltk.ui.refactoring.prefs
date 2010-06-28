@@ -1,0 +1,4 @@
+#Mon Jan 04 22:34:57 GMT 2010
+org.eclipse.ltk.ui.refactoring.do.not.warn.delete.history=true
+eclipse.preferences.version=1
+org.eclipse.ltk.ui.refactoring.do.not.warn.delete.descriptor=true

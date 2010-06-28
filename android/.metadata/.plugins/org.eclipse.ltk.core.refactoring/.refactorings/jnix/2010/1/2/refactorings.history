@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 1 element(s) from project &apos;jnix&apos;&#x0A;- Original project: &apos;jnix&apos;&#x0A;- Original element: &apos;libjnix.a&apos;" description="Delete element" element1="dist/Android-armeabi/libjnix.a" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1263391023997" subPackages="false" version="1.0"/>
+</session>

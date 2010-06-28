@@ -1,0 +1,8 @@
+class X:
+    pass
+
+print str(type(X()))
+
+t = type(X())
+x = X()
+print x.__class__.__name__

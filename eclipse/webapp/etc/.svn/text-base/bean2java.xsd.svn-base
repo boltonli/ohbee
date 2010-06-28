@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="bean">
+		<xs:complexType>
+			<xs:sequence>
+				<!--
+					A textual description of the bean class, which will be included
+					verbatim in any generated code or documentation.
+				-->
+				<xs:element name="description" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string" />
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<!--
+					Define an alias for a Java type to be used in property or constant
+					elements in the same file.
+				-->
+				<xs:element name="type" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<!-- The name of the type alias being defined. -->
+						<xs:attribute name="name" type="xs:string" use="required" />
+						<!--
+							The fully-qualified name of the corresponding Java type or class.
+						-->
+						<xs:attribute name="javatype" type="xs:string" use="required" />
+						<!--
+							The maximum length of the value when used with a Hibernate-based
+							persistent dataspace, e.g. javatype="java.lang.String"
+							maxlength="20" defines a string of no more than 20 characters in
+							length. The default length is database-specific, e.g. a string
+							length may default to 256 characters. Only affects generated
+							Hibernate mapping files.
+						-->
+						<xs:attribute name="maxlength" type="xs:positiveInteger" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					Indicate that the bean (or bean interface) defined in this file
+					should implement the identified interface. This will cause the
+					generated bean (or interface) to include all of the properties
+					defined in that interface.
+				-->
+				<xs:element name="implements" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<!--
+							The name of the XML bean definition file for the interface to be
+							implemented. By default the directory of the implementing
+							definintion file is searched.
+						-->
+						<xs:attribute name="beanfile" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					Each property element defines one of the bean's properties
+					(fields).
+				-->
+				<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!--
+								A textual description of the property, which will be included
+								verbatim in any generated code or documentation.
+							-->
+							<xs:element name="description" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string" />
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!--
+							The name of the bean property being defined. This must be a valid
+							Java and (if using Hibernate) SQL identifier, i.e. it should
+							start with a letter, followed by letters, digits or underscore
+							(_). It should not include any whitespace. It should not be a
+							Java or (if using Hibernate) SQL keyword (e.g. 'where', 'time',
+							'if'). By convention Java property or field names use "camel
+							case", i.e. mixed case, starting with a lower-case letter and
+							using a subsequent capital letter to indicate the start of a new
+							word. However this convention is not required.
+						-->
+						<xs:attribute name="name" type="xs:string" use="required" />
+						<!--
+							Gives the fully qualified name of the Java type or class of the
+							property. If a type attribute is specified then the type
+							element's javatype is used instead (required unless a type
+							attribute is present).
+						-->
+						<xs:attribute name="javatype" type="xs:string" />
+						<!--
+							The maximum length of the value when used with a Hibernate-based
+							persistent dataspace, e.g. javatype="java.lang.String"
+							maxlength="20" defines a string of no more than 20 characters in
+							length. If a type attribute is specified then the type element's
+							maxlength is used instead. The default length is
+							database-specific, e.g. a string length may default to 256
+							characters.Only affects generated Hibernate mapping files.
+						-->
+						<xs:attribute name="maxlength" type="xs:positiveInteger" />
+						<!--
+							The name of a type element which specifies the javatype and
+							maxlength to use for the property.
+						-->
+						<xs:attribute name="type" type="xs:string" />
+						<!--
+							For a collection-type value (e.g. javatype java.util.Set) the
+							Java type or class of the collection elements. Required when
+							using a collection type with a Hibernate-based persistent
+							dataspace. Only affects generated Hibernate mapping files.
+						-->
+						<xs:attribute name="elementjavatype" type="xs:string" />
+						<!--
+							For a collection-type value (e.g. javatype java.util.Set) the
+							maximum length of each element of the collection. Note: the
+							number of elements in the collection is always unbounded. The
+							default is database-specific - see maxlength. Only affects
+							generated Hibernate mapping files.
+						-->
+						<xs:attribute name="elementmaxlength" type="xs:positiveInteger" />
+						<!--
+							The name of a type element which specifies the values to use for
+							elementjavatype (from type's javatype) and elementmaxlength (from
+							type's maxlength). Only affects generated Hibernate mapping
+							files.
+						-->
+						<xs:attribute name="elementtype" type="xs:string" />
+						<!--
+							If the property is a foreign key for instance(s) of another class
+							then this attribute can be used to identify that other class. If
+							specified then the linkproperty attribute must also be specified.
+							A helper method called get<propertyName>Template() is generated
+							which returns a template instance of the class with the link
+							property value initialised to the current value of this property
+							which can be used with a dataspace match operation.
+						-->
+						<xs:attribute name="class" type="xs:string" />
+						<!--
+							If class attribute is specified then by default the package is
+							the same as the package of the current bean file. This attribute
+							can be used to specify an alternative package name for the linked
+							class.
+						-->
+						<xs:attribute name="package" type="xs:string" />
+						<!--
+							If class attribute is specified then this attribute identifies
+							the property of the other class which serves as the key to be
+							matched.
+						-->
+						<xs:attribute name="linkproperty" type="xs:string" />
+						<!--
+							Indicates to the Dataspace configuration viewer that the property
+							of this value is a foreign key reference to an object of the
+							type specified.  Must be a fully qualified class name.  This
+							attribute differs slightly from the class/package/linkproperty
+							triplet in that it does not generate any extra code in the bean
+							itself and thus allows referencing to interfaces.
+						-->
+						<xs:attribute name="references" type="xs:string" />
+						<!--
+							If this property requires a custom type handler for display,
+							this attribute should be set to the fully qualified class
+							name of the custom type handler.
+						-->
+						<xs:attribute name="typehandler" type="xs:string" />
+						<!-- Configures the dataspace viewer to show the property in a text area. -->
+						<xs:attribute name="textarea" type="xs:boolean" default="false" />
+						<!-- Configures the dataspace viewer to show the property in the list view. -->
+						<xs:attribute name="listview" type="xs:boolean" default="false" />
+						<!-- 'Nice' display name for the property. -->
+						<xs:attribute name="nicename" type="xs:string" />
+						<!-- 'Nice' list heading for the property. -->
+						<xs:attribute name="nicelistheading" type="xs:string" />
+						<!-- 
+							Causes classes that link to this type to be shown
+							on the object view page in the dataspace viewer.
+						-->
+						<xs:attribute name="showinplace" type="xs:boolean" default="false" />
+						<!-- Set this to the property to order lists of linked classes on. -->
+						<xs:attribute name="showinplace-order" type="xs:string" />
+						<!-- True if linked classes should be shown in descending order. -->
+						<xs:attribute name="showinplace-descending" type="xs:boolean" default="false" />
+						<!-- 
+							Indicates that when a property has been set it should
+							not be reset (affects the dataspace viewer configuration.
+						-->
+						<xs:attribute name="fixed" type="xs:boolean" default="false" />
+						<!-- Name of a bitflag to value this property. -->
+						<xs:attribute name="bitflagname" type="xs:string" />
+						<!-- Name of a enum grouping to value this property. -->
+						<xs:attribute name="enumgroupname" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					Each constant element defines one constant value (in Java this
+					corresponds to a static final field).
+				-->
+				<xs:element name="constant" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!--
+								A textual description of the constant, which will be included
+								verbatim in any generated code or documentation.
+							-->
+							<xs:element name="description" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string" />
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!-- The name of the generated constant field. -->
+						<xs:attribute name="name" type="xs:string" use="required" />
+						<!--
+							The Java type or class of the generated constant field. Note: the
+							use of a type attribute is not supported in a constant element.
+						-->
+						<xs:attribute name="javatype" type="xs:string" use="required" />
+						<!--
+							The value of the generated constant field. Note: for a javatype
+							of java.lang.String the value should be automatically quoted (but
+							hasn't been in the past). Note: if Java (double) quotes are to be
+							used explicitly then single quotes can be used for the XML
+							attribute value, e.g. value='"a string value"'.
+						-->
+						<xs:attribute name="value" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					The linkedclass element indicates that another class has a property which is a
+					foreign key for instances of this class. This element is never essential, but
+					may be used (a) as a form of documentation (b) to generate a helper method called
+					get<name>Template() which returns a template instance of that class with the
+					foreign key (link) property value initialised to the current value of this object's
+					primarykey property.
+      			-->
+				<xs:element name="linkedclass" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<!--
+							A name for the relationship, used in naming the generated method.
+						-->
+						<xs:attribute name="name" type="xs:string" use="required" />
+						<!-- The name of the linked class. -->
+						<xs:attribute name="class" type="xs:string" use="required" />
+						<!--
+							The name of the property of the linked class which holds the
+							primary key of an instance of this class.
+						-->
+						<xs:attribute name="linkproperty" type="xs:string"
+							use="required" />
+						<!--
+							The package of the linked class if different from the current
+							class.
+						-->
+						<xs:attribute name="package" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					Allows the dataspace viewer to be configured not to show certain
+					properties.
+				-->
+				<xs:element name="hiddenproperties" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- A reference to a property by name to be hidden. -->
+							<xs:element name="property" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<!-- The property name reference. -->
+									<xs:attribute name="reference" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!--
+					Property groups can be used to group properties under
+					different headings in the dataspace viewer.
+				-->
+				<xs:element name="propertygroup" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- A reference to a property by name that is part of this group. -->
+							<xs:element name="property" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<!-- The property name reference. -->
+									<xs:attribute name="reference" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!-- The name of the property group. -->
+						<xs:attribute name="name" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					The idallocation element provides information for automatically
+					generating primary key generators in the application by the 
+					equip2 skeleton build script.
+      			-->
+				<xs:element name="idallocation" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<!--
+							Fixed prefix - at front of all IDs; if property prefix is also specified
+							then they are combined as <prefixProperty><fixedPrefix><Num>[_<suffixProperty>]
+						-->
+						<xs:attribute name="fixedPrefix" type="xs:string" />
+						<!-- Property prefix - name of property, value of which is used as prefix. -->
+						<xs:attribute name="prefixProperty" type="xs:string" />
+						<!-- Secondary property prefix - name of property, value of which is used as prefix. -->
+						<xs:attribute name="prefixProperty2" type="xs:string" />
+						<!-- Property suffix - name of property, value of which is used as suffix. -->
+						<xs:attribute name="suffixProperty" type="xs:string" />
+						<!-- Maximum suffix length. -->
+						<xs:attribute name="suffixLength" type="xs:positiveInteger" />
+						<!-- Flag to uppercase the suffix value. -->
+						<xs:attribute name="upperCaseFlag" type="xs:boolean" />
+					</xs:complexType>
+				</xs:element>
+				<!--
+					The cvsinfo element provides information that configures the
+					CSV import/export functionality of the dataspace viewer.  When
+					configuring, don't forget to include properties inherited
+					from interfaces.  CVS field ordering follows the order
+					in which the property elements are defined.
+      			-->
+				<xs:element name="csvinfo" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<!--
+								A property element should be included for every named
+								property from this type including inherited properties. 
+							 -->
+							<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<!-- The property name. -->
+									<xs:attribute name="name" type="xs:string" use="required" />
+									<!-- 
+										A short description of the property to be included
+										in the exported CSV file.										
+									 -->
+									<xs:attribute name="description" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!-- Creates a bitflag with named values. -->
+				<xs:element name="bitflag" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- A named bitflag value  -->
+							<xs:element name="value" minOccurs="1" maxOccurs="32">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string" />
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!-- Bitflag name. -->
+						<xs:attribute name="name" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<!-- Creates an enum group. -->
+				<xs:element name="enumgroup" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- An expression to select constants from the class.  -->
+							<xs:element name="constselector" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<!-- A simple unix 'glob' style pattern for matching constants. -->
+									<xs:attribute name="pattern" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<!-- A named enum value  -->
+							<xs:element name="enumvalue" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<!-- The value name. -->
+									<xs:attribute name="name" type="xs:string" use="required" />
+									<!-- The integer value. -->
+									<xs:attribute name="value" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!-- Bitflag name. -->
+						<xs:attribute name="name" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<!--
+				The name of the Java package of the generated bean, in dot-separated
+				format and with no trailing dot (e.g. "equip2.core.test").
+			-->
+			<xs:attribute name="package" type="xs:string" use="required" />
+			<!--
+				The name of the generated bean/class with the above-specific package
+				(e.g. "TestObject1"). By convention Java class names use "camel
+				case", i.e. mixed case, starting with a capital letter and using a
+				subsequent capital letter to indicate the start of a new word.
+				However this convention is not required.
+			-->
+			<xs:attribute name="class" type="xs:string" use="required" />
+			<!--
+				The name of the bean property (if any), the value of which uniquely
+				identifies any instance of this class, i.e. effectively a primary
+				key for the class. For example, id="id" indicates that (a) every
+				instance of this class placed in a dataspace will have a value for
+				this property and (b) if two instances in the same dataspace have
+				the same value for this property then they are intended to represent
+				the "same" object (e.g. before and after an update). If a class does
+				not have an id defined then the whole bean value is considered to be
+				its identity.
+			-->
+			<xs:attribute name="id" type="xs:string" />
+			<!--
+				Boolean ('true' or 'false') which indicates whether the file defines
+				a concrete bean class or an abstract interface (typically a set of
+				getter and setter methods) to be implemented by some other bean
+				class(es).
+			-->
+			<xs:attribute name="interface" type="xs:boolean"
+				default="false" />
+			<!--
+				The name of the bean property (if any) to be used as the Hibernate
+				primary key for the object when used with a Hibernate-based
+				persistent dataspace. By default a hibernate-internal primary key
+				called 'hibernatekey' is generated of type long. Only affects
+				generated Hibernate mapping files.
+			-->
+			<xs:attribute name="primarykey" type="xs:string" />
+			<!--
+				The name of the Hibernate key generation method to be used for the
+				primarykey when the object is used with a Hibernate-based persistent
+				dataspace. Common options: - 'native', to be generated by the
+				underlying database, i.e. auto-increment or similar; - 'assigned' -
+				to be supplied by the application and not generated by Hibernate or
+				the database. Note that native allocation will typically only work
+				with integer-typed primary keys. Only affects generated Hibernate
+				mapping files.
+			-->
+			<xs:attribute name="primarykeygenerator" default="native">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="native" />
+						<xs:enumeration value="assigned" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<!--
+				The name of the database table in which class should be persisted
+				when used with a Hibernate-based persistent dataspace. By default
+				the class name is used (excluding package, and capitalised). Only
+				affects generated Hibernate mapping files.
+			-->
+			<xs:attribute name="table" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

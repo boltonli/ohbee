@@ -1,0 +1,17 @@
+#!/bin/sh
+
+NDK_ROOT=/opt/android-ndk-r3
+PLATFORM=android-3
+
+export PATH=$NDK_ROOT/build/prebuilt/linux-x86/arm-eabi-4.4.0/bin:$PATH
+export CFLAGS="-I$NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/include"
+export CPPFLAGS="$CFLAGS"
+./configure --host=x86_64-unknown-linux-gnu --cross-prefix=arm-eabi- --prefix=/home/pszdp1/libx264/ --disable-avs-input --disable-pthread --disable-asm --enable-pic --extra-cflags="$CFLAGS" --extra-ldflags="-nostdlib -L$NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/lib $NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/lib/crtbegin_static.o -lc -ldl"
+export LDFLAGS="-L$NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/lib"
+cat config.mak | sed -e 's/^LDFLAGS= .*$/LDFLAGS = -L\/opt\/android-ndk-r3\/build\/platforms\/android-3\/arch-arm\/usr\/lib -lm -Wl,-Bsymbolic -s/' > config.mak.tmp
+mv config.mak.tmp config.mak
+cat config.mak | sed -e 's/^ARCH=.*$/ARCH=ARM/' > config.mak.tmp
+mv config.mak.tmp config.mak
+cat config.h | sed -e 's/^#define ARCH_.*$/#define ARCH_ARM/' > config.h.tmp
+mv config.h.tmp config.h
+make libx264.a

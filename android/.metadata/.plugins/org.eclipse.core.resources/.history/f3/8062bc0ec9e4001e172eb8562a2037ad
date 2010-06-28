@@ -1,0 +1,73 @@
+package ob.streamer;
+
+public class Logger
+{
+	private static final Logger instance = new Logger();
+	
+	public static Logger getLogger(String classname)
+	{
+		return instance;
+	}
+	
+	public static Logger getLogger(Class clazz)
+	{
+		return instance;
+	}
+	
+	private Logger() {}
+	
+	public void debug(Object message)
+	{
+		
+	}
+	
+	public void debug(Object message, Throwable t)
+	{
+		
+	}
+	
+	public void error(Object message)
+	{
+		
+	}
+	
+	public void error(Object message, Throwable t)
+	{
+		
+	}
+	
+	public void fatal(Object message)
+	{
+		
+	}
+	
+	public void fatal(Object message, Throwable t)
+	{
+		
+	}
+	
+	public void info(Object message)
+	{
+		
+	}
+	
+	public void info(Object message, Throwable t)
+	{
+		
+	}
+	
+	public boolean isDebugEnabled()
+	{
+		return true;
+	}
+	
+	public void warn(Object message)
+	{
+		
+	}
+	
+	public void warn(Object message, Throwable t)
+	{
+		
+	}
+}

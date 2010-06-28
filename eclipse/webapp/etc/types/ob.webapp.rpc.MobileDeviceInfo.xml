@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.rpc"
+		class="MobileDeviceInfo">
+
+	<description>
+		Information about a mobile device in the system
+	</description>
+	
+	<type name="IDType" javatype="java.lang.String" maxlength="20" />
+	
+	<property name="ID" type="IDType">
+		<description>Primary key, a generated ID.</description>
+	</property>
+    
+    <property name="name" javatype="java.lang.String">
+        <description>Friendly name for this device</description>
+    </property>
+	
+</bean>

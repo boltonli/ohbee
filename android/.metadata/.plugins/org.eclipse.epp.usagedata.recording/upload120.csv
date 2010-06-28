@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+opened,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783618730
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783618803
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257783620180
+closed,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783620182
+opened,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783623525
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783623597
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257783627732
+opened,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783630206
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783630312
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783644325
+closed,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783644325
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257783658176
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257783660734
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783661769
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783685355
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257783688029
+opened,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1257783688551
+activated,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1257783688716
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783691078
+closed,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1257783691079
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257783696283
+opened,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783696399
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783696512
+error,log,,,"File not found: /home/djp/projects/ob/android/streamer/jni/config-$(TARGET_ARCH).mak.",1257783705849
+error,log,,,"File not found: /home/djp/projects/ob/android/streamer/jni/$(LOCAL_PATH)/Makefile.",1257783705864

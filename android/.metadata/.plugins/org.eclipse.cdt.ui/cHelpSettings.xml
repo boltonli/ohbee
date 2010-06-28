@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cHelpSettings>
+<project name="streamer-native">
+<provider id="org.eclipse.cdt.ui.provider1"/>
+</project>
+<project name="streamer-live555">
+<provider id="org.eclipse.cdt.ui.provider1"/>
+</project>
+<project name="jnix-native">
+<provider id="org.eclipse.cdt.ui.provider1"/>
+</project>
+</cHelpSettings>

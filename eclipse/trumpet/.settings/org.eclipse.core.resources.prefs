@@ -1,0 +1,15 @@
+#Tue Aug 18 15:54:53 BST 2009
+eclipse.preferences.version=1
+encoding//.processed/src/Configuration.java=UTF-8
+encoding//.processed/src/ConfigurationDAO.java=UTF-8
+encoding//.processed/src/DeviceCapabilities.java=UTF-8
+encoding//.processed/src/IdentifiableTextField.java=UTF-8
+encoding//.processed/src/LocationJSONSerializer.java=UTF-8
+encoding//.processed/src/LocationListenerService.java=UTF-8
+encoding//.processed/src/LocationUpdatedEvent.java=UTF-8
+encoding//.processed/src/LocationUpdatedListener.java=UTF-8
+encoding//.processed/src/LocationUploaderService.java=UTF-8
+encoding//.processed/src/ServiceThread.java=UTF-8
+encoding//.processed/src/Trumpet.java=UTF-8
+encoding//.processed/src/UncaughtExceptionEvent.java=UTF-8
+encoding//.processed/src/UncaughtExceptionHandler.java=UTF-8

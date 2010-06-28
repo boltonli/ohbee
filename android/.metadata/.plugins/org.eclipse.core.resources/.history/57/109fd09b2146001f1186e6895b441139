@@ -1,0 +1,26 @@
+LOCAL_PATH 			:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    	:= client
+LOCAL_SRC_FILES		:= test.c
+LOCAL_LDLIBS 		:= 
+LOCAL_C_INCLUDES 	:= $(NDK_APP_PROJECT_PATH)/jni/x264/x264
+LOCAL_CFLAGS 		:= $(CFLAGS)
+LOCAL_LDFLAGS		:= $(LDFLAGS)
+
+x264-configure:
+	cd $(NDK_APP_PROJECT_PATH)/jni/x264/x264; \
+	./configure --disable-avs-input \
+            --disable-lavf-input \
+            --disable-ffms-input \
+            --disable-mp4-output \
+            --disable-pthread \
+            --disable-asm \
+            --enable-pic \
+            --host=arm-linux-gnu; \
+	cat config.h | sed -e 's/#define HAVE_LOG2F/#undef HAVE_LOG2F/' \
+			> config.h.tmp; \
+	mv config.h.tmp config.h 
+	
+include $(BUILD_STATIC_LIBRARY)

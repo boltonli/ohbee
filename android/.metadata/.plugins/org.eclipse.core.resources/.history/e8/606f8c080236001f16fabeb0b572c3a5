@@ -1,0 +1,3 @@
+APP_MODULES      := \
+		libx264
+APP_PROJECT_PATH := $(call my-dir)

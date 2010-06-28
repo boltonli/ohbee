@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.rpc"
+		class="SensorData">
+	
+	<property name="orientation" 
+			javatype="double"
+			nicename="Orientation">
+		<description>Phone orientation (from the PyS60 class OrientationData).</description>
+	</property>
+	
+	<property name="azimuth" 
+			javatype="double"
+			nicename="Azimuth">
+		<description>Compass heading (from the PyS60 class MagneticNorthData).</description>
+	</property>
+	
+	<property name="doubleTapDirection" 
+			javatype="double"
+			nicename="Double Tap Direction">
+		<description>Double tap direction (from the PyS60 class AccelerometerDoubleTappingData).</description>
+	</property>
+	
+	<property name="magnetometerXYZ" 
+			javatype="ob.webapp.rpc.XYZ"
+			nicename="Magnetometer XYZ">
+		<description>Magnetometer XYZ (from the PyS60 class MagnetometerXYZAxisData).</description>
+	</property>
+	
+	<property name="accelerometerXYZ" 
+			javatype="ob.webapp.rpc.XYZ"
+			nicename="Accelerometer XYZ">
+		<description>Accelerometer XYZ (from the PyS60 class AccelerometerXYZAxisData).</description>
+	</property>
+	
+	<property name="rotationXYZ" 
+			javatype="ob.webapp.rpc.XYZ"
+			nicename="Rotation XYZ">
+		<description>Rotation XYZ (from the PyS60 class RotationData).</description>
+	</property>
+	
+</bean>

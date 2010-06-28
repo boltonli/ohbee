@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.mylyn.tasks.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.tasks.ui",1257776272972
+started,bundle,org.eclipse.mylyn.team.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.team.ui",1257776272972
+started,bundle,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui",1257776273062
+started,bundle,org.eclipse.team.cvs.ui,3.3.201.R35x_v20090826-0905,"org.eclipse.team.cvs.ui",1257776273064
+started,bundle,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.ui.views.log",1257776273071
+started,bundle,org.eclipse.wst.common.project.facet.core,1.4.1.v200908111817,"org.eclipse.wst.common.project.facet.core",1257776273071
+started,bundle,org.eclipse.wst.web,1.1.301.v200909021400,"org.eclipse.wst.web",1257776273071
+os,sysinfo,,,"linux",1257776273074
+arch,sysinfo,,,"x86",1257776273074
+ws,sysinfo,,,"gtk",1257776273074
+locale,sysinfo,,,"en_GB",1257776273074
+processors,sysinfo,,,"1",1257776273075
+java.runtime.name,sysinfo,,,"OpenJDK  Runtime Environment",1257776273075
+java.runtime.version,sysinfo,,,"1.6.0_0-b11",1257776273075
+java.specification.name,sysinfo,,,"Java Platform API Specification",1257776273075
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1257776273075
+java.specification.version,sysinfo,,,"1.6",1257776273075
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1257776273075
+java.version,sysinfo,,,"1.6.0_0",1257776273075
+java.vm.info,sysinfo,,,"mixed mode, sharing",1257776273075
+java.vm.name,sysinfo,,,"OpenJDK Client VM",1257776273075
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1257776273075
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1257776273075
+java.vm.specification.version,sysinfo,,,"1.0",1257776273075
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1257776273075

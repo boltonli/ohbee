@@ -1,0 +1,5 @@
+#Mon Jan 04 22:58:45 GMT 2010
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<external location\="/usr/bin/firefox" name\="Firefox" parameters\="%URL%"/>\n</web-browsers>
+browser-choice=1
+eclipse.preferences.version=1
+internalWebBrowserHistory=file\:/home/djp/projects/ob/android/streamer/res/drawable/icon.png|*|

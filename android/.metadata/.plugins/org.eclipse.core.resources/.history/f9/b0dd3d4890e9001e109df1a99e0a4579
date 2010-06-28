@@ -1,0 +1,45 @@
+package jnix;
+
+import java.io.FileDescriptor;
+
+public class Pipe
+{
+	static
+	{
+		System.load("/home/djp/libPipe.so");
+	}
+
+	private final FileDescriptor inFD = new FileDescriptor();
+
+	private final FileDescriptor outFD = new FileDescriptor();
+
+	@SuppressWarnings("unused")
+	private int inNativeFD;
+
+	@SuppressWarnings("unused")
+	private int outNativeFD;
+
+	public static void main(String[] args)
+	{
+		new Pipe();
+	}
+
+	public Pipe()
+	{
+		init();	
+	}
+
+	public FileDescriptor getInFD()
+	{
+		return inFD;
+	}
+
+	public FileDescriptor getOutFD()
+	{
+		return outFD;
+	}
+
+	public native void close();
+
+	private native void init();
+}

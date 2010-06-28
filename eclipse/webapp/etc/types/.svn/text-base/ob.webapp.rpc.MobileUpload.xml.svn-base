@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.rpc"
+		class="MobileUpload">
+
+	<type name="IDType" javatype="java.lang.String" maxlength="20" />
+
+	<property name="ID" type="IDType">
+		<description>Database unique ID.</description>
+	</property>
+
+	<property name="timestamp" 
+			javatype="long"
+			nicename="Timestamp">
+		<description>Timestamp.</description>
+	</property>
+
+	<property name="sensorData" 
+			javatype="ob.webapp.rpc.SensorData"
+			nicename="Sensor Data">
+		<description>Sensor data.</description>
+	</property>
+	
+	<property name="location" 
+			javatype="ob.webapp.db.Location"
+			nicename="Location">
+		<description>Location.</description>
+	</property>
+	
+</bean>

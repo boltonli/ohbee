@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF
+END
+rpc-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/rpc-servlet.xml
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/log4j.properties
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/applicationContext.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/web.xml
+END
+db-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/db-servlet.xml
+END

@@ -1,0 +1,7 @@
+MIDlet-Version: 0.1.5
+MIDlet-Vendor: Mixed Reality Lab, University of Nottingham
+MIDlet-Jar-URL: trumpet.jar
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-1: Trumpet,/icon.png,Trumpet
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Name: Trumpet Instrumentation Service

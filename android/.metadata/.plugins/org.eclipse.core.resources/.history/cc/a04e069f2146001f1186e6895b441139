@@ -1,0 +1,12 @@
+LOCAL_PATH 			:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    	:= client
+LOCAL_SRC_FILES		:= test.c
+LOCAL_LDLIBS 		:= 
+LOCAL_C_INCLUDES 	:= $(NDK_APP_PROJECT_PATH)/jni/x264/x264
+LOCAL_CFLAGS 		:= $(CFLAGS)
+LOCAL_LDFLAGS		:= $(LDFLAGS)
+	
+include $(BUILD_SHARED_LIBRARY)

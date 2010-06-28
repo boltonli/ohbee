@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.vm.version,sysinfo,,,"1.6.0_0-b11",1257776273075
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.1.v200908111817,"org.eclipse.jst.common.project.facet.core",1257776273645
+started,bundle,org.eclipse.team.svn.mylyn,0.7.8.I20090506-1500,"org.eclipse.team.svn.mylyn",1257776273840
+started,bundle,org.eclipse.team.svn.core,0.7.8.I20090506-1500,"org.eclipse.team.svn.core",1257776273886
+started,bundle,org.eclipse.team.svn.ui,0.7.8.I20090506-1500,"org.eclipse.team.svn.ui",1257776273970
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1257776277529
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776279882
+error,log,,,"Errors occurred during the build.",1257776280688
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776280922
+started,bundle,org.eclipse.jpt.core,2.2.1.v200908270220,"org.eclipse.jpt.core",1257776281987
+started,bundle,org.eclipse.jpt.eclipselink.core,1.2.0.v200905310000,"org.eclipse.jpt.eclipselink.core",1257776282044
+started,bundle,org.eclipse.wst.sse.core,1.1.401.v200909172215,"org.eclipse.wst.sse.core",1257776282184
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776284841
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257776285464
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.refresh",1257776286671
+started,bundle,org.eclipse.pde.core,3.5.100.v20090821,"org.eclipse.pde.core",1257776286882
+started,bundle,org.eclipse.wst.jsdt.core,1.0.201.v200908101420,"org.eclipse.wst.jsdt.core",1257776286981
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776287200
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776288585
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1257776305175
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.lineStart",1257776306106
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1257776307257
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.lineStart",1257776307569
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1257776308565
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.lineStart",1257776308909

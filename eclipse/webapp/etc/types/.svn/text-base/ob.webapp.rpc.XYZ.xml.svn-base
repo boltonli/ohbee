@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.rpc"
+		class="XYZ">
+
+	<property name="x" 
+			javatype="double"
+			nicename="X Axis">
+		<description>X axis value.</description>
+	</property>
+
+	<property name="y" 
+			javatype="double"
+			nicename="Y Axis">
+		<description>Y axis value.</description>
+	</property>
+	
+	<property name="z" 
+			javatype="double"
+			nicename="Z Axis">
+		<description>Z axis value.</description>
+	</property>
+	
+</bean>

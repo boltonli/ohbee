@@ -1,0 +1,10 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.ui.externaltools,3.2.0.v20090504,"org.eclipse.ui.externaltools",1248723983287
+stopped,bundle,org.eclipse.wst.server.preview.adapter,1.1.0.v20090311b,"org.eclipse.wst.server.preview.adapter",1248723983288
+stopped,bundle,org.eclipse.wst.server.http.ui,1.0.200.v20090113,"org.eclipse.wst.server.http.ui",1248723983288
+stopped,bundle,org.eclipse.wst.server.ui,1.1.102.v20090515,"org.eclipse.wst.server.ui",1248723983289
+stopped,bundle,org.eclipse.dltk.console.ui,1.0.0.v20090610-1638,"org.eclipse.dltk.console.ui",1248723983289
+stopped,bundle,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui",1248723983361
+stopped,bundle,org.eclipse.rse.subsystems.files.dstore,2.1.100.v200905272300,"org.eclipse.rse.subsystems.files.dstore",1248723983361
+stopped,bundle,org.eclipse.rse.subsystems.processes.dstore,2.1.100.v200905272300,"org.eclipse.rse.subsystems.processes.dstore",1248723983362
+stopped,bundle,org.eclipse.rse.subsystems.shells.dstore,2.1.100.v200905272300,"org.eclipse.rse.subsystems.shells.dstore",1248723983363

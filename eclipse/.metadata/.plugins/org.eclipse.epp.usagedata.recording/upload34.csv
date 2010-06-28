@@ -1,0 +1,16 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.datatools.enablement.ibm.db2.zseries.ui,1.0.0.v200906020900,"org.eclipse.datatools.enablement.ibm.db2.zseries.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.enablement.ibm.informix.ui,1.0.1.v200906020900,"org.eclipse.datatools.enablement.ibm.informix.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.enablement.msft.sqlserver.ui,1.0.1.v200906020900,"org.eclipse.datatools.enablement.msft.sqlserver.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.enablement.mysql.ui,1.0.0.v200906020900,"org.eclipse.datatools.enablement.mysql.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.enablement.oracle.ui,1.0.1.v200906020900,"org.eclipse.datatools.enablement.oracle.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.enablement.sap.maxdb.ui,1.0.0.v200906020900,"org.eclipse.datatools.enablement.sap.maxdb.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.connectivity.ui,1.1.4.v200906020553,"org.eclipse.datatools.connectivity.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.enablement.ibm.ui,1.0.0.v200906020900,"org.eclipse.datatools.enablement.ibm.ui",1248727816596
+stopped,bundle,org.eclipse.datatools.sqltools.sql.ui,1.0.0.v200906022302,"org.eclipse.datatools.sqltools.sql.ui",1248727816596
+stopped,bundle,org.eclipse.rse.services.dstore,3.1.0.v200906102345,"org.eclipse.rse.services.dstore",1248727816596
+stopped,bundle,org.eclipse.dstore.core,3.1.0.v200906032235,"org.eclipse.dstore.core",1248727816596
+stopped,bundle,org.eclipse.dstore.extra,2.1.100.v200905272300,"org.eclipse.dstore.extra",1248727816596
+stopped,bundle,org.eclipse.emf.codegen.ui,2.5.0.v200906151043,"org.eclipse.emf.codegen.ui",1248727816596
+stopped,bundle,org.eclipse.emf.common.ui,2.5.0.v200906151043,"org.eclipse.emf.common.ui",1248727816597
+stopped,bundle,org.eclipse.epp.usagedata.ui,1.1.0.R200906100410,"org.eclipse.epp.usagedata.ui",1248727816597

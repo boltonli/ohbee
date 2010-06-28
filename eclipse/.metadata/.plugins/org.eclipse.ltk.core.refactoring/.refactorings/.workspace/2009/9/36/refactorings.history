@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/pungi/default.uml" element2="/pungi/default.umlclass" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1251814440012"/>&#x0A;<refactoring comment="Delete resource &apos;pungi/src/test.py&apos;" deleteContents="false" description="Delete resource &apos;pungi/src/test.py&apos;" element1="/pungi/src/test.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1252067063761"/>
+</session>

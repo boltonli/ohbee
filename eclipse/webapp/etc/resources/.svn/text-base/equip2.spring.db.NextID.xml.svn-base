@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<bean package="equip2.spring.db" class="NextID" id="prefix"
+		primarykey="prefix" primarykeygenerator="assigned" table="nextid">
+	<description>
+		This is just here to make Hibernate create a corresponding table,
+		to be used by the getnextid stored procedure to get new IDs.
+	</description>
+	<property name="prefix" javatype="java.lang.String" maxlength="20" />
+	<property name="count" javatype="int" />
+</bean>

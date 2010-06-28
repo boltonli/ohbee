@@ -1,0 +1,14 @@
+prefix=/home/pszdp1/video/myffmpeg
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 52.2.0
+Requires: libavformat = 52.56.1
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavdevice -lz -lm -lfaac -lopencore-amrnb -lm -lopencore-amrwb -lm -lx264 -lm
+Libs.private: 
+Cflags: -I${includedir}

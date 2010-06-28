@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="OptionalMessageDialog.hide.">
+		<item value="0" key="askReindex.detail"/>
+		<item value="true" key="askReindex"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="531" key="size.width"/>
+		<item value="180" key="size.height"/>
+	</section>
+	<section name="CRenameRefactoringInputPage">
+		<item value="3" key="scope"/>
+		<item value="false" key="macroDefinition"/>
+		<item value="false" key="comment"/>
+		<item value="" key="workingset"/>
+		<item value="false" key="references_inv"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+</section>

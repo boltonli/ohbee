@@ -1,0 +1,11 @@
+package jnix;
+
+public class Pipe
+{
+	
+	
+	
+	public native void close();
+	
+	private native void open();
+}

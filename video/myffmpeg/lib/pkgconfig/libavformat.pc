@@ -1,0 +1,14 @@
+prefix=/home/pszdp1/video/myffmpeg
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 52.56.1
+Requires: libavcodec = 52.59.0
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavformat -lz -lm -lfaac -lopencore-amrnb -lm -lopencore-amrwb -lm -lx264 -lm
+Libs.private: 
+Cflags: -I${includedir}

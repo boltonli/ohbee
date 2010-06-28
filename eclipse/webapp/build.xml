@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="dist" name="equip2-web-application">
+	
+	<description>Contains build targets for equip2 web applications</description>
+	
+	<!-- Load in the user defined build configuration properties. -->
+	<property file="build.properties" description="User configurable build properties" />
+	
+	<!-- Load in the user defined application configuration properties. -->
+	<property file="${config.properties}" description="User configurable application configuration properties" />
+	
+	<!-- Directory properties. -->
+	<property name="lib.dir" location="lib" description="Path to the directory containing library dependencies" />
+	<property name="tmp.dir" location="tmp" description="Temporary directory to use during the build process" />
+	<property name="tmp.generated.dir" location="${tmp.dir}/generated" description="Temporary directory to store generated source files in" />
+	<property name="tmp.compiled.dir" location="${tmp.dir}/classes" description="Temporary directory to store compiled source files in" />
+	<property name="dist.dir" location="dist" description="The directory in which the built distribution will be stored" />
+	<property name="src.dir" location="src" description="The source file directory" />
+	<property name="config.dir" location="etc" description="Directory in which configuration files are stored" />
+	<property name="types.dir" location="${config.dir}/types" description="Directory in which XML type definitions are stored" />
+	<property name="skeleton.dir" location="webapp" description="Directory where the webapp skeleton is stored" />
+	
+	<target name="help" description="Displays help information">
+		<echo>Target: init - Performs build initialisation tasks</echo>
+		<echo>Target: setproxy - Sets the proxy to use during the build process</echo>
+		<echo>Target: equip2_libs - Builds the equip2 libraries</echo>
+		<echo>Target: equip2webapp_libs - Builds the equip2 webapp libraries</echo>
+		<echo>Target: generate - Generates beans and Hibernate mappings from the XML type definitions</echo>
+		<echo>Target: compile_generated - Compiles the generated types</echo>
+		<echo>Target: compile - Compiles the source code</echo>
+		<echo>Target: compile_aspectj - Compiles the source code with the AspectJ compiler</echo>
+		<echo>Target: compile_java - Compiles the source code with the Java compiler</echo>
+		<echo>Target: webapp - Creates the web application distribution</echo>
+		<echo>Target: dist - Creates the web application distribution archive (war file)</echo>
+		<echo>Target: clean - Cleans up files created during the build process</echo>
+	</target>
+	
+	<target name="setproxy" if="proxy.enabled" description="Sets the proxy to use during the build process">
+		<setproxy proxyhost="${proxy.host}" proxyport="${proxy.port}" />
+	</target>
+	
+	<target name="init" description="Performs build initialisation tasks">
+		<mkdir dir="${tmp.dir}" />
+		<antcall target="setproxy" />
+		<!-- Check if the equip2 libraries are up to date. -->
+		<condition property="equip2.libs.uptodate">
+			<and>
+				<available file="${lib.dir}/equip2hibernate.jar" />
+				<uptodate targetfile="${lib.dir}/equip2hibernate.jar">
+					<srcfiles dir="${equip2.base}" includes="**/*" />
+				</uptodate>
+				<available file="${lib.dir}/equip2.jar" />
+				<uptodate targetfile="${lib.dir}/equip2.jar">
+					<srcfiles dir="${equip2.base}" includes="**/*" />
+				</uptodate>
+				<available file="${lib.dir}/equip2script.jar" />
+				<uptodate targetfile="${lib.dir}/equip2script.jar">
+					<srcfiles dir="${equip2.base}" includes="**/*" />
+				</uptodate>
+				<available file="${lib.dir}/equip2taglib.jar" />
+				<uptodate targetfile="${lib.dir}/equip2taglib.jar">
+					<srcfiles dir="${equip2.base}" includes="**/*" />
+				</uptodate>
+				<available file="${lib.dir}/equip2tools.jar" />
+				<uptodate targetfile="${lib.dir}/equip2tools.jar">
+					<srcfiles dir="${equip2.base}" includes="**/*" />
+				</uptodate>
+			</and>
+		</condition>
+		<!-- Check if the equip2 webapp libraries are up to date. -->
+		<condition property="equip2webapp.libs.uptodate">
+			<and>
+				<available file="${lib.dir}/equip2webdb.jar" />
+				<uptodate targetfile="${lib.dir}/equip2webdb.jar">
+					<srcfiles dir="${equip2webapp.base}" includes="**/*" />
+				</uptodate>
+				<available file="${lib.dir}/equip2webdb_jsp.jar" />
+				<uptodate targetfile="${lib.dir}/equip2webdb_jsp.jar">
+					<srcfiles dir="${equip2webapp.base}" includes="**/*" />
+				</uptodate>
+			</and>
+		</condition>
+	</target>
+	
+	<target name="equip2_libs" depends="init" unless="equip2.libs.uptodate" description="Builds the equip2 libraries">
+		<!-- Build the equip2 distribution -->
+		<ant antfile="${equip2.base}/build.xml" dir="${equip2.base}" target="j2ee" inheritAll="false" />
+		<!-- Copy over the dependencies that we have just built to the library folder -->
+		<copy todir="${lib.dir}">
+			<fileset dir="${equip2.base}/dist">
+				<include name="equip2hibernate.jar" />
+				<include name="equip2.jar" />
+				<include name="equip2script.jar" />
+				<include name="equip2taglib.jar" />
+				<include name="equip2tools.jar" />
+			</fileset>
+		</copy>
+		<!-- Clean the equip2 distribution -->
+		<ant antfile="${equip2.base}/build.xml" dir="${equip2.base}" target="clean" inheritAll="false" />
+	</target>
+	
+	<target name="equip2webapp_libs" depends="init" unless="equip2webapp.libs.uptodate" description="Builds the equip2 webapp libraries">
+		<!-- Build the equip2webapp distribution -->
+		<ant antfile="${equip2webapp.base}/build.xml" dir="${equip2webapp.base}" target="jar" inheritAll="false" />
+		<!-- Copy over the dependencies that we have just built -->
+		<copy todir="${lib.dir}">
+			<fileset dir="${equip2webapp.base}/dist">
+				<include name="equip2webdb.jar" />
+				<include name="equip2webdb_jsp.jar" />
+			</fileset>
+		</copy>
+		<!-- Clean the equip2webapp distribution -->
+		<ant antfile="${equip2webapp.base}/build.xml" dir="${equip2webapp.base}" target="clean" inheritAll="false" />
+	</target>
+	
+	<target name="generate" depends="equip2_libs" description="Generates the types from the XML definitions">
+		<taskdef name="generatejavatypes"
+				classname="equip2.tools.ant.GenerateJavaTypesTask" 
+				classpath="${lib.dir}/equip2tools.jar" 
+				description="Generates Java source files from XML definitions" />
+		
+		<!-- db beans -->
+		<generatejavatypes outdir="${tmp.generated.dir}/src" 
+				uptodatecheck="true"
+				stylesheet="${equip2.base}/etc/bean2java.xsl"
+				helper="true"
+				helperstylesheet="${equip2.base}/etc/bean2javahelper.xsl"
+				hibernate="true"
+				hibernatestylesheet="${equip2.base}/etc/bean2hibernatehbm.xsl">
+			<fileset dir="${types.dir}">
+				<include name="*.db.*.xml" />
+			</fileset>
+		</generatejavatypes>
+		<!-- non-db beans -->
+		<generatejavatypes outdir="${tmp.generated.dir}/src" 
+				uptodatecheck="true"
+				stylesheet="${equip2.base}/etc/bean2java.xsl"
+				helper="true"
+				helperstylesheet="${equip2.base}/etc/bean2javahelper.xsl">
+			<fileset dir="${types.dir}">
+				<exclude name="*.db.*.xml" />
+			</fileset>
+		</generatejavatypes>
+		<!-- Generate the NextID bean -->
+		<generatejavatypes outdir="${tmp.generated.dir}/src" 
+				uptodatecheck="true"
+				stylesheet="${equip2.base}/etc/bean2java.xsl"
+				helper="true"
+				helperstylesheet="${equip2.base}/etc/bean2javahelper.xsl">
+			<fileset dir="${config.dir}/resources" includes="equip2.spring.db.NextID.xml" />
+		</generatejavatypes>
+		<!-- Copy over the custom NextID Hibernate mapping file -->
+		<copy file="${config.dir}/resources/NextID.hbm.xml" todir="${tmp.generated.dir}/src/equip2/spring/db" />
+
+	</target>
+	
+	<target name="compile_generated" depends="generate" description="Compiles the types generated from the XML definitions">
+		<mkdir dir="${tmp.generated.dir}/classes" />
+		<javac destdir="${tmp.generated.dir}/classes" srcdir="${tmp.generated.dir}/src" 
+				debug="${java.debug.enable}" source="${java.target.version}">
+			<!--<classpath location="${lib.dir}/equip2.jar" />-->
+			<classpath>
+				<fileset dir="${lib.dir}" includes="*.jar" />
+			</classpath>
+		</javac>
+		<copy todir="${tmp.generated.dir}/classes">
+			<fileset dir="${tmp.generated.dir}/src">
+				<include name="**/*.hbm.xml" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="compile" depends="compile_generated, equip2webapp_libs" description="Compiles the application source code">
+		<mkdir dir="${tmp.compiled.dir}" />
+		<condition property="aspectj.support.on">
+			<equals arg1="${aspectj.support.enable}" arg2="true" />
+		</condition>
+		<antcall target="compile_aspectj" />
+		<antcall target="compile_java" />
+		<copy todir="${tmp.compiled.dir}">
+			<fileset dir="${tmp.generated.dir}/classes">
+				<include name="**/*.class" />
+				<include name="**/*.hbm.xml" />
+			</fileset>
+			<fileset dir="${src.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.java" />
+				<exclude name="**/*.aj" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="compile_aspectj" if="aspectj.support.on" description="Compiles the source using the AspectJ compiler">
+		<taskdef classpath="${lib.dir}/aspectjtools.jar" 
+				resource="org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties"/>
+		<iajc destdir="${tmp.compiled.dir}" sourceroots="${src.dir}" inpath="${tmp.generated.dir}/classes"
+				debug="${java.debug.enable}" source="${java.target.version}">
+			<classpath>
+				<fileset dir="${lib.dir}" includes="*.jar" />
+			</classpath>
+		</iajc>
+	</target>
+	
+	<target name="compile_java" unless="aspectj.support.on" description="Compiles the source using the default Java compiler">
+		<javac destdir="${tmp.compiled.dir}" srcdir="${src.dir}"
+				debug="${java.debug.enable}" source="${java.target.version}">
+			<classpath>
+				<fileset dir="${lib.dir}" includes="*.jar" />
+				<path location="${tmp.generated.dir}/classes" />
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="webapp" depends="compile" description="Generates the web application">
+		<delete dir="${tmp.dir}/${webapp.context}" />
+		<mkdir dir="${tmp.dir}/${webapp.context}" />
+		<!-- Copy over the webapp skeleton -->
+		<copy todir="${tmp.dir}/${webapp.context}">
+			<fileset dir="${skeleton.dir}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<!-- Apply configuration settings to the web.xml file -->
+		<replace file="${tmp.dir}/${webapp.context}/WEB-INF/web.xml" 
+				replacefilterfile="${config.properties}" />
+		<!-- Apply configuration settings to the db-servlet.xml file -->
+		<replace file="${tmp.dir}/${webapp.context}/WEB-INF/db-servlet.xml" 
+				replacefilterfile="${config.properties}" />
+		<!-- Copy over the compiled sources -->
+		<mkdir dir="${tmp.dir}/${webapp.context}/WEB-INF/classes" />
+		<copy todir="${tmp.dir}/${webapp.context}/WEB-INF/classes">
+			<fileset dir="${tmp.compiled.dir}" />
+		</copy>
+		<!-- Copy over the libraries -->
+		<mkdir dir="${tmp.dir}/${webapp.context}/WEB-INF/lib" />
+		<copy todir="${tmp.dir}/${webapp.context}/WEB-INF/lib">
+			<fileset dir="${lib.dir}">
+				<include name="*.jar" />
+				<exclude name="servlet-api.jar" />
+			</fileset>
+		</copy>
+		<!-- Unpack the standard equip database view jsp files -->
+		<unjar src="${lib.dir}/equip2webdb_jsp.jar" dest="${tmp.dir}/${webapp.context}/WEB-INF/jsp">
+			<patternset>
+				<exclude name="db/configuration.jsp" />
+			</patternset>
+		</unjar>
+		<!-- Replace the css link in the dataspace view jsp files -->
+		<replace dir="${tmp.dir}/${webapp.context}/WEB-INF/jsp/db"
+				token="../images/default.css" value="../css/dsviewer.css">
+			<include name="**/*.jsp"/>
+		</replace>
+		<!-- Change the dataspace name in the header -->
+		<replace file="${tmp.dir}/${webapp.context}/WEB-INF/jsp/db/header.jsp"
+				token="DOTF Database" value="${webapp.display-name} Database">
+			<include name="**/*.jsp"/>
+		</replace>
+		<!-- Generate the Dataspace viewer configuration file -->
+		<!--
+		<taskdef name="dsviewconfgen"
+				classname="equip2.tools.ant.DataspaceViewerConfigGenTask">
+			<classpath>
+				<fileset dir="${lib.dir}">
+					<include name="equip2tools.jar" />
+					<include name="jakarta-oro-2.0.8.jar" />
+				</fileset>
+			</classpath>
+		</taskdef>
+		<dsviewconfgen configin="${config.dir}/resources/configuration.jsp" 
+				configout="${tmp.dir}/${webapp.context}/WEB-INF/jsp/db/configuration.jsp"
+				applicationcontext="${tmp.dir}/${webapp.context}/WEB-INF/applicationContext.xml"
+				dbcontext="${tmp.dir}/${webapp.context}/WEB-INF/db-servlet.xml"
+				defaultfixedproperties="${dataspace.default-fixed-properties}">
+			<fileset dir="${types.dir}">
+				<include name="*.db.*.xml" />
+			</fileset>
+		</dsviewconfgen> -->
+		<!-- Generate the Hibernate configuration -->
+		<!--
+		<taskdef name="hibernategen"
+				classname="equip2.tools.ant.HibernateConfigGenTask"
+				classpath="${lib.dir}/equip2tools.jar"
+				description="Generates the Hibernate configuration file">
+		</taskdef>
+		<hibernategen outfile="${tmp.dir}/${webapp.context}/WEB-INF/classes/hibernate.cfg.xml"
+				identifier="-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+				dtd="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+			<fileset dir="${tmp.compiled.dir}">
+				<include name="**/*.hbm.xml" />
+			</fileset>
+			<propertyset>
+				<propertyref prefix="hibernate." />
+			</propertyset>
+		</hibernategen>-->
+	</target>
+	
+	<target name="dist" depends="webapp" description="Creates the distribution war file">		
+		<mkdir dir="${dist.dir}"/>
+		<war destfile="${dist.dir}/${webapp.context}.war" webxml="${tmp.dir}/${webapp.context}/WEB-INF/web.xml">
+			<fileset dir="${tmp.dir}/${webapp.context}" excludes="${tmp.dir}/${webapp.context}/web.xml" includes="**" />
+		</war>
+	</target>
+	
+	<target name="deploy" depends="webapp" description="copy webapp files into local container">
+		<echo>Copying webapp to ${webapps.dir}/${webapp.context}</echo>
+		<copy todir="${webapps.dir}/${webapp.context}">
+			<fileset dir="${tmp.dir}/${webapp.context}" includes="**" />
+		</copy>
+	</target>	
+
+	<target name="clean" description="Returns the build directory to a clean state">
+		<delete dir="${tmp.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete>
+			<fileset dir="${lib.dir}">
+				<include name="equip2.jar" />
+				<include name="equip2hibernate.jar" />
+				<include name="equip2script.jar" />
+				<include name="equip2taglib.jar" />
+				<include name="equip2tools.jar" />
+				<include name="equip2webdb_jsp.jar" />
+				<include name="equip2webdb.jar" />
+			</fileset>
+		</delete>
+	</target>
+
+</project>

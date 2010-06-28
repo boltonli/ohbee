@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.db"
+		class="Camera"
+		id="ID"
+		primarykey="ID"
+		primarykeygenerator="assigned">
+
+	<idallocation fixedPrefix="C" />
+	
+	<implements beanfile="ob.webapp.db.Metadata.xml"/>
+
+	<implements beanfile="ob.webapp.db.Locatable.xml"/>
+
+	<property name="cameraPan" 
+			javatype="double"
+			nicename="Camera Pan">
+		<description>Pan relative to camera base.</description>
+	</property>
+
+	<property name="cameraPanMinimum" 
+			javatype="double"
+			nicename="Pan">
+		<description>Minimum pan extent.</description>
+	</property>
+	
+	<property name="cameraPanMaximum" 
+			javatype="double"
+			nicename="Pan Maximum">
+		<description>Maximum pan extent.</description>
+	</property>
+
+	<property name="cameraTilt" 
+			javatype="double"
+			nicename="Camera Tilt">
+		<description>Tilt relative to camera base.</description>
+	</property>
+
+	<property name="cameraTiltMinimum" 
+			javatype="double"
+			nicename="Tilt Maximum">
+		<description>Minimum Tilt extent.</description>
+	</property>
+	
+	<property name="cameraTiltMaximum" 
+			javatype="double"
+			nicename="Tilt Minimum">
+		<description>Maximum Tilt extent.</description>
+	</property>
+	
+	<property name="cameraZoom" 
+			javatype="double"
+			nicename="Camera zoom">
+		<description>Zoom relative to camera base.</description>
+	</property>
+
+	<property name="cameraZoomMinimum" 
+			javatype="double"
+			nicename="Zoom Minimum">
+		<description>Minimum zoom fov.</description>
+	</property>
+	
+	<property name="cameraZoomMaximum" 
+			javatype="double"
+			nicename="Zoom Maximum">
+		<description>Maximum zoom fov.</description>
+	</property>
+	
+	<property name="url" 
+			javatype="java.lang.String"
+			nicename="Streaming URL">
+		<description>Streaming URL.</description>
+	</property>	
+	
+	<property name="cameraType" javatype="java.lang.String">
+		<description>Camera Type.</description>
+	</property>
+
+	<constant name="CAMERA_TYPE_OTHER" javatype="java.lang.String" value='"CAMERA_TYPE_OTHER"'/>
+	<constant name="CAMERA_TYPE_PTZ" javatype="java.lang.String" value='"CAMERA_TYPE_PTZ"'/>
+	<constant name="CAMERA_TYPE_FIXED" javatype="java.lang.String" value='"CAMERA_TYPE_FIXED"'/>
+	<constant name="CAMERA_TYPE_MOVEABLE" javatype="java.lang.String" value='"CAMERA_TYPE_MOVEABLE"'/>
+
+
+</bean>

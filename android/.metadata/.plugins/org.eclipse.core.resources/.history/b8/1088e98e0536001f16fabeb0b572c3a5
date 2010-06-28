@@ -1,0 +1,9 @@
+#define HAVE_MALLOC_H
+#define ARCH_X86_64
+#define SYS_LINUX
+#define HAVE_LOG2F
+#define LAVF_INPUT
+#define fseek fseeko
+#define ftell ftello
+#define X264_VERSION " r1471M 1144615"
+#define X264_POINTVER "0.88.1471M 1144615"

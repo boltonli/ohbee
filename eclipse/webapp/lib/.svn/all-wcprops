@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/ob/!svn/ver/10/trunk/webapp/lib
+END
+spring-web.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ob/!svn/ver/10/trunk/webapp/lib/spring-web.jar
+END
+aspectjrt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ob/!svn/ver/10/trunk/webapp/lib/aspectjrt.jar
+END
+javassist-3.4.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ob/!svn/ver/10/trunk/webapp/lib/javassist-3.4.GA.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ob/!svn/ver/10/trunk/webapp/lib/commons-collections-3.1.jar
+END
+mysql-connector-java-5.1.7-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ob/!svn/ver/10/trunk/webapp/lib/mysql-connector-java-5.1.7-bin.jar
+END
+c3p0-0.9.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ob/!svn/ver/10/trunk/webapp/lib/c3p0-0.9.1.jar
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ob/!svn/ver/10/trunk/webapp/lib/hibernate3.jar
+END
+antlr-2.7.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ob/!svn/ver/10/trunk/webapp/lib/antlr-2.7.6.jar
+END
+slf4j-api-1.5.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ob/!svn/ver/10/trunk/webapp/lib/slf4j-api-1.5.6.jar
+END
+slf4j-log4j12-1.5.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ob/!svn/ver/10/trunk/webapp/lib/slf4j-log4j12-1.5.6.jar
+END
+hsqldb.jar
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ob/!svn/ver/10/trunk/webapp/lib/hsqldb.jar
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ob/!svn/ver/10/trunk/webapp/lib/commons-logging-1.1.1.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ob/!svn/ver/10/trunk/webapp/lib/dom4j-1.6.1.jar
+END
+commons-io.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ob/!svn/ver/10/trunk/webapp/lib/commons-io.jar
+END
+equip2toolstest.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ob/!svn/ver/10/trunk/webapp/lib/equip2toolstest.jar
+END
+ehcache-1.2.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ob/!svn/ver/10/trunk/webapp/lib/ehcache-1.2.3.jar
+END
+commons-fileupload-1.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ob/!svn/ver/10/trunk/webapp/lib/commons-fileupload-1.2.1.jar
+END
+log4j-1.2.13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ob/!svn/ver/10/trunk/webapp/lib/log4j-1.2.13.jar
+END
+log4j-1.2.15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ob/!svn/ver/10/trunk/webapp/lib/log4j-1.2.15.jar
+END
+proxool-0.8.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ob/!svn/ver/10/trunk/webapp/lib/proxool-0.8.3.jar
+END
+jta-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ob/!svn/ver/10/trunk/webapp/lib/jta-1.1.jar
+END
+jstl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ob/!svn/ver/10/trunk/webapp/lib/jstl.jar
+END
+jakarta-oro-2.0.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ob/!svn/ver/10/trunk/webapp/lib/jakarta-oro-2.0.8.jar
+END
+aspectjweaver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ob/!svn/ver/10/trunk/webapp/lib/aspectjweaver.jar
+END
+spring-webmvc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ob/!svn/ver/10/trunk/webapp/lib/spring-webmvc.jar
+END
+oscache-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ob/!svn/ver/10/trunk/webapp/lib/oscache-2.1.jar
+END
+aspectjtools.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ob/!svn/ver/10/trunk/webapp/lib/aspectjtools.jar
+END
+org.aspectj.matcher.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ob/!svn/ver/10/trunk/webapp/lib/org.aspectj.matcher.jar
+END
+jakarta-taglibs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ob/!svn/ver/10/trunk/webapp/lib/jakarta-taglibs.jar
+END
+spring.jar
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ob/!svn/ver/10/trunk/webapp/lib/spring.jar
+END
+servlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ob/!svn/ver/10/trunk/webapp/lib/servlet-api.jar
+END

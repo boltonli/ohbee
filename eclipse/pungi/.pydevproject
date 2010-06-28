@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?>
+
+<pydev_project>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/pungi/src</path>
+</pydev_pathproperty>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.2</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
+
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>/opt/PythonForS60/module-repo/dev-modules/sensor</path>
+<path>/opt/PythonForS60/module-repo/dev-modules/positioning</path>
+<path>/opt/PythonForS60/module-repo/dev-modules/location</path>
+<path>/opt/PythonForS60/module-repo/standard-modules</path>
+<path>/opt/PythonForS60/module-repo/dev-modules/appuifw</path>
+<path>/opt/PythonForS60/module-repo/dev-modules/e32</path>
+<path>/opt/PythonForS60/module-repo/dev-modules/btsocket</path>
+<path>/home/djp/projects/ob/eclipse/pungi/s60-compat</path>
+</pydev_pathproperty>
+</pydev_project>

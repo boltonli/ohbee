@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<!--
+		This is the configuration file for the low-level dataspace access
+		web application.  You should not normally need to modify anything 
+		in here. 
+	 -->
+
+	<bean id="urlMapping"
+			class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="equipSessionReleaseInterceptor" />
+			</list>
+		</property>
+		<property name="mappings">
+			<props>
+				<prop key="/index.htm">filenameViewController</prop>
+				<prop key="/index.html">filenameViewController</prop>
+				<prop key="/dump_form.htm">filenameViewController</prop>
+				<prop key="/upload_form.htm">filenameViewController</prop>
+				<prop key="/upload_hessian_form.htm">filenameViewController</prop>
+				<prop key="/upload_csv_form.htm">filenameViewController</prop>
+				<prop key="/dump_csv_form.htm">filenameViewController</prop>
+				<prop key="/test_query_form.htm">filenameViewController</prop>
+				<prop key="/dump.xml">dbViewMultiController</prop>
+				<prop key="/dump_hessian.hessian">dbViewMultiController</prop>
+				<prop key="/dump_csv.txt">dbViewMultiController</prop>
+				<prop key="/upload.do.htm">dbUploadController</prop>
+				<prop key="/upload_hessian.do.htm">dbHessianUploadController</prop>
+				<prop key="/upload_csv.do.htm">dbCsvUploadController</prop>
+				<prop key="/class_index.htm">filenameViewController</prop>
+				<prop key="/view_list.htm">genViewMultiController</prop>
+				<prop key="/view_object.htm">genViewMultiController</prop>
+				<prop key="/search_form.htm">genViewMultiController</prop>
+				<prop key="/do_search.htm">genViewMultiController</prop>
+				<prop key="/add_object.htm">genViewMultiController</prop>
+				<prop key="/do_add_object.htm">genViewMultiController</prop>
+				<prop key="/edit_object.htm">genViewMultiController</prop>
+				<prop key="/do_edit_object.htm">genViewMultiController</prop>
+				<prop key="/do_delete_object.htm">genViewMultiController</prop>
+				<prop key="/xml_query.do.xml">xmlQueryController</prop>
+				<prop key="/status_equip.htm">statusEquipMultiController</prop>
+				<prop key="/view/*.htm">viewFilenameViewController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="viewResolver"
+			class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+				value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="filenameViewController"
+			class="org.springframework.web.servlet.mvc.UrlFilenameViewController">
+		<property name="prefix" value="db/" />
+	</bean>
+
+	<bean id="viewFilenameViewController"
+			class="org.springframework.web.servlet.mvc.UrlFilenameViewController">
+		<property name="prefix" value="db/view/" />
+	</bean>
+
+	<bean id="internalPathMethodNameResolver"
+			class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver" />
+
+	<bean id="genViewMultiController"
+			class="org.springframework.web.servlet.mvc.multiaction.MultiActionController">
+		<property name="methodNameResolver" ref="internalPathMethodNameResolver" />
+		<property name="delegate" ref="genViewController" />
+	</bean>
+
+	<bean id="genViewController" class="equip2.spring.DbGenericController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="defaultPackageName" value="dataspace.default-package-name" />
+		<property name="prefix" value="db/" />
+		<property name="itemsPerPage" value="dataspace.view.items-per-page" />
+		<property name="linkedObjectProperties">
+			<map />
+		</property>
+		<property name="allCustomTypeHandlers">
+			<map />
+		</property>
+		<property name="dbGenericIDAllocator" ref="dbIdAllocator" />
+	</bean>
+
+	<bean id="dbViewMultiController"
+			class="org.springframework.web.servlet.mvc.multiaction.MultiActionController">
+		<property name="methodNameResolver" ref="internalPathMethodNameResolver" />
+		<property name="delegate" ref="dbViewController" />
+	</bean>
+
+	<bean id="dbViewController" class="equip2.spring.DbViewController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="defaultPackageName" value="dataspace.default-package-name" />
+		<property name="prefix" value="db/" />
+		<property name="classPropertiesInOrder">
+			<map />
+		</property>
+		<property name="classPropertyDescriptions">
+			<map />
+		</property>
+	</bean>
+
+	<bean id="dbUploadController" class="equip2.spring.DbUploadController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="commandClass" value="equip2.spring.DbUploadBean" />
+		<property name="formView" value="db/upload_form" />
+		<property name="successView" value="db/upload_done" />
+		<property name="defaultPackageName" value="dataspace.default-package-name" />
+	</bean>
+	
+	<bean id="dbHessianUploadController" class="equip2.spring.DbHessianUploadController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="commandClass" value="equip2.spring.DbUploadBean" />
+		<property name="formView" value="db/upload_hessian_form" />
+		<property name="successView" value="db/upload_done" />
+	</bean>
+
+	<bean id="dbCsvUploadController" class="equip2.spring.DbCsvUploadController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="commandClass" value="equip2.spring.DbUploadBean" />
+		<property name="formView" value="db/upload_csv_form" />
+		<property name="successView" value="db/upload_csv_done" />
+		<property name="defaultPackageName" value="dataspace.default-package-name" />
+		<property name="dbGenericIDAllocator" ref="dbIdAllocator" />
+		<property name="classFirstLines">
+			<map />
+		</property>
+		<property name="addMultipleHeadingName" value="dataspace.cvs-upload.add-multiple-heading-name" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<bean id="xmlQueryController" class="equip2.spring.XmlQueryController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="commandClass" value="equip2.spring.XmlQueryBean" />
+		<property name="formView" value="db/test_query_form" />
+		<property name="defaultPackageName" value="dataspace.default-package-name" />
+	</bean>
+
+	<bean id="statusEquipMultiController"
+		class="org.springframework.web.servlet.mvc.multiaction.MultiActionController">
+		<property name="methodNameResolver" ref="internalPathMethodNameResolver" />
+		<property name="delegate" ref="statusEquipController" />
+	</bean>
+
+	<bean id="statusEquipController" class="equip2.spring.EquipStatusController">
+		<property name="dataspace" ref="dataspace" />
+		<property name="viewname" value="db/status_equip" />
+	</bean>
+
+</beans>

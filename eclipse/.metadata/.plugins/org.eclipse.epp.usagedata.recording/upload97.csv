@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.dltk.ui,1.0.0.v20090617-1521,"org.eclipse.dltk.ui",1250502817300
+started,bundle,org.eclipse.mtj.core,1.0.0.v200906121354,"org.eclipse.mtj.core",1250502817300
+started,bundle,org.eclipse.mtj.core.hooks,1.0.0.v200906121354,"org.eclipse.mtj.core.hooks",1250502817363
+started,bundle,org.eclipse.mtj.toolkit.microemu,1.0.0.v200906121354,"org.eclipse.mtj.toolkit.microemu",1250502817379
+started,bundle,org.eclipse.mtj.toolkit.uei,1.0.0.v200906121354,"org.eclipse.mtj.toolkit.uei",1250502817380
+os,sysinfo,,,"linux",1250502817382
+arch,sysinfo,,,"x86",1250502817382
+ws,sysinfo,,,"gtk",1250502817382
+locale,sysinfo,,,"en_GB",1250502817382
+processors,sysinfo,,,"1",1250502817382
+java.runtime.name,sysinfo,,,"OpenJDK  Runtime Environment",1250502817382
+java.runtime.version,sysinfo,,,"1.6.0_0-b11",1250502817382
+java.specification.name,sysinfo,,,"Java Platform API Specification",1250502817382
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1250502817382
+java.specification.version,sysinfo,,,"1.6",1250502817382
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1250502817382
+java.version,sysinfo,,,"1.6.0_0",1250502817382
+java.vm.info,sysinfo,,,"mixed mode, sharing",1250502817382
+java.vm.name,sysinfo,,,"OpenJDK Client VM",1250502817383
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1250502817383
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1250502817383
+java.vm.specification.version,sysinfo,,,"1.0",1250502817383
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1250502817383
+java.vm.version,sysinfo,,,"1.6.0_0-b11",1250502817383
+started,bundle,org.eclipse.mylyn.commons.net,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.commons.net",1250502817592

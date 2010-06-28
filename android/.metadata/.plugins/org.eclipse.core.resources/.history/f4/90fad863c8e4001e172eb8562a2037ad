@@ -1,0 +1,24 @@
+package ob.streamer;
+
+public class Logger
+{
+	public void debug(Object message)
+	{
+		
+	}
+	
+	public void debug(Object message, Throwable t)
+	{
+		
+	}
+	
+	public void error(Object message)
+	{
+		
+	}
+	
+	public void error(Object message, Throwable t)
+	{
+		
+	}
+}

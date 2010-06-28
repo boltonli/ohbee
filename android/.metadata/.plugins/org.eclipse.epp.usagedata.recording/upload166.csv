@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.epp.usagedata.ui,1.1.0.R200906100410,"org.eclipse.epp.usagedata.ui",1258629870418
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1258629871829
+started,bundle,org.eclipse.jdt.launching,3.5.0.v20090527,"org.eclipse.jdt.launching",1258629872211
+started,bundle,org.eclipse.mylyn.monitor.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.monitor.ui",1258629872212
+started,bundle,org.eclipse.team.cvs.ui,3.3.201.R35x_v20090826-0905,"org.eclipse.team.cvs.ui",1258629872380
+started,bundle,org.eclipse.mylyn.commons.net,3.3.0.v20091013-0200-e3x,"org.eclipse.mylyn.commons.net",1258629872381
+started,bundle,org.eclipse.php.debug.core,2.1.0.v20090617-2341,"org.eclipse.php.debug.core",1258629872870
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.0.v20090513-2000,"org.eclipse.ltk.core.refactoring",1258629873145
+started,bundle,org.eclipse.mtj.core.hooks,1.0.0.v200906121354,"org.eclipse.mtj.core.hooks",1258629873463
+started,bundle,org.eclipse.ltk.ui.refactoring,3.4.100.v20090604,"org.eclipse.ltk.ui.refactoring",1258629873756
+error,log,,,"Collect resource IDs failed, class android.R not found in /opt/android-sdk-linux_x86-1.5_r2/platforms/android-1.1/android.jar",1258629873802
+error,log,,,"Collect permissions failed, class android.Manifest$permission not found in /opt/android-sdk-linux_x86-1.5_r2/platforms/android-1.1/android.jar",1258629873803
+started,bundle,org.eclipse.mtj.core,1.0.0.v200906121354,"org.eclipse.mtj.core",1258629873873
+started,bundle,org.eclipse.jdt.apt.core,3.3.201.R35x_v20090818-0235,"org.eclipse.jdt.apt.core",1258629874109
+started,bundle,org.eclipse.mylyn.commons.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.commons.ui",1258629874117
+started,bundle,org.eclipse.mylyn.bugzilla.core,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.bugzilla.core",1258629874401
+started,bundle,org.eclipse.mylyn.bugzilla.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.bugzilla.ui",1258629875050
+error,log,,,"Problem loading class android.preference.Preference or android.preference.PreferenceGroup",1258629875218
+error,log,,,"Android Framework Parser: failed to collect preference classes",1258629875218
+error,log,,,"loadAndParseRClass: failed to find manifest package for project streamer",1258629875471
+started,bundle,org.eclipse.ui.forms,3.4.0.v20090526,"org.eclipse.ui.forms",1258629875925
+started,bundle,org.eclipse.mylyn.context.core,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.context.core",1258629876110
+started,bundle,org.eclipse.mylyn.context.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.context.ui",1258629876153
+started,bundle,org.eclipse.mylyn.tasks.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.tasks.ui",1258629876819
+started,bundle,org.eclipse.mylyn.team.ui,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.team.ui",1258629876845

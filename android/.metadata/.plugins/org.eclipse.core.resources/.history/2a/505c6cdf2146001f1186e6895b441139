@@ -1,0 +1,6 @@
+#include <stdlib.h>
+
+void sayHello()
+{
+	printf("Hello\n");
+}

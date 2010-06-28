@@ -1,0 +1,19 @@
+#!/bin/sh
+
+NDK_ROOT=/opt/android-ndk-r3
+PLATFORM=android-3
+
+export PATH=$NDK_ROOT/build/prebuilt/linux-x86/arm-eabi-4.4.0/bin:$PATH
+export CFLAGS="-I$NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/include"
+export CPPFLAGS="$CFLAGS"
+export LDFLAGS="-nostdlib -L$NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/lib $NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/lib/crtbegin_static.o -lc -ldl"
+./configure --build=`./config.guess` --host=arm-eabi
+export LDFLAGS="-L$NDK_ROOT/build/platforms/$PLATFORM/arch-arm/usr/lib"
+for f in `find . -name Makefile`; do
+	echo $f
+	cat $f | sed -e 's/^LDFLAGS = .*$/LDFLAGS = -L\/opt\/android-ndk-r3\/build\/platforms\/android-3\/arch-arm\/usr\/lib/' > Makefile.tmp
+	mv Makefile.tmp $f
+done
+cat Makefile | sed -e 's/^SUBDIRS = .*$/SUBDIRS = amrnb amrwb/' > Makefile.tmp
+mv Makefile.tmp Makefile
+make

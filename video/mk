@@ -1,0 +1,5 @@
+#!/bin/sh
+
+gcc -Imyffmpeg/include output-example.c -static -o test \
+	-L/home/pszdp1/video/myffmpeg/lib -lavutil -lavdevice -lavformat -lavcodec -lswscale -lavutil -lm -lz \
+	-L/home/pszdp1/video/libx264/lib/ -lx264 -lfaac -lopencore-amrnb -lopencore-amrwb -lm

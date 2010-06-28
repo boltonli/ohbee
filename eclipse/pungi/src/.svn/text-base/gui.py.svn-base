@@ -1,0 +1,73 @@
+import appuifw
+import e32
+import logging
+import sys
+
+class Config(object):
+    logFormat = "%(levelname)s : %(msecs)d : %(module)s\n%(message)s"
+    
+selectedDevice = None
+    
+logging.basicConfig(stream = sys.stdout, \
+                    level = logging.DEBUG, \
+                    format = Config.logFormat)
+    
+uiThreadLock = e32.Ao_lock()
+uiCallbacks = []
+def doOnUIThread(callback):
+    global uiThreadLock, uiCallbacks
+    uiCallbacks.append(callback)
+    uiThreadLock.signal()    
+
+quitted = False
+
+def quit():
+    global quitted
+    logging.debug("Exiting")
+    quitted = True
+    uiThreadLock.signal()
+    
+def remoteLogin(username, password):
+    return True
+
+appuifw.app.exit_key_handler = quit  
+appuifw.app.title = u"Pungi"
+appuifw.app.screen = "normal"
+appuifw.app.body = None
+
+def login():
+    while True:
+        loginDetails = appuifw.multi_query(u"Username", u"Password")
+        if loginDetails: 
+            if remoteLogin(loginDetails[0], loginDetails[1]):
+                doOnUIThread(deviveSelection)
+                return
+            appuifw.note(u"Username or password not correct", 'error')
+        else:
+            logging.debug("User cancelled login request")
+            quit()
+
+infoDisplay = appuifw.Text()
+infoDisplay.color = 0xff0000
+infoDisplay.add(u"Current Device: None")
+
+def setBody(x):
+    logging.debug("Setting body to %s" % str(x))
+    appuifw.app.body = x
+    
+def showInfoDisplay():
+    global infoDisplay
+    appuifw.app.body = infoDisplay
+            
+def deviveSelection():
+    global infoDisplay
+    index = appuifw.selection_list(choices = [u"Camera1", u"Camera2"], search_field = 1)
+    doOnUIThread(showInfoDisplay)
+
+uiCallbacks.append(login)
+
+
+uiThreadLock.wait()
+    #uiThreadLock.clear()
+
+logging.debug("UI thread exiting")

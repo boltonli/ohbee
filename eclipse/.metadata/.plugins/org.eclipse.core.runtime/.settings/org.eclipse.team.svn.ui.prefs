@@ -1,0 +1,26 @@
+#Tue Mar 23 13:43:36 GMT 2010
+preference.repository.repositoryBrowser=false
+org.eclipse.team.svn.ui.panel.remote.CreateFilePanel.width=525
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.width=640
+org.eclipse.team.svn.ui.panel.callback.AskTrustSSLServerPanel.height=477
+org.eclipse.team.svn.ui.panel.callback.AskTrustSSLServerPanel.width=530
+org.eclipse.team.svn.ui.panel.local.CommitPanel.height=406
+history.selectProjectNamePage=aHR0cHM6Ly8xMjguMjQzLjIyLjM4L3N2bi9vYi90cnVtcGV0;aHR0cHM6Ly8xMjguMjQzLjIyLjM4L3N2bi9vYi9wdW5naQ\=\=;aHR0cHM6Ly8xMjguMjQzLjIyLjM4L3N2bi9vYi90cnVuay9wdW5naQ\=\=;aHR0cHM6Ly8xMjguMjQzLjIyLjM4L3N2bi9vYi90cnVuay9wdW5n;aHR0cHM6Ly8xMjguMjQzLjIyLjM4L3N2bi9vYi90cnVuay9wdW4\=
+org.eclipse.team.svn.ui.panel.local.CommitPanel.width=600
+org.eclipse.team.svn.ui.panel.callback.PromptCredentialsPanel.width=470
+eclipse.preferences.version=1
+org.eclipse.team.svn.ui.panel.callback.PromptCredentialsPanel.height=232
+org.eclipse.team.svn.ui.panel.local.IgnoreMethodPanel.height=130
+history.repositoryUser=ZGpw
+org.eclipse.team.svn.ui.panel.remote.CreateFolderPanel.height=213
+org.eclipse.team.svn.ui.panel.local.IgnoreMethodPanel.width=470
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=136
+org.eclipse.team.svn.ui.panel.remote.CreateFolderPanel.width=525
+preference.decoration.use.fontdecor=true
+history.comment=QWRkZWQgaW5pdGlhbCBzb3VyY2UgZmlsZXM\=;SW5pdGlhbCBzb3VyY2UgZmlsZXMgZnJvbSBhbiBleHBsb3JhdGlvbiBvZiBhIEoyTUUgaW5zdHJ1bWVudGF0aW9uIGNsaWVudCBmb3IgdGhlIE91dHNpZGUgQnJvYWRjYXN0IHByb2plY3Q\=;QWRkZWQgaW5pdGlhbCBtb2JpbGUgaW5zdHJ1bWVudGF0aW9uIGNsaWVudCBzb3VyY2Vz;UHVuZ2kgaXMgdGhlIG1vYmlsZSAoTm9raWEgU2VyaWVzIDYwIFB5dGhvbikgaW5zdHJ1bWVudGF0aW9uIGNsaWVudCBmb3IgdGhlIE91dHNpZGUgQnJvYWRjYXNlIHByb2plY3Qu;Q3JlYXRlZCBicmFuY2hlcyBmb2xkZXI\=;Q3JlYXRlZCB0YWdzIGZvbGRlcg\=\=;Q3JlYXRlZCB0cnVuayBmb2xkZXI\=;Q3JlYXRlZCBkZWZhdWx0IGZvbGRlcnM\=
+org.eclipse.team.svn.ui.panel.local.AddToSVNPanel.width=600
+org.eclipse.team.svn.ui.panel.common.RepositoryTreePanel.height=203
+org.eclipse.team.svn.ui.panel.remote.CreateFilePanel.height=213
+history.repositoryURL=aHR0cHM6Ly8xMjguMjQzLjIyLjM4L3N2bi9vYg\=\=
+org.eclipse.team.svn.ui.panel.common.RepositoryTreePanel.width=470
+org.eclipse.team.svn.ui.panel.local.AddToSVNPanel.height=224

@@ -1,0 +1,166 @@
+sp_enc.lo: ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/sp_enc.cpp \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/sp_enc.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/typedef.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/gsm_amr_typedefs.h \
+ ../oscl/oscl_base.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/stdint.h \
+ /opt/android-ndk-r3/build/prebuilt/linux-x86/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include/stddef.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/_types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/machine/_types.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/cnst.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/pre_proc.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/mode.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/cod_amr.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/lpc.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/levinson.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/get_const_tbls.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/typedef.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/lsp.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/q_plsf.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/cnst.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/mode.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/cl_ltp.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/pitch_fr.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/ton_stab.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/gain_q.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/gc_pred.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/g_adapt.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/p_ol_wgh.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/vad.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/vad1.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/cnst_vad.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/vad2.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/vad.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/dtx_enc.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/q_plsf.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/dtx_common_def.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/set_zero.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/prm2bits.h \
+ ../oscl/oscl_mem.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/stdlib.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/cdefs.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/cdefs_elf.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/string.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/malloc.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/alloca.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/strings.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/posix_types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/stddef.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/compiler.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/asm/posix_types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/asm/types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/machine/kernel.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/sysmacros.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/memory.h
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/sp_enc.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/typedef.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/gsm_amr_typedefs.h:
+
+../oscl/oscl_base.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/stdint.h:
+
+/opt/android-ndk-r3/build/prebuilt/linux-x86/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include/stddef.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/_types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/machine/_types.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/cnst.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/pre_proc.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/mode.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/cod_amr.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/lpc.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/levinson.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/get_const_tbls.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/typedef.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/lsp.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/q_plsf.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/cnst.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/mode.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/cl_ltp.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/pitch_fr.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/ton_stab.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/gain_q.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/gc_pred.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/g_adapt.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/p_ol_wgh.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/vad.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/vad1.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/cnst_vad.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/vad2.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/vad.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/dtx_enc.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/q_plsf.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/dtx_common_def.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/set_zero.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/prm2bits.h:
+
+../oscl/oscl_mem.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/stdlib.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/cdefs.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/string.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/malloc.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/alloca.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/strings.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/posix_types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/stddef.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/compiler.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/asm/types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/linux/types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/machine/kernel.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/sysmacros.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/memory.h:

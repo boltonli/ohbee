@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.rpc"
+		class="MobileDeviceList">
+
+	<description>
+		Collection of mobile device infos
+	</description>
+	
+	<property name="devices" javatype="ob.webapp.rpc.MobileDeviceInfo[]">
+		<description>Array of devices</description>
+	</property>
+	
+</bean>

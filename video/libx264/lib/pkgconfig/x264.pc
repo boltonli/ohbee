@@ -1,0 +1,10 @@
+prefix=/home/pszdp1/libx264/
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: x264
+Description: H.264 (MPEG4 AVC) encoder library
+Version: 0.88.1471 1144615
+Libs: -L${exec_prefix}/lib -lx264 
+Cflags: -I${prefix}/include

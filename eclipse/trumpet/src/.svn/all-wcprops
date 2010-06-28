@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/ob/!svn/ver/8/trunk/trumpet/src
+END
+UncaughtExceptionEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ob/!svn/ver/8/trunk/trumpet/src/UncaughtExceptionEvent.java
+END
+UncaughtExceptionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ob/!svn/ver/8/trunk/trumpet/src/UncaughtExceptionHandler.java
+END
+LocationJSONSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ob/!svn/ver/8/trunk/trumpet/src/LocationJSONSerializer.java
+END
+ServiceThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ob/!svn/ver/8/trunk/trumpet/src/ServiceThread.java
+END
+ConfigurationDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ob/!svn/ver/8/trunk/trumpet/src/ConfigurationDAO.java
+END
+DeviceCapabilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ob/!svn/ver/8/trunk/trumpet/src/DeviceCapabilities.java
+END
+LocationListenerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ob/!svn/ver/8/trunk/trumpet/src/LocationListenerService.java
+END
+LocationUpdatedListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ob/!svn/ver/8/trunk/trumpet/src/LocationUpdatedListener.java
+END
+Trumpet.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ob/!svn/ver/8/trunk/trumpet/src/Trumpet.java
+END
+IdentifiableTextField.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ob/!svn/ver/8/trunk/trumpet/src/IdentifiableTextField.java
+END
+Configuration.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ob/!svn/ver/8/trunk/trumpet/src/Configuration.java
+END
+LocationUpdatedEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ob/!svn/ver/8/trunk/trumpet/src/LocationUpdatedEvent.java
+END
+LocationUploaderService.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ob/!svn/ver/8/trunk/trumpet/src/LocationUploaderService.java
+END

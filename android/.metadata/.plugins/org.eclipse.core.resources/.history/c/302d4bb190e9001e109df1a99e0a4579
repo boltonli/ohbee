@@ -1,0 +1,26 @@
+package jnix;
+
+import java.io.FileDescriptor;
+import java.io.InputStream;
+
+public class Pipe
+{	
+	private final FileDescriptor inputFileDescriptor = new FileDescriptor();
+
+	private final FileDescriptor outFileDescriptor = new FileDescriptor();
+
+	public Pipe()
+	{
+		open();	
+	}
+	
+	public FileDescriptor getInputFileDescriptor()
+	{
+		return i
+	}
+
+
+	public native void close();
+
+	private native void open();
+}

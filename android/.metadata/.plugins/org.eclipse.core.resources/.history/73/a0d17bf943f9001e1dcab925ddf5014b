@@ -1,0 +1,357 @@
+#include "ob_android_MainActivity.h"
+#include "ob_android_Stream.h"
+#include "config.h"
+
+#include <errno.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <linux/un.h>
+#include <fcntl.h>
+
+#include <liveMedia.hh>
+#include <BasicUsageEnvironment.hh>
+#include <UsageEnvironment.hh>
+
+extern "C"
+{
+	#include <jnix_util.h>
+	#include <avcodec.h>
+	#include <avformat.h>
+}
+
+void show_formats(void)
+{
+    AVInputFormat *ifmt=NULL;
+    AVOutputFormat *ofmt=NULL;
+    URLProtocol *up=NULL;
+    AVCodec *p=NULL, *p2;
+    AVBitStreamFilter *bsf=NULL;
+    const char *last_name;
+
+    logInfo("File formats:");
+    last_name= "000";
+    char msgbuf[200];
+    for(;;){
+        int decode=0;
+        int encode=0;
+        const char *name=NULL;
+        const char *long_name=NULL;
+
+        while((ofmt= av_oformat_next(ofmt))) {
+            if((name == NULL || strcmp(ofmt->name, name)<0) &&
+                strcmp(ofmt->name, last_name)>0){
+                name= ofmt->name;
+                long_name= ofmt->long_name;
+                encode=1;
+            }
+        }
+        while((ifmt= av_iformat_next(ifmt))) {
+            if((name == NULL || strcmp(ifmt->name, name)<0) &&
+                strcmp(ifmt->name, last_name)>0){
+                name= ifmt->name;
+                long_name= ifmt->long_name;
+                encode=0;
+            }
+            if(name && strcmp(ifmt->name, name)==0)
+                decode=1;
+        }
+        if(name==NULL)
+            break;
+        last_name= name;
+
+
+        sprintf(
+        	msgbuf,
+            " %s%s %-15s %s",
+            decode ? "D":" ",
+            encode ? "E":" ",
+            name,
+            long_name ? long_name:" ");
+        logInfo(msgbuf);
+    }
+
+
+    logInfo("Codecs:");
+    last_name= "000";
+    for(;;){
+        int decode=0;
+        int encode=0;
+        int cap=0;
+        const char *type_str;
+
+        p2=NULL;
+        while((p= av_codec_next(p))) {
+            if((p2==NULL || strcmp(p->name, p2->name)<0) &&
+                strcmp(p->name, last_name)>0){
+                p2= p;
+                decode= encode= cap=0;
+            }
+            if(p2 && strcmp(p->name, p2->name)==0){
+                if(p->decode) decode=1;
+                if(p->encode) encode=1;
+                cap |= p->capabilities;
+            }
+        }
+        if(p2==NULL)
+            break;
+        last_name= p2->name;
+
+        switch(p2->type) {
+        case CODEC_TYPE_VIDEO:
+            type_str = "V";
+            break;
+        case CODEC_TYPE_AUDIO:
+            type_str = "A";
+            break;
+        case CODEC_TYPE_SUBTITLE:
+            type_str = "S";
+            break;
+        default:
+            type_str = "?";
+            break;
+        }
+        sprintf(
+        	msgbuf,
+            " %s%s%s%s%s%s %-15s %s",
+            decode ? "D": (/*p2->decoder ? "d":*/" "),
+            encode ? "E":" ",
+            type_str,
+            cap & CODEC_CAP_DRAW_HORIZ_BAND ? "S":" ",
+            cap & CODEC_CAP_DR1 ? "D":" ",
+            cap & CODEC_CAP_TRUNCATED ? "T":" ",
+            p2->name,
+            p2->long_name ? p2->long_name : "");
+       /* if(p2->decoder && decode==0)
+            printf(" use %s for decoding", p2->decoder->name);*/
+		logInfo(msgbuf);
+    }
+
+
+    logInfo("Bitstream filters:\n");
+    while((bsf = av_bitstream_filter_next(bsf)))
+    {
+        sprintf(msgbuf, " %s", bsf->name);
+        logInfo(msgbuf);
+    }
+
+
+    logInfo("Supported file protocols:\n");
+    while((up = av_protocol_next(up)))
+    {
+        sprintf(msgbuf, " %s:", up->name);
+        logInfo(msgbuf);
+    }
+}
+
+void Java_ob_android_MainActivity_onCreateNative(JNIEnv *env, jobject obj)
+{
+	av_register_all();
+	show_formats();
+}
+
+/* ob.android.Stream */
+
+Boolean awaitConfigInfo(RTPSink *sink);
+void play();
+
+static char doneFlag = 0;
+UsageEnvironment *uenv;
+MPEG4VideoStreamFramer *videoSource;
+RTPSink *videoSink;
+FILE* videoFile;
+
+void Java_ob_android_Stream_stream(JNIEnv *env, jobject obj)
+{
+	jclass streamClazz = env->GetObjectClass(obj);
+	if(streamClazz == NULL)
+		return;
+
+	jfieldID videoField = env->GetFieldID(streamClazz, "video", "Ljnix/Pipe;");
+	jfieldID audioField = env->GetFieldID(streamClazz, "audio", "Ljnix/Pipe;");
+	env->DeleteLocalRef(streamClazz);
+	if(videoField == NULL || audioField == NULL)
+		return;
+	jobject videoPipe = env->GetObjectField(obj, videoField);
+	jobject audioPipe = env->GetObjectField(obj, audioField);
+	if(videoPipe == NULL || audioPipe == NULL)
+		return;
+
+	jclass pipeClazz = env->GetObjectClass(videoPipe);
+	if(pipeClazz == NULL)
+		return;
+	jfieldID videoInField = env->GetFieldID(pipeClazz, "input", "Ljava/io/FileDescriptor;");
+	env->DeleteLocalRef(pipeClazz);
+	if(videoInField == NULL)
+		return;
+	jobject infd = env->GetObjectField(videoPipe, videoInField);
+	jobject inafd = env->GetObjectField(audioPipe, videoInField);
+	if(infd == NULL)
+		return;
+
+	jclass fdClazz = env->GetObjectClass(infd);
+	if(fdClazz == NULL)
+		return;
+	jfieldID fdField = env->GetFieldID(fdClazz, "descriptor", "I");
+	env->DeleteLocalRef(fdClazz);
+	if(fdField == NULL)
+		return;
+	jint fd = env->GetIntField(infd, fdField);
+	jint afd = env->GetIntField(inafd, fdField);
+
+	//videoFile = fdopen(fd, "rb");
+	logDebug("Video file descriptor opened as file okay");
+	//FILE* audioFile = fdopen(afd, "rb");
+	logDebug("Audio file descriptor opened as file okay");
+
+	AVFormatContext *pFormatCtx;
+	// Open video file
+	char fileBuf[100];
+	sprintf(fileBuf, "fd:%i", fd);
+	logInfo(fileBuf);
+	if(av_open_input_file(&pFormatCtx, fileBuf, NULL, 0, NULL) != 0)
+	{
+		logError("Couldn't open file thingy");
+		exit(-1);
+	}
+
+
+	/*char buf[100];
+	size_t read;
+	char msg[100];
+	while(1)
+	{
+		if(feof(videoFile) || feof(audioFile))
+			break;
+		read = fread(buf, 1, 100, videoFile);
+		sprintf(msg, "Read %i video bytes", read);
+		logDebug(msg);
+		read = fread(buf, 1, 50, audioFile);
+		sprintf(msg, "Read %i audio bytes", read);
+		logDebug(msg);
+	}*/
+
+	//fclose(videoFile);
+	//fclose(audioFile);
+
+	/*logDebug("Starting test stream");
+	BasicTaskScheduler* scheduler = BasicTaskScheduler::createNew();
+	logDebug("Loaded scheduler");
+	uenv = BasicUsageEnvironment::createNew(*scheduler);
+	logDebug("Loaded environment");
+	DarwinInjector* injector = DarwinInjector::createNew(*uenv, "streamer");
+	logDebug("Loaded Darwin injector");
+
+	struct in_addr dummyDestAddress;
+	dummyDestAddress.s_addr = 0;
+	Groupsock rtpGroupsockVideo(*uenv, dummyDestAddress, 0, 0);
+	Groupsock rtcpGroupsockVideo(*uenv, dummyDestAddress, 0, 0);
+	logDebug("Created group sockets");
+
+	// Create an 'MPEG-4 Video RTP' sink from the RTP 'groupsock':
+	videoSink = MPEG4ESVideoRTPSink::createNew(*uenv, &rtpGroupsockVideo, 96);
+	logDebug("Created a video sink");
+
+	logDebug("Beginning to play");
+	play();
+
+	if (!awaitConfigInfo(videoSink))
+	{
+		*uenv << "Failed to get MPEG-4 'config' information from input file: "
+			 << uenv->getResultMsg() << "\n";
+	    exit(1);
+	}
+
+	// Create (and start) a 'RTCP instance' for this RTP sink:
+	const unsigned estimatedSessionBandwidthVideo = 200; // in kbps; for RTCP b/w share
+	const unsigned maxCNAMElen = 100;
+	unsigned char CNAME[maxCNAMElen+1];
+	gethostname((char*)CNAME, maxCNAMElen);
+	CNAME[maxCNAMElen] = '\0'; // just in case
+	logDebug((const char*)CNAME);
+	RTCPInstance* videoRTCP =
+			RTCPInstance::createNew(*uenv, &rtcpGroupsockVideo,
+					estimatedSessionBandwidthVideo, CNAME,
+					videoSink, NULL /* we're a server /);
+	// Note: This starts RTCP running automatically
+	// Add these to our 'Darwin injector':
+	injector->addStream(videoSink, videoRTCP);
+	// Next, specify the destination Darwin Streaming Server:
+	// injector->setDestination("rtppublish.livestream.com",
+	//	"wirecastOrigin/mixedrealitylab/test.sdp?username=djp_mrl&password=79yugbypmoI&isAutoLive=true",
+	//	"testsesstion",
+	//	"",
+	//	1935,
+	//	"djp_mrl",
+	//	"79yugbypmoI");
+	if(!injector->setDestination(
+			"192.168.1.100",
+			"test.sdp",
+			"testsession",
+			"",
+			554,
+			"broadcast",
+			"broadcast"))
+	{
+		*uenv << "injector->setDestination() failed: " << uenv->getResultMsg() << "\n";
+		exit(1);
+	}
+
+	*uenv << "Play this stream (from the Darwin Streaming Server) using the URL:\n"
+		<< "\trtsp://" << "localhost" << "/" << "test.sdp" << "\n";
+		uenv->taskScheduler().doEventLoop();*/
+}
+
+void afterPlaying(void* clientData)
+{
+	logDebug("...done reading from file");
+	Medium::close(videoSource);
+	//play();
+}
+
+void play()
+{
+	// Open the input file as a 'byte-stream file source':
+	ByteStreamFileSource* fileSource
+			//= ByteStreamFileSource::createNew(*uenv, "/sdcard/streamer.mp4");
+			= ByteStreamFileSource::createNew(*uenv, videoFile);
+	if(fileSource == NULL)
+	{
+		logError("Unable to open file");
+		exit(1);
+	}
+
+	FramedSource* videoES = fileSource;
+	// Create a framer for the Video Elementary Stream:
+	videoSource = MPEG4VideoStreamFramer::createNew(*uenv, videoES);
+	// Finally, start playing:
+	logDebug("Beginning to read from file...");
+	videoSink->startPlaying(*videoSource, afterPlaying, videoSink);
+}
+
+static void checkForAuxSDPLine(void* clientData)
+{
+	RTPSink* sink = (RTPSink*)clientData;
+	if (sink->auxSDPLine() != NULL)
+	{
+		// Signal the event loop that we're done:
+		doneFlag = ~0;
+	}
+	else
+	{
+		// No luck yet.  Try again, after a brief delay:
+		int uSecsToDelay = 100000; // 100 ms
+		uenv->taskScheduler().scheduleDelayedTask(uSecsToDelay, (TaskFunc*)checkForAuxSDPLine, sink);
+	}
+}
+
+Boolean awaitConfigInfo(RTPSink* sink)
+{
+	// Check whether the sink's 'auxSDPLine()' is ready:
+	checkForAuxSDPLine(sink);
+	uenv->taskScheduler().doEventLoop(&doneFlag);
+	char const* auxSDPLine = sink->auxSDPLine();
+	return auxSDPLine != NULL;
+}

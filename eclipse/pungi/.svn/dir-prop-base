@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 29
+etc
+
+.project
+
+.pydevproject
+
+END

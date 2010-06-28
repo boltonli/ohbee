@@ -1,0 +1,16 @@
+K 10
+svn:ignore
+V 79
+deployed
+
+.mtj
+
+.project
+
+build.properties
+
+Application Descriptor
+
+.classpath
+
+END

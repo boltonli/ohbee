@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="deviceSymbolsetViewerSettings">
+		<item value="260" key="columnWidth_Symbol"/>
+		<item value="451" key="columnWidth_Value"/>
+	</section>
+	<section name="org.eclipse.mtj.internal.ui.devices.DeviceImportWizard">
+		<item value="752" key="dialogWidth"/>
+		<item value="215" key="dialogHeight"/>
+		<section name="viewerSettings">
+			<item value="55" key="columnWidth_Import"/>
+			<item value="123" key="columnWidth_Configuration"/>
+			<item value="180" key="columnWidth_Profile"/>
+			<item value="123" key="columnWidth_Group"/>
+			<item value="169" key="columnWidth_Name"/>
+		</section>
+	</section>
+	<section name="NewMidletWizard">
+		<section name="NewMidletClass">
+			<item value="true" key="unimplemented"/>
+			<item value="true" key="addToJad"/>
+			<item value="true" key="constructors"/>
+		</section>
+	</section>
+	<section name="deviceManagementViewerSettings">
+		<item value="123" key="columnWidth_Configuration"/>
+		<item value="250" key="columnWidth_Profile"/>
+		<item value="123" key="columnWidth_Group"/>
+		<item value="55" key="columnWidth_Default"/>
+		<item value="161" key="columnWidth_Name"/>
+	</section>
+	<section name="ConfigWizardSettings">
+		<item value="325" key="columnWidth_User defined Symbol Set"/>
+		<item value="260" key="columnWidth_Symbol"/>
+		<item value="390" key="columnWidth_Value"/>
+		<item value="80" key="columnWidth_Choose"/>
+	</section>
+	<section name="deviceLibrariesViewerSettings">
+		<item value="130" key="columnWidth_Path"/>
+		<item value="162" key="columnWidth_Source"/>
+		<item value="162" key="columnWidth_Javadoc"/>
+		<item value="97" key="columnWidth_File"/>
+		<item value="97" key="columnWidth_APIs"/>
+	</section>
+	<section name="symbolDefsViewerSettings">
+		<item value="325" key="columnWidth_Symbol"/>
+		<item value="325" key="columnWidth_Value"/>
+	</section>
+	<section name="ConfigManageComponentSettings">
+		<item value="60" key="columnWidth_active"/>
+		<item value="637" key="columnWidth_Configuration"/>
+	</section>
+</section>

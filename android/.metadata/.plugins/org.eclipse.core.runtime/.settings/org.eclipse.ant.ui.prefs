@@ -1,0 +1,16 @@
+#Mon Jan 04 14:20:58 GMT 2010
+problem_tasks=ignore
+problem_properties=ignore
+useQuickDiffPrefPage=true
+useAnnotationsPrefPage=true
+org.eclipse.ant.ui.dtdColor_bold=true
+org.eclipse.ant.ui.tagsColor_bold=true
+formatter_tab_char=false
+org.eclipse.ant.ui.processingInstructionsColor_bold=true
+problem_classpath=warning
+problem_imports=warning
+problem_security=warning
+org.eclipse.ant.ui.customtemplates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+eclipse.preferences.version=1
+org.eclipse.ant.ui.commentsColor_bold=false
+org.eclipse.ant.ui.constantStringsColor_bold=false

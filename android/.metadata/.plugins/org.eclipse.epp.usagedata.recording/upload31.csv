@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1256931854743
+opened,editor,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.editors.layout.LayoutEditor",1256931855258
+activated,editor,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.editors.layout.LayoutEditor",1256931855505
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1256931895970
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.copy",1256931899555
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256931902860
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1256931909524
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256931909603
+opened,editor,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.editors.layout.LayoutEditor",1256931912307
+activated,editor,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.editors.layout.LayoutEditor",1256931912736
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1256931930869
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256931931415
+error,log,,,"Argument cannot be null",1256931940067
+error,log,,,"Argument cannot be null",1256931940070
+error,log,,,"Argument cannot be null",1256931945521
+error,log,,,"Argument cannot be null",1256931945529
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256931945660
+activated,editor,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.editors.layout.LayoutEditor",1256932013245
+closed,editor,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.editors.layout.LayoutEditor",1256932013275
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256932014137
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256932188343
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256932190212
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256932238942
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256932254908
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256932512902

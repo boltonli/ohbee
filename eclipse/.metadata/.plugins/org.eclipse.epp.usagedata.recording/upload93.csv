@@ -1,0 +1,16 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.lineEnd",1249056355264
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.cut",1249056355936
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1249056356473
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1249056359817
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1249056366013
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1249056366352
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1249056370382
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1249056377217
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1249056379378
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1249056385843
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1249056387939
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1249056388210
+closed,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1249057443339
+stopped,bundle,org.eclipse.jst.ws.axis.creation.ui,1.0.406.v200903031852,"org.eclipse.jst.ws.axis.creation.ui",1249057444040
+stopped,bundle,org.eclipse.jst.ws.axis.consumption.ui,1.0.405.v200901261650,"org.eclipse.jst.ws.axis.consumption.ui",1249057444068

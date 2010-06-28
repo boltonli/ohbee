@@ -1,0 +1,31 @@
+package jnix;
+
+import java.io.FileDescriptor;
+
+public class Pipe
+{	
+	private final FileDescriptor inFD = new FileDescriptor();
+
+	private final FileDescriptor outFD = new FileDescriptor();
+
+	@SuppressWarnings("unused")
+	private int inNativeFD;
+
+	@SuppressWarnings("unused")
+	private int outNativeFD;
+
+	public static void main(String[] args)
+	{
+		new Pipe();
+	}
+
+	public Pipe()
+	{
+		init();	
+	}
+
+
+	public native void close();
+
+	private native void open();
+}

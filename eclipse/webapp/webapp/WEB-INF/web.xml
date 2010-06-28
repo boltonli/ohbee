@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+        xmlns="http://java.sun.com/xml/ns/j2ee" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="
+                http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	    version="2.4">
+
+	<!--
+		======================================
+		= General web application properties =
+		======================================
+	-->
+
+	<!-- Web application name - set from configuration.properties -->
+	<display-name>webapp.display-name</display-name>
+	<!-- Web application description - set from configuration.properties -->
+	<description>webapp.description</description>
+
+	<!--
+		===============================================================
+		= General web application configuration (esp. Log4j & Spring) =
+		===============================================================
+	-->
+
+	<!--
+		Used in Log4j.properties: Key of the system property that should
+		specify the root directory of this web app. Applied by
+		WebAppRootListener or Log4jConfigListener.
+		Set from configuration.properties.
+	-->
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>webapp.webAppRootKey</param-value>
+	</context-param>
+
+	<!--
+		Location of the Log4J config file (used by Spring), Applied by
+		Log4jConfigListener.
+	-->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/log4j.properties
+		</param-value>
+	</context-param>
+
+	<!--
+		Location of the Spring XML file that defines the root application
+		context. Used by ContextLoaderListener to specify applicaiton-wide
+		context/beans/etc.
+	-->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<!--
+		================================
+		= Global Spring initialisation =
+		================================
+	-->
+
+	<!--
+		Class loaded during web app startup, Configures Log4J for this web
+		app. Uses context-param s "log4jConfigLocation" and "WebAppRootKey".
+	-->
+	<!-- Apparently not compatible with the JBoss container. -->
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+	<!--
+		The Spring root application context, loaded during web app startup.
+		Loads configuration from "/WEB-INF/applicationContext.xml" by default,
+		overriden by context-param "contextConfigLocation", above.
+
+		(apparently) use
+		WebApplicationContextUtils.getWebApplicationContext(servletContext) to
+		access it anywhere in the web application, outside of the framework.
+
+		The root context is the parent of all servlet-specific contexts. This
+		means that its beans are automatically available in these child
+		contexts, both for getBean(name) calls and (external) bean references.
+	-->
+
+	<!--
+		Note listener apparently doesn't work with J2EE servers that do not
+		follow the Servlet 2.4 initialization order - have to use
+		ContextLoaderServlet instead.
+	-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!--
+		=========================
+		= Servlet configuration =
+		=========================
+	-->
+
+	<servlet>
+		<servlet-name>db</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>db</servlet-name>
+		<url-pattern>/db/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>rpc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>rpc</servlet-name>
+		<url-pattern>/rpc/*</url-pattern>
+	</servlet-mapping>	
+    
+	<!--
+		==============================================================
+		= General web application configuration - home, errors, etc. =
+		==============================================================
+	-->
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

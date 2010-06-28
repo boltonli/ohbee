@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deviceRegistry version="1.1.0.v200909181641">
+   <deviceCount value="7"/>
+   <device0 bundle="org.eclipse.mtj.toolkit.uei" class="org.eclipse.mtj.internal.toolkit.uei.UEIDeviceInternal" id="0">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="1">
+         <entryCount value="21"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="2">
+            <file value="/opt/WTK2.5.2/lib/midpapi21.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="3">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="4">
+            <file value="/opt/WTK2.5.2/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="5">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="6">
+            <file value="/opt/WTK2.5.2/lib/wma20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="7">
+               <identifier value="WMA"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="2.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/io/j2se/wma/"/>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="8">
+            <file value="/opt/WTK2.5.2/lib/mmapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="9">
+               <identifier value="MMAPI"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/UserGuide-html/mmapi.html"/>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="10">
+            <file value="/opt/WTK2.5.2/lib/j2me-ws.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="11">
+               <identifier value="J2ME-WS"/>
+               <name value="J2ME Web Services"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="12">
+            <file value="/opt/WTK2.5.2/lib/j2me-xmlrpc.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="13">
+               <identifier value="J2ME-XMLRPC"/>
+               <name value="J2ME XML/RPC"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="14">
+            <file value="/opt/WTK2.5.2/lib/jsr75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="15">
+               <identifier value="JSR75"/>
+               <name value="File Connection and PIM Optional Packages"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="16">
+            <file value="/opt/WTK2.5.2/lib/jsr082.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="17">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth Wireless Technology"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr082/"/>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="18">
+            <file value="/opt/WTK2.5.2/lib/jsr184.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="19">
+               <identifier value="JSR184"/>
+               <name value="Mobile 3D Graphics Optional Package"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry8>
+         <entry9 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="20">
+            <file value="/opt/WTK2.5.2/lib/jsr179.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="21">
+               <identifier value="JSR179"/>
+               <name value="Location Based APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry9>
+         <entry10 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="22">
+            <file value="/opt/WTK2.5.2/lib/satsa-apdu.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="23">
+               <identifier value="SATSA-APDU"/>
+               <name value="Application Protocol Data Unit APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry10>
+         <entry11 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="24">
+            <file value="/opt/WTK2.5.2/lib/satsa-jcrmi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="25">
+               <identifier value="SATSA-JCRMI"/>
+               <name value="Java Card RMI APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry11>
+         <entry12 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="26">
+            <file value="/opt/WTK2.5.2/lib/satsa-pki.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="27">
+               <identifier value="SATSA-PKI"/>
+               <name value="Public Key Infrastructure APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry12>
+         <entry13 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="28">
+            <file value="/opt/WTK2.5.2/lib/satsa-crypto.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="29">
+               <identifier value="SATSA-CRYPTO"/>
+               <name value="Java Cryptographics Extension APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry13>
+         <entry14 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="30">
+            <file value="/opt/WTK2.5.2/lib/jsr211.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="31">
+               <identifier value="JSR211"/>
+               <name value="ContentHandler APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr211/"/>
+         </entry14>
+         <entry15 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="32">
+            <file value="/opt/WTK2.5.2/lib/jsr238.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="33">
+               <identifier value="JSR238"/>
+               <name value="Mobile Internationalization API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry15>
+         <entry16 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="34">
+            <file value="/opt/WTK2.5.2/lib/jsr229.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="35">
+               <identifier value="JSR229"/>
+               <name value="Payment API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry16>
+         <entry17 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="36">
+            <file value="/opt/WTK2.5.2/lib/jsr180.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="37">
+               <identifier value="JSR180"/>
+               <name value="SIP API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry17>
+         <entry18 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="38">
+            <file value="/opt/WTK2.5.2/lib/jsr234.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="39">
+               <identifier value="JSR234"/>
+               <name value="Advanced Multimedia Supplements API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry18>
+         <entry19 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="40">
+            <file value="/opt/WTK2.5.2/lib/jsr226.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="41">
+               <identifier value="JSR226"/>
+               <name value="SVG API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry19>
+         <entry20 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="42">
+            <file value="/opt/WTK2.5.2/lib/jsr239.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="43">
+               <identifier value="JSR239"/>
+               <name value="Java(TM) Binding for OpenGL(R) ES API Reference Implementation"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr239/"/>
+         </entry20>
+      </classpath>
+      <debugServer value="true"/>
+      <description value="MediaControlSkin"/>
+      <deviceProperties>
+         <property key="screen.height" value="208"/>
+         <property key="screen.width" value="180"/>
+         <property key="security.domains" value="manufacturer,minimum,identified_third_party,unidentified_third_party,maximum"/>
+         <property key="screen.bitDepth" value="8"/>
+         <property key="bootclasspath" value="/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="screen.isColor" value="true"/>
+         <property key="apis" value="/opt/WTK2.5.2/lib/cldcapi10.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/midpapi10.jar,/opt/WTK2.5.2/lib/midpapi20.jar,/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/wma11.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="version.configuration" value="CLDC-1.1"/>
+         <property key="screen.isTouch" value="false"/>
+         <property key="description" value="MediaControlSkin"/>
+         <property key="version.profile" value="MIDP-2.1"/>
+      </deviceProperties>
+      <name value="MediaControlSkin"/>
+      <protectionDomainsCount value="5"/>
+      <protectionDomain0 value="manufacturer"/>
+      <protectionDomain1 value="minimum"/>
+      <protectionDomain2 value="identified_third_party"/>
+      <protectionDomain3 value="unidentified_third_party"/>
+      <protectionDomain4 value="maximum"/>
+      <groupName value="Sun Java(TM) Wireless Toolkit 2.5.2_01 for CLDC"/>
+      <preverifier class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifier" id="44">
+         <preverifierExecutable value="/opt/WTK2.5.2/bin/preverify"/>
+         <parameters class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifierParameters" id="45">
+            <cldc10_count value="5"/>
+            <cldc10_0 value="-target"/>
+            <cldc10_1 value="CLDC1.0"/>
+            <cldc10_2 value="-nofp"/>
+            <cldc10_3 value="-nofinalize"/>
+            <cldc10_4 value="-nonative"/>
+            <cldc11_count value="4"/>
+            <cldc11_0 value="-target"/>
+            <cldc11_1 value="CLDC1.1"/>
+            <cldc11_2 value="-nofinalize"/>
+            <cldc11_3 value="-nonative"/>
+         </parameters>
+      </preverifier>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,suspend=y,server=y,address=%debugPort%] [%classpath%|-classpath &quot;%classpath%&quot;] -Xdevice:%device% [%jadfile%|&quot;-Xdescriptor:%jadfile%&quot;] [%verbose%|-Xverbose:%verbose%] [%heapsize%|-Xheapsize:%heapsize%] [%securityDomain%|-Xdomain:%securityDomain%] %userSpecifiedArguments% [%target%|%target%] [%otaurl%|-Xjam:transient=%otaurl%]"/>
+      <executable value="/opt/WTK2.5.2/bin/emulator"/>
+   </device0>
+   <device1 bundle="org.eclipse.mtj.toolkit.uei" class="org.eclipse.mtj.internal.toolkit.uei.UEIDeviceInternal" id="46">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="47">
+         <entryCount value="21"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="48">
+            <file value="/opt/WTK2.5.2/lib/midpapi21.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="49">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="50">
+            <file value="/opt/WTK2.5.2/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="51">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="52">
+            <file value="/opt/WTK2.5.2/lib/wma20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="53">
+               <identifier value="WMA"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="2.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/io/j2se/wma/"/>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="54">
+            <file value="/opt/WTK2.5.2/lib/mmapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="55">
+               <identifier value="MMAPI"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/UserGuide-html/mmapi.html"/>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="56">
+            <file value="/opt/WTK2.5.2/lib/j2me-ws.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="57">
+               <identifier value="J2ME-WS"/>
+               <name value="J2ME Web Services"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="58">
+            <file value="/opt/WTK2.5.2/lib/j2me-xmlrpc.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="59">
+               <identifier value="J2ME-XMLRPC"/>
+               <name value="J2ME XML/RPC"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="60">
+            <file value="/opt/WTK2.5.2/lib/jsr75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="61">
+               <identifier value="JSR75"/>
+               <name value="File Connection and PIM Optional Packages"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="62">
+            <file value="/opt/WTK2.5.2/lib/jsr082.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="63">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth Wireless Technology"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr082/"/>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="64">
+            <file value="/opt/WTK2.5.2/lib/jsr184.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="65">
+               <identifier value="JSR184"/>
+               <name value="Mobile 3D Graphics Optional Package"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry8>
+         <entry9 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="66">
+            <file value="/opt/WTK2.5.2/lib/jsr179.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="67">
+               <identifier value="JSR179"/>
+               <name value="Location Based APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry9>
+         <entry10 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="68">
+            <file value="/opt/WTK2.5.2/lib/satsa-apdu.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="69">
+               <identifier value="SATSA-APDU"/>
+               <name value="Application Protocol Data Unit APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry10>
+         <entry11 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="70">
+            <file value="/opt/WTK2.5.2/lib/satsa-jcrmi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="71">
+               <identifier value="SATSA-JCRMI"/>
+               <name value="Java Card RMI APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry11>
+         <entry12 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="72">
+            <file value="/opt/WTK2.5.2/lib/satsa-pki.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="73">
+               <identifier value="SATSA-PKI"/>
+               <name value="Public Key Infrastructure APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry12>
+         <entry13 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="74">
+            <file value="/opt/WTK2.5.2/lib/satsa-crypto.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="75">
+               <identifier value="SATSA-CRYPTO"/>
+               <name value="Java Cryptographics Extension APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry13>
+         <entry14 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="76">
+            <file value="/opt/WTK2.5.2/lib/jsr211.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="77">
+               <identifier value="JSR211"/>
+               <name value="ContentHandler APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr211/"/>
+         </entry14>
+         <entry15 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="78">
+            <file value="/opt/WTK2.5.2/lib/jsr238.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="79">
+               <identifier value="JSR238"/>
+               <name value="Mobile Internationalization API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry15>
+         <entry16 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="80">
+            <file value="/opt/WTK2.5.2/lib/jsr229.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="81">
+               <identifier value="JSR229"/>
+               <name value="Payment API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry16>
+         <entry17 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="82">
+            <file value="/opt/WTK2.5.2/lib/jsr180.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="83">
+               <identifier value="JSR180"/>
+               <name value="SIP API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry17>
+         <entry18 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="84">
+            <file value="/opt/WTK2.5.2/lib/jsr234.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="85">
+               <identifier value="JSR234"/>
+               <name value="Advanced Multimedia Supplements API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry18>
+         <entry19 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="86">
+            <file value="/opt/WTK2.5.2/lib/jsr226.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="87">
+               <identifier value="JSR226"/>
+               <name value="SVG API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry19>
+         <entry20 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="88">
+            <file value="/opt/WTK2.5.2/lib/jsr239.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="89">
+               <identifier value="JSR239"/>
+               <name value="Java(TM) Binding for OpenGL(R) ES API Reference Implementation"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr239/"/>
+         </entry20>
+      </classpath>
+      <debugServer value="true"/>
+      <description value="DefaultGrayPhone"/>
+      <deviceProperties>
+         <property key="screen.height" value="208"/>
+         <property key="screen.width" value="180"/>
+         <property key="security.domains" value="manufacturer,minimum,identified_third_party,unidentified_third_party,maximum"/>
+         <property key="screen.bitDepth" value="8"/>
+         <property key="bootclasspath" value="/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="screen.isColor" value="false"/>
+         <property key="apis" value="/opt/WTK2.5.2/lib/cldcapi10.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/midpapi10.jar,/opt/WTK2.5.2/lib/midpapi20.jar,/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/wma11.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="version.configuration" value="CLDC-1.1"/>
+         <property key="screen.isTouch" value="false"/>
+         <property key="description" value="DefaultGrayPhone"/>
+         <property key="version.profile" value="MIDP-2.1"/>
+      </deviceProperties>
+      <name value="DefaultGrayPhone"/>
+      <protectionDomainsCount value="5"/>
+      <protectionDomain0 value="manufacturer"/>
+      <protectionDomain1 value="minimum"/>
+      <protectionDomain2 value="identified_third_party"/>
+      <protectionDomain3 value="unidentified_third_party"/>
+      <protectionDomain4 value="maximum"/>
+      <groupName value="Sun Java(TM) Wireless Toolkit 2.5.2_01 for CLDC"/>
+      <preverifier class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifier" id="90">
+         <preverifierExecutable value="/opt/WTK2.5.2/bin/preverify"/>
+         <parameters class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifierParameters" id="91">
+            <cldc10_count value="5"/>
+            <cldc10_0 value="-target"/>
+            <cldc10_1 value="CLDC1.0"/>
+            <cldc10_2 value="-nofp"/>
+            <cldc10_3 value="-nofinalize"/>
+            <cldc10_4 value="-nonative"/>
+            <cldc11_count value="4"/>
+            <cldc11_0 value="-target"/>
+            <cldc11_1 value="CLDC1.1"/>
+            <cldc11_2 value="-nofinalize"/>
+            <cldc11_3 value="-nonative"/>
+         </parameters>
+      </preverifier>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,suspend=y,server=y,address=%debugPort%] [%classpath%|-classpath &quot;%classpath%&quot;] -Xdevice:%device% [%jadfile%|&quot;-Xdescriptor:%jadfile%&quot;] [%verbose%|-Xverbose:%verbose%] [%heapsize%|-Xheapsize:%heapsize%] [%securityDomain%|-Xdomain:%securityDomain%] %userSpecifiedArguments% [%target%|%target%] [%otaurl%|-Xjam:transient=%otaurl%]"/>
+      <executable value="/opt/WTK2.5.2/bin/emulator"/>
+   </device1>
+   <device2 bundle="org.eclipse.mtj.toolkit.uei" class="org.eclipse.mtj.internal.toolkit.uei.UEIDeviceInternal" id="92">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="93">
+         <entryCount value="21"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="94">
+            <file value="/opt/WTK2.5.2/lib/midpapi21.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="95">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="96">
+            <file value="/opt/WTK2.5.2/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="97">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="98">
+            <file value="/opt/WTK2.5.2/lib/wma20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="99">
+               <identifier value="WMA"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="2.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/io/j2se/wma/"/>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="100">
+            <file value="/opt/WTK2.5.2/lib/mmapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="101">
+               <identifier value="MMAPI"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/UserGuide-html/mmapi.html"/>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="102">
+            <file value="/opt/WTK2.5.2/lib/j2me-ws.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="103">
+               <identifier value="J2ME-WS"/>
+               <name value="J2ME Web Services"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="104">
+            <file value="/opt/WTK2.5.2/lib/j2me-xmlrpc.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="105">
+               <identifier value="J2ME-XMLRPC"/>
+               <name value="J2ME XML/RPC"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="106">
+            <file value="/opt/WTK2.5.2/lib/jsr75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="107">
+               <identifier value="JSR75"/>
+               <name value="File Connection and PIM Optional Packages"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="108">
+            <file value="/opt/WTK2.5.2/lib/jsr082.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="109">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth Wireless Technology"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr082/"/>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="110">
+            <file value="/opt/WTK2.5.2/lib/jsr184.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="111">
+               <identifier value="JSR184"/>
+               <name value="Mobile 3D Graphics Optional Package"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry8>
+         <entry9 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="112">
+            <file value="/opt/WTK2.5.2/lib/jsr179.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="113">
+               <identifier value="JSR179"/>
+               <name value="Location Based APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry9>
+         <entry10 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="114">
+            <file value="/opt/WTK2.5.2/lib/satsa-apdu.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="115">
+               <identifier value="SATSA-APDU"/>
+               <name value="Application Protocol Data Unit APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry10>
+         <entry11 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="116">
+            <file value="/opt/WTK2.5.2/lib/satsa-jcrmi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="117">
+               <identifier value="SATSA-JCRMI"/>
+               <name value="Java Card RMI APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry11>
+         <entry12 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="118">
+            <file value="/opt/WTK2.5.2/lib/satsa-pki.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="119">
+               <identifier value="SATSA-PKI"/>
+               <name value="Public Key Infrastructure APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry12>
+         <entry13 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="120">
+            <file value="/opt/WTK2.5.2/lib/satsa-crypto.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="121">
+               <identifier value="SATSA-CRYPTO"/>
+               <name value="Java Cryptographics Extension APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry13>
+         <entry14 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="122">
+            <file value="/opt/WTK2.5.2/lib/jsr211.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="123">
+               <identifier value="JSR211"/>
+               <name value="ContentHandler APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr211/"/>
+         </entry14>
+         <entry15 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="124">
+            <file value="/opt/WTK2.5.2/lib/jsr238.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="125">
+               <identifier value="JSR238"/>
+               <name value="Mobile Internationalization API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry15>
+         <entry16 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="126">
+            <file value="/opt/WTK2.5.2/lib/jsr229.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="127">
+               <identifier value="JSR229"/>
+               <name value="Payment API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry16>
+         <entry17 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="128">
+            <file value="/opt/WTK2.5.2/lib/jsr180.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="129">
+               <identifier value="JSR180"/>
+               <name value="SIP API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry17>
+         <entry18 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="130">
+            <file value="/opt/WTK2.5.2/lib/jsr234.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="131">
+               <identifier value="JSR234"/>
+               <name value="Advanced Multimedia Supplements API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry18>
+         <entry19 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="132">
+            <file value="/opt/WTK2.5.2/lib/jsr226.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="133">
+               <identifier value="JSR226"/>
+               <name value="SVG API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry19>
+         <entry20 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="134">
+            <file value="/opt/WTK2.5.2/lib/jsr239.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="135">
+               <identifier value="JSR239"/>
+               <name value="Java(TM) Binding for OpenGL(R) ES API Reference Implementation"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr239/"/>
+         </entry20>
+      </classpath>
+      <debugServer value="true"/>
+      <description value="DefaultColorPhone"/>
+      <deviceProperties>
+         <property key="screen.height" value="320"/>
+         <property key="screen.width" value="240"/>
+         <property key="security.domains" value="manufacturer,minimum,identified_third_party,unidentified_third_party,maximum"/>
+         <property key="screen.bitDepth" value="8"/>
+         <property key="bootclasspath" value="/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="screen.isColor" value="true"/>
+         <property key="apis" value="/opt/WTK2.5.2/lib/cldcapi10.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/midpapi10.jar,/opt/WTK2.5.2/lib/midpapi20.jar,/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/wma11.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="version.configuration" value="CLDC-1.1"/>
+         <property key="screen.isTouch" value="false"/>
+         <property key="description" value="DefaultColorPhone"/>
+         <property key="version.profile" value="MIDP-2.1"/>
+      </deviceProperties>
+      <name value="DefaultColorPhone"/>
+      <protectionDomainsCount value="5"/>
+      <protectionDomain0 value="manufacturer"/>
+      <protectionDomain1 value="minimum"/>
+      <protectionDomain2 value="identified_third_party"/>
+      <protectionDomain3 value="unidentified_third_party"/>
+      <protectionDomain4 value="maximum"/>
+      <groupName value="Sun Java(TM) Wireless Toolkit 2.5.2_01 for CLDC"/>
+      <preverifier class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifier" id="136">
+         <preverifierExecutable value="/opt/WTK2.5.2/bin/preverify"/>
+         <parameters class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifierParameters" id="137">
+            <cldc10_count value="5"/>
+            <cldc10_0 value="-target"/>
+            <cldc10_1 value="CLDC1.0"/>
+            <cldc10_2 value="-nofp"/>
+            <cldc10_3 value="-nofinalize"/>
+            <cldc10_4 value="-nonative"/>
+            <cldc11_count value="4"/>
+            <cldc11_0 value="-target"/>
+            <cldc11_1 value="CLDC1.1"/>
+            <cldc11_2 value="-nofinalize"/>
+            <cldc11_3 value="-nonative"/>
+         </parameters>
+      </preverifier>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,suspend=y,server=y,address=%debugPort%] [%classpath%|-classpath &quot;%classpath%&quot;] -Xdevice:%device% [%jadfile%|&quot;-Xdescriptor:%jadfile%&quot;] [%verbose%|-Xverbose:%verbose%] [%heapsize%|-Xheapsize:%heapsize%] [%securityDomain%|-Xdomain:%securityDomain%] %userSpecifiedArguments% [%target%|%target%] [%otaurl%|-Xjam:transient=%otaurl%]"/>
+      <executable value="/opt/WTK2.5.2/bin/emulator"/>
+   </device2>
+   <device3 bundle="org.eclipse.mtj.toolkit.uei" class="org.eclipse.mtj.internal.toolkit.uei.UEIDeviceInternal" id="138">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="139">
+         <entryCount value="21"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="140">
+            <file value="/opt/WTK2.5.2/lib/midpapi21.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="141">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="142">
+            <file value="/opt/WTK2.5.2/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="143">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/"/>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="144">
+            <file value="/opt/WTK2.5.2/lib/wma20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="145">
+               <identifier value="WMA"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="2.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/wtk/wmaBridge/com/sun/kvem/midp/io/j2se/wma/"/>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="146">
+            <file value="/opt/WTK2.5.2/lib/mmapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="147">
+               <identifier value="MMAPI"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/UserGuide-html/mmapi.html"/>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="148">
+            <file value="/opt/WTK2.5.2/lib/j2me-ws.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="149">
+               <identifier value="J2ME-WS"/>
+               <name value="J2ME Web Services"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="150">
+            <file value="/opt/WTK2.5.2/lib/j2me-xmlrpc.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="151">
+               <identifier value="J2ME-XMLRPC"/>
+               <name value="J2ME XML/RPC"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="152">
+            <file value="/opt/WTK2.5.2/lib/jsr75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="153">
+               <identifier value="JSR75"/>
+               <name value="File Connection and PIM Optional Packages"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="154">
+            <file value="/opt/WTK2.5.2/lib/jsr082.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="155">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth Wireless Technology"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr082/"/>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="156">
+            <file value="/opt/WTK2.5.2/lib/jsr184.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="157">
+               <identifier value="JSR184"/>
+               <name value="Mobile 3D Graphics Optional Package"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry8>
+         <entry9 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="158">
+            <file value="/opt/WTK2.5.2/lib/jsr179.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="159">
+               <identifier value="JSR179"/>
+               <name value="Location Based APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry9>
+         <entry10 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="160">
+            <file value="/opt/WTK2.5.2/lib/satsa-apdu.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="161">
+               <identifier value="SATSA-APDU"/>
+               <name value="Application Protocol Data Unit APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry10>
+         <entry11 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="162">
+            <file value="/opt/WTK2.5.2/lib/satsa-jcrmi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="163">
+               <identifier value="SATSA-JCRMI"/>
+               <name value="Java Card RMI APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry11>
+         <entry12 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="164">
+            <file value="/opt/WTK2.5.2/lib/satsa-pki.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="165">
+               <identifier value="SATSA-PKI"/>
+               <name value="Public Key Infrastructure APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry12>
+         <entry13 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="166">
+            <file value="/opt/WTK2.5.2/lib/satsa-crypto.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="167">
+               <identifier value="SATSA-CRYPTO"/>
+               <name value="Java Cryptographics Extension APIs "/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry13>
+         <entry14 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="168">
+            <file value="/opt/WTK2.5.2/lib/jsr211.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="169">
+               <identifier value="JSR211"/>
+               <name value="ContentHandler APIs"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr211/"/>
+         </entry14>
+         <entry15 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="170">
+            <file value="/opt/WTK2.5.2/lib/jsr238.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="171">
+               <identifier value="JSR238"/>
+               <name value="Mobile Internationalization API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry15>
+         <entry16 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="172">
+            <file value="/opt/WTK2.5.2/lib/jsr229.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="173">
+               <identifier value="JSR229"/>
+               <name value="Payment API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry16>
+         <entry17 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="174">
+            <file value="/opt/WTK2.5.2/lib/jsr180.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="175">
+               <identifier value="JSR180"/>
+               <name value="SIP API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry17>
+         <entry18 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="176">
+            <file value="/opt/WTK2.5.2/lib/jsr234.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="177">
+               <identifier value="JSR234"/>
+               <name value="Advanced Multimedia Supplements API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry18>
+         <entry19 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="178">
+            <file value="/opt/WTK2.5.2/lib/jsr226.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="179">
+               <identifier value="JSR226"/>
+               <name value="SVG API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry19>
+         <entry20 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="180">
+            <file value="/opt/WTK2.5.2/lib/jsr239.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="181">
+               <identifier value="JSR239"/>
+               <name value="Java(TM) Binding for OpenGL(R) ES API Reference Implementation"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+            <javadocURL value="file:/opt/WTK2.5.2/docs/api/jsr239/"/>
+         </entry20>
+      </classpath>
+      <debugServer value="true"/>
+      <description value="QwertyDevice"/>
+      <deviceProperties>
+         <property key="screen.height" value="320"/>
+         <property key="screen.width" value="320"/>
+         <property key="security.domains" value="manufacturer,minimum,identified_third_party,unidentified_third_party,maximum"/>
+         <property key="screen.bitDepth" value="12"/>
+         <property key="bootclasspath" value="/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="screen.isColor" value="true"/>
+         <property key="apis" value="/opt/WTK2.5.2/lib/cldcapi10.jar,/opt/WTK2.5.2/lib/cldcapi11.jar,/opt/WTK2.5.2/lib/midpapi10.jar,/opt/WTK2.5.2/lib/midpapi20.jar,/opt/WTK2.5.2/lib/midpapi21.jar,/opt/WTK2.5.2/lib/wma20.jar,/opt/WTK2.5.2/lib/wma11.jar,/opt/WTK2.5.2/lib/mmapi.jar,/opt/WTK2.5.2/lib/jsr75.jar,/opt/WTK2.5.2/lib/jsr082.jar,/opt/WTK2.5.2/lib/jsr184.jar,/opt/WTK2.5.2/lib/jsr179.jar,/opt/WTK2.5.2/lib/jsr211.jar,/opt/WTK2.5.2/lib/jsr238.jar,/opt/WTK2.5.2/lib/jsr229.jar,/opt/WTK2.5.2/lib/jsr180.jar,/opt/WTK2.5.2/lib/jsr234.jar,/opt/WTK2.5.2/lib/j2me-ws.jar,/opt/WTK2.5.2/lib/j2me-xmlrpc.jar,/opt/WTK2.5.2/lib/jsr226.jar,/opt/WTK2.5.2/lib/satsa-apdu.jar,/opt/WTK2.5.2/lib/satsa-jcrmi.jar,/opt/WTK2.5.2/lib/satsa-pki.jar,/opt/WTK2.5.2/lib/satsa-crypto.jar,/opt/WTK2.5.2/lib/jsr239.jar"/>
+         <property key="version.configuration" value="CLDC-1.1"/>
+         <property key="screen.isTouch" value="false"/>
+         <property key="description" value="QwertyDevice"/>
+         <property key="version.profile" value="MIDP-2.1"/>
+      </deviceProperties>
+      <name value="QwertyDevice"/>
+      <protectionDomainsCount value="5"/>
+      <protectionDomain0 value="manufacturer"/>
+      <protectionDomain1 value="minimum"/>
+      <protectionDomain2 value="identified_third_party"/>
+      <protectionDomain3 value="unidentified_third_party"/>
+      <protectionDomain4 value="maximum"/>
+      <groupName value="Sun Java(TM) Wireless Toolkit 2.5.2_01 for CLDC"/>
+      <preverifier class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifier" id="182">
+         <preverifierExecutable value="/opt/WTK2.5.2/bin/preverify"/>
+         <parameters class="org.eclipse.mtj.internal.core.build.preverifier.StandardPreverifierParameters" id="183">
+            <cldc10_count value="5"/>
+            <cldc10_0 value="-target"/>
+            <cldc10_1 value="CLDC1.0"/>
+            <cldc10_2 value="-nofp"/>
+            <cldc10_3 value="-nofinalize"/>
+            <cldc10_4 value="-nonative"/>
+            <cldc11_count value="4"/>
+            <cldc11_0 value="-target"/>
+            <cldc11_1 value="CLDC1.1"/>
+            <cldc11_2 value="-nofinalize"/>
+            <cldc11_3 value="-nonative"/>
+         </parameters>
+      </preverifier>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,suspend=y,server=y,address=%debugPort%] [%classpath%|-classpath &quot;%classpath%&quot;] -Xdevice:%device% [%jadfile%|&quot;-Xdescriptor:%jadfile%&quot;] [%verbose%|-Xverbose:%verbose%] [%heapsize%|-Xheapsize:%heapsize%] [%securityDomain%|-Xdomain:%securityDomain%] %userSpecifiedArguments% [%target%|%target%] [%otaurl%|-Xjam:transient=%otaurl%]"/>
+      <executable value="/opt/WTK2.5.2/bin/emulator"/>
+   </device3>
+   <device4 bundle="org.eclipse.mtj.toolkit.microemu" class="org.eclipse.mtj.internal.toolkit.microemu.MicroEmuDevice" id="184">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="185">
+         <entryCount value="9"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="186">
+            <file value="/opt/J2ME-Polish/lib/microemulator/microemulator.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="187">
+               <identifier value="microemulator.jar"/>
+               <name value="Unknown Library"/>
+               <type value="3"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="188">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="189">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="190">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/midpapi20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="191">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.0"/>
+            </entry0>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="192">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="193">
+               <identifier value="JSR75"/>
+               <name value="PDA Optional Packages for the J2ME Platform"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="194">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-82.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="195">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="196">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-120.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="197">
+               <identifier value="JSR120"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="198">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-135.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="199">
+               <identifier value="JSR135"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="200">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-nokiaui.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="201">
+               <identifier value="Nokia UI"/>
+               <name value="Nokia UI API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="202">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-siemensapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="203">
+               <identifier value="Siemens API"/>
+               <name value="Siemens API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry8>
+      </classpath>
+      <debugServer value="false"/>
+      <description value="Microemulator Device"/>
+      <deviceProperties/>
+      <name value="Minimum device"/>
+      <protectionDomainsCount value="0"/>
+      <groupName value="Microemulator"/>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=%debugPort%] -cp &quot;%toolkitroot%/microemulator.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-75.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-82.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-120.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-135.jar%pathSeparator%%toolkitroot%/lib/microemu-nokiaui.jar%pathSeparator%%toolkitroot%/lib/microemu-siemensapi.jar%pathSeparator%%toolkitroot%/%skinJarFile%&quot; org.microemu.app.Main %userSpecifiedArguments% --device  %skinPathInJar% %jadfile% "/>
+      <toolkitRoot value="/opt/J2ME-Polish/lib/microemulator"/>
+      <skinJar value="devices/microemu-device-minimum.jar"/>
+      <skinPathInJar value="org/microemu/device/minimum/device.xml"/>
+      <skinName value="Minimum device"/>
+   </device4>
+   <device5 bundle="org.eclipse.mtj.toolkit.microemu" class="org.eclipse.mtj.internal.toolkit.microemu.MicroEmuDevice" id="204">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="205">
+         <entryCount value="9"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="206">
+            <file value="/opt/J2ME-Polish/lib/microemulator/microemulator.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="207">
+               <identifier value="microemulator.jar"/>
+               <name value="Unknown Library"/>
+               <type value="3"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="208">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="209">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="210">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/midpapi20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="211">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.0"/>
+            </entry0>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="212">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="213">
+               <identifier value="JSR75"/>
+               <name value="PDA Optional Packages for the J2ME Platform"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="214">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-82.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="215">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="216">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-120.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="217">
+               <identifier value="JSR120"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="218">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-135.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="219">
+               <identifier value="JSR135"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="220">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-nokiaui.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="221">
+               <identifier value="Nokia UI"/>
+               <name value="Nokia UI API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="222">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-siemensapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="223">
+               <identifier value="Siemens API"/>
+               <name value="Siemens API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry8>
+      </classpath>
+      <debugServer value="false"/>
+      <description value="Microemulator Device"/>
+      <deviceProperties/>
+      <name value="Large Device"/>
+      <protectionDomainsCount value="0"/>
+      <groupName value="Microemulator"/>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=%debugPort%] -cp &quot;%toolkitroot%/microemulator.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-75.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-82.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-120.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-135.jar%pathSeparator%%toolkitroot%/lib/microemu-nokiaui.jar%pathSeparator%%toolkitroot%/lib/microemu-siemensapi.jar%pathSeparator%%toolkitroot%/%skinJarFile%&quot; org.microemu.app.Main %userSpecifiedArguments% --device  %skinPathInJar% %jadfile% "/>
+      <toolkitRoot value="/opt/J2ME-Polish/lib/microemulator"/>
+      <skinJar value="devices/microemu-device-large.jar"/>
+      <skinPathInJar value="org/microemu/device/large/device.xml"/>
+      <skinName value="Large Device"/>
+   </device5>
+   <device6 bundle="org.eclipse.mtj.toolkit.microemu" class="org.eclipse.mtj.internal.toolkit.microemu.MicroEmuDevice" id="224">
+      <classpath class="org.eclipse.mtj.internal.core.sdk.device.DeviceClasspath" id="225">
+         <entryCount value="9"/>
+         <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="226">
+            <file value="/opt/J2ME-Polish/lib/microemulator/microemulator.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="227">
+               <identifier value="microemulator.jar"/>
+               <name value="Unknown Library"/>
+               <type value="3"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry0>
+         <entry1 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="228">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/cldcapi11.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="229">
+               <identifier value="CLDC"/>
+               <name value="Connected Limited Device Configuration"/>
+               <type value="0"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry1>
+         <entry2 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="230">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/midpapi20.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="231">
+               <identifier value="MIDP"/>
+               <name value="Mobile Information Device Profile"/>
+               <type value="1"/>
+               <version value="2.0"/>
+            </entry0>
+         </entry2>
+         <entry3 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="232">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-75.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="233">
+               <identifier value="JSR75"/>
+               <name value="PDA Optional Packages for the J2ME Platform"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry3>
+         <entry4 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="234">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-82.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="235">
+               <identifier value="JSR82"/>
+               <name value="Java APIs for Bluetooth"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry4>
+         <entry5 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="236">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-120.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="237">
+               <identifier value="JSR120"/>
+               <name value="Wireless Messaging API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry5>
+         <entry6 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="238">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-jsr-135.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="239">
+               <identifier value="JSR135"/>
+               <name value="Mobile Media API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry6>
+         <entry7 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="240">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-nokiaui.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="241">
+               <identifier value="Nokia UI"/>
+               <name value="Nokia UI API"/>
+               <type value="2"/>
+               <version value="1.1"/>
+            </entry0>
+         </entry7>
+         <entry8 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPLibrary" id="242">
+            <file value="/opt/J2ME-Polish/lib/microemulator/lib/microemu-siemensapi.jar"/>
+            <apiCount value="1"/>
+            <entry0 class="org.eclipse.mtj.internal.core.sdk.device.midp.MIDPAPI" id="243">
+               <identifier value="Siemens API"/>
+               <name value="Siemens API"/>
+               <type value="2"/>
+               <version value="1.0"/>
+            </entry0>
+         </entry8>
+      </classpath>
+      <debugServer value="false"/>
+      <description value="Microemulator Device"/>
+      <deviceProperties/>
+      <name value="Default device"/>
+      <protectionDomainsCount value="0"/>
+      <groupName value="Microemulator"/>
+      <rawLaunchCommand value="%executable% [%debugPort%|-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=%debugPort%] -cp &quot;%toolkitroot%/microemulator.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-75.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-82.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-120.jar%pathSeparator%%toolkitroot%/lib/microemu-jsr-135.jar%pathSeparator%%toolkitroot%/lib/microemu-nokiaui.jar%pathSeparator%%toolkitroot%/lib/microemu-siemensapi.jar%pathSeparator%%toolkitroot%/%skinJarFile%&quot; org.microemu.app.Main %userSpecifiedArguments% --device  %skinPathInJar% %jadfile% "/>
+      <toolkitRoot value="/opt/J2ME-Polish/lib/microemulator"/>
+      <skinJar value="microemulator.jar"/>
+      <skinPathInJar value="org/microemu/device/default/device.xml"/>
+      <skinName value="Default device"/>
+   </device6>
+   <defaultDevice refid="92"/>
+</deviceRegistry>

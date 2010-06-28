@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Cannot find builtin/gnu.mk",1257783705866
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783713708
+closed,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783713708
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257783719023
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783722564
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783723080
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783723661
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783728790
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783728860
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257783731003
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783732976
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783739881
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257783739975
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257783742364
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257783745768
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783746730
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783752601
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.lineEnd",1257783754625
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1257783754961
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257783758413
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257783759430
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257784705273
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257784706214
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257785492745
+activated,view,org.eclipse.ui.ide,3.5.0.I20090525-2000,"org.eclipse.ui.views.ProblemView",1257785492894

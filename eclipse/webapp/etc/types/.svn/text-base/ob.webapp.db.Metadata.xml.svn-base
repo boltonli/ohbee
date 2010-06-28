@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.db"
+		class="Metadata"
+		interface="true">
+		
+	<type name="IDType" javatype="java.lang.String" maxlength="20" />
+
+	<property name="ID" type="IDType">
+		<description>Database unique ID.</description>
+	</property>
+	
+	<property name="name" javatype="java.lang.String">
+		<description>Friendly name.</description>
+	</property>
+	
+	<property name="parentID" type="IDType">
+		<description>Parent Object.</description>
+	</property>
+	
+	<property name="tagID" type="IDType">
+		<description>Tag for tagging.</description>
+	</property>
+
+	<property name="type" javatype="java.lang.String">
+		<description>Object Type.</description>
+	</property>
+
+	<constant name="TYPE_ANNOTATION" javatype="java.lang.String" value='"TYPE_ANNOTATION"'/>
+	<constant name="TYPE_CAMERA" javatype="java.lang.String" value='"TYPE_CAMERA"'/>
+	<constant name="TYPE_PERSON" javatype="java.lang.String" value='"TYPE_PERSON"'/>
+
+</bean>

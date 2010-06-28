@@ -1,0 +1,23 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE                    := jnix
+LOCAL_SRC_FILES                 := \
+        $(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/src/*.c))
+LOCAL_LDLIBS                    := 
+LOCAL_C_INCLUDES                := \
+        $(LOCAL_PATH)/jni-include \
+        $(LOCAL_PATH)/include
+LOCAL_CFLAGS                    := \
+        -DNULL=0 \
+        -DFILE_DESCRIPTOR_PRIVATE_FIELD=\"descriptor\"
+
+NDK_APP_DEST                    := \
+        $(NDK_APP_PROJECT_PATH)/dist/Android-$(TARGET_ABI_SUBDIR)
+        
+ifeq ($(MAKECMDGOALS),static)
+include $(BUILD_STATIC_LIBRARY)
+else
+include $(BUILD_SHARED_LIBRARY)
+endif

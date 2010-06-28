@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="MTJ.emulatorLaunchConfigurationType">
+<booleanAttribute key="mtj.do_ota" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Trumpet"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="trumpet"/>
+</launchConfiguration>

@@ -1,0 +1,26 @@
+lag_wind_tab.lo: \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/lag_wind_tab.cpp \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/lag_wind_tab.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/typedef.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/gsm_amr_typedefs.h \
+ ../oscl/oscl_base.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/stdint.h \
+ /opt/android-ndk-r3/build/prebuilt/linux-x86/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include/stddef.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/_types.h \
+ /opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/machine/_types.h
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/enc/src/lag_wind_tab.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/typedef.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_nb/common/include/gsm_amr_typedefs.h:
+
+../oscl/oscl_base.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/stdint.h:
+
+/opt/android-ndk-r3/build/prebuilt/linux-x86/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include/stddef.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/sys/_types.h:
+
+/opt/android-ndk-r3/build/platforms/android-3/arch-arm/usr/include/machine/_types.h:

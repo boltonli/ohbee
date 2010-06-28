@@ -1,0 +1,12 @@
+LOCAL_PATH 			:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    	:= client
+LOCAL_SRC_FILES		:= test.c
+LOCAL_LDLIBS 		:= opencore-amrnb
+LOCAL_C_INCLUDES 	:= 
+LOCAL_CFLAGS 		:= 
+LOCAL_LDFLAGS		:= 
+	
+include $(BUILD_SHARED_LIBRARY)

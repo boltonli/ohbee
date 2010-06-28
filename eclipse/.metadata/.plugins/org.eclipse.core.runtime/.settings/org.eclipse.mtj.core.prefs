@@ -1,0 +1,7 @@
+#Tue Aug 18 15:18:01 BST 2009
+antenna_jar=/opt/ant/lib/antenna-bin-1.1.0-beta.jar
+preverify_config_value=CLDC-1.0
+proguard_dir=/opt/J2ME-Polish2.0.7
+wtk_root=/opt/WTK2.5.2
+eclipse.preferences.version=1
+pref_selected_SDK=All

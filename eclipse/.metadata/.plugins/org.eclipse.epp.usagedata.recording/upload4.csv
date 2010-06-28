@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.equinox.weaving.aspectj,1.0.0.200906171200,"org.eclipse.equinox.weaving.aspectj",1248723832245
+started,bundle,org.python.pydev,1.4.7.2843,"org.python.pydev",1248723832245
+started,bundle,org.python.pydev.core,1.4.7.2843,"org.python.pydev.core",1248723832245
+started,bundle,org.eclipse.mylyn.context.core,3.2.1.v20090722-0200-e3x,"org.eclipse.mylyn.context.core",1248723832245
+started,bundle,org.eclipse.mylyn.context.ui,3.2.1.v20090722-0200-e3x,"org.eclipse.mylyn.context.ui",1248723832245
+os,sysinfo,,,"linux",1248723832253
+arch,sysinfo,,,"x86_64",1248723832253
+ws,sysinfo,,,"gtk",1248723832253
+locale,sysinfo,,,"en_GB",1248723832253
+processors,sysinfo,,,"2",1248723832254
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1248723832254
+java.runtime.version,sysinfo,,,"1.6.0_14-b08",1248723832254
+java.specification.name,sysinfo,,,"Java Platform API Specification",1248723832254
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1248723832254
+java.specification.version,sysinfo,,,"1.6",1248723832254
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1248723832254
+java.version,sysinfo,,,"1.6.0_14",1248723832254
+java.vm.info,sysinfo,,,"mixed mode",1248723832254
+java.vm.name,sysinfo,,,"Java HotSpot(TM) 64-Bit Server VM",1248723832254
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1248723832254
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1248723832254
+java.vm.specification.version,sysinfo,,,"1.0",1248723832254
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1248723832254
+java.vm.version,sysinfo,,,"14.0-b16",1248723832254
+started,bundle,org.eclipse.debug.core,3.5.0.v20090526-1600,"org.eclipse.debug.core",1248723832282

@@ -1,0 +1,3 @@
+#Tue Jan 05 11:11:43 GMT 2010
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.so.release.1643871631=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="false">\n<variable delimiter\=";" name\="PATH" operation\="replace" value\="/opt/android-ndk-1.6_r1/build/prebuilt/linux-x86/arm-eabi-4.2.1/libexec/gcc/arm-eabi/4.2.1\:/opt/java/bin\:/opt/ant/bin\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/usr/games"/>\n</environment>\n

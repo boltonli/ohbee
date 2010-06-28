@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+processors,sysinfo,,,"2",1257521823402
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1257521823402
+java.runtime.version,sysinfo,,,"1.6.0_14-b08",1257521823402
+java.specification.name,sysinfo,,,"Java Platform API Specification",1257521823402
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1257521823402
+java.specification.version,sysinfo,,,"1.6",1257521823402
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1257521823402
+java.version,sysinfo,,,"1.6.0_14",1257521823402
+java.vm.info,sysinfo,,,"mixed mode",1257521823402
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Server VM",1257521823402
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1257521823402
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1257521823402
+java.vm.specification.version,sysinfo,,,"1.0",1257521823402
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1257521823402
+java.vm.version,sysinfo,,,"14.0-b16",1257521823402
+started,bundle,org.eclipse.ui.forms,3.4.0.v20090526,"org.eclipse.ui.forms",1257521823433
+started,bundle,org.eclipse.mylyn.context.core,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.context.core",1257521823566
+started,bundle,org.eclipse.mylyn.context.ui,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.context.ui",1257521823622
+started,bundle,org.eclipse.mylyn.tasks.ui,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.tasks.ui",1257521823961
+started,bundle,org.eclipse.mylyn.team.ui,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.team.ui",1257521824146
+started,bundle,org.eclipse.update.scheduler,3.2.200.v20081127,"org.eclipse.update.scheduler",1257521824154
+started,bundle,org.eclipse.update.core,3.2.300.v20090525,"org.eclipse.update.core",1257521824267
+started,bundle,org.eclipse.mylyn.monitor.ui,3.2.0.v20090617-0100-e3x,"org.eclipse.mylyn.monitor.ui",1257521824332
+started,bundle,org.eclipse.epp.usagedata.ui,1.1.0.R200906100410,"org.eclipse.epp.usagedata.ui",1257521824642
+started,bundle,org.eclipse.jsch.core,1.1.100.I20090430-0408,"org.eclipse.jsch.core",1257521824928

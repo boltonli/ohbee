@@ -1,0 +1,83 @@
+package ob.streamer;
+
+import android.util.Log;
+
+/**
+ * Very minimal Log4J style Logger class so that Log4J style
+ * logging implementations can be inserted with minimal
+ * fuss later in the development process.
+ * @author djp@cs.nott.ac.uk
+ */
+public class Logger
+{
+	private static final String LOG_TAG = "streamer";
+	
+	private static final Logger instance = new Logger();
+	
+	public static Logger getLogger(String classname)
+	{
+		return instance;
+	}
+	
+	public static Logger getLogger(Class clazz)
+	{
+		return instance;
+	}
+	
+	private Logger() { /* */ }
+	
+	public void debug(Object message)
+	{
+		Log.d(LOG_TAG, message.toString());
+	}
+	
+	public void debug(Object message, Throwable t)
+	{
+		Log.d(LOG_TAG, message.toString(), t);
+	}
+	
+	public void error(Object message)
+	{
+		Log.e(LOG_TAG, message.toString());
+	}
+	
+	public void error(Object message, Throwable t)
+	{
+		Log.e(LOG_TAG, message.toString(), t);
+	}
+	
+	public void fatal(Object message)
+	{
+		Log.e(LOG_TAG, message.toString());
+	}
+	
+	public void fatal(Object message, Throwable t)
+	{
+		Log.e(LOG_TAG, message.toString(), t);
+	}
+	
+	public void info(Object message)
+	{
+		Log.i(LOG_TAG, message.toString());
+	}
+	
+	public void info(Object message, Throwable t)
+	{
+		Log.i(LOG_TAG, message.toString(), t);
+	}
+	
+	public boolean isDebugEnabled()
+	{
+		return true;
+	}
+	
+	public void warn(Object message)
+	{
+		Log.w(LOG_TAG, message.toString());
+	}
+	
+	public void warn(Object message, Throwable t)
+	{
+		Log.w(LOG_TAG, message.toString(), t);
+	}
+}

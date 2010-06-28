@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="300" key="DIALOG_WIDTH"/>
+		<item value="122" key="DIALOG_Y_ORIGIN"/>
+		<item value="1041" key="DIALOG_X_ORIGIN"/>
+		<item value="416" key="DIALOG_HEIGHT"/>
+		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="true" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="CPPF" key="selection"/>
+		<list key="findhistory">
+			<item value="CPPF"/>
+			<item value="cc_check"/>
+			<item value="HAVE_LOG2F"/>
+			<item value="ARCH"/>
+			<item value="fid"/>
+			<item value="videoSink"/>
+			<item value="sa_fa"/>
+			<item value="${"/>
+		</list>
+		<list key="replacehistory">
+			<item value="file"/>
+			<item value="rtpSink"/>
+			<item value="_PARSER 0"/>
+			<item value="ENCODER 0"/>
+			<item value="DECODER 0"/>
+		</list>
+	</section>
+</section>

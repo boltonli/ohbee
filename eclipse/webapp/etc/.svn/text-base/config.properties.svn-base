@@ -1,0 +1,76 @@
+##########################################################################
+# Application Configuration                                              #
+# This Java properties file contains the configuration settings for your #
+# equip2 web application.  You should edit this file to meet your        #
+# requirements.                                                          #
+##########################################################################
+
+#########################
+# General configuration #
+#########################
+
+# The context name to be used for the application
+webapp.context=ob
+
+# The display name used for the application
+webapp.display-name=ob
+
+# A short description of the web application
+webapp.description=outsidebroadcast
+
+# The webapp root key as used by the Spring configuration
+webapp.webAppRootKey=ob.root
+
+###########################
+# Dataspace Configuration #
+###########################
+
+# The default package to use where the package is unknown
+dataspace.default-package-name=
+
+# The number of objects to show on a page in the dataspace viewer
+dataspace.view.items-per-page=30
+
+# The column heading for identifying the number of objects
+# to upload in CVS upload files
+dataspace.cvs-upload.add-multiple-heading-name=HOW MANY?
+
+# The default fixed class properties, as a comma separated list
+dataspace.default-fixed-properties=ID
+
+###########################
+# Hibernate configuration #
+###########################
+
+# The most common settings are set below, you can add extra Hibernate
+# configuration properties by using the Hibernate configuration property
+# name prefixed with 'hibernate.' as the property name.  For example, to set
+# the 'show_sql' Hibernate property:
+# hibernate.show_sql=true
+
+# MySQL settings
+hibernate.connection.driver_class=com.mysql.jdbc.Driver
+hibernate.connection.url=jdbc:mysql:///ob
+hibernate.connection.username=ob
+hibernate.connection.password=ob09@MRL!
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+# HSQL settings
+#hibernate.connection.driver_class=org.hsqldb.jdbcDriver
+#hibernate.connection.url=jdbc:hsqldb:file:hsql_ob_db
+#hibernate.connection.username=sa
+#hibernate.connection.password=
+#hibernate.dialect=org.hibernate.dialect.HSQLDialect
+
+# General Hibernate settings
+hibernate.c3p0.acquire_increment=1
+hibernate.c3p0.idle_test_period=100
+hibernate.c3p0.max_size=5
+hibernate.c3p0.max_statements=0
+hibernate.c3p0.min_size=1
+hibernate.c3p0.timeout=100
+hibernate.c3p0.idleConnectionTestPeriod=300
+hibernate.current_session_context_class=thread
+hibernate.cache.provider_class=org.hibernate.cache.NoCacheProvider
+hibernate.show_sql=false
+hibernate.hbm2ddl.auto=update

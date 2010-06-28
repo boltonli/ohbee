@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/jsp/rpc
+END
+test_client.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/jsp/rpc/test_client.jsp
+END
+test_mobile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/jsp/rpc/test_mobile.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ob/!svn/ver/10/trunk/webapp/webapp/WEB-INF/jsp/rpc/index.jsp
+END

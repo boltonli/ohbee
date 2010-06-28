@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+arch,sysinfo,,,"x86",1256842537428
+ws,sysinfo,,,"gtk",1256842537428
+locale,sysinfo,,,"en_GB",1256842537428
+processors,sysinfo,,,"2",1256842537430
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1256842537430
+java.runtime.version,sysinfo,,,"1.6.0_14-b08",1256842537431
+java.specification.name,sysinfo,,,"Java Platform API Specification",1256842537431
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1256842537431
+java.specification.version,sysinfo,,,"1.6",1256842537431
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1256842537431
+java.version,sysinfo,,,"1.6.0_14",1256842537431
+java.vm.info,sysinfo,,,"mixed mode",1256842537431
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Server VM",1256842537431
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1256842537431
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1256842537431
+java.vm.specification.version,sysinfo,,,"1.0",1256842537431
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1256842537431
+java.vm.version,sysinfo,,,"14.0-b16",1256842537431
+started,bundle,org.eclipse.epp.usagedata.ui,1.1.0.R200906100410,"org.eclipse.epp.usagedata.ui",1256842538499
+error,log,,,"Unhandled event loop exception",1256842539570
+started,bundle,com.android.ide.eclipse.ddms,0.9.1.v200905011822-1621,"com.android.ide.eclipse.ddms",1256842540023
+started,bundle,com.android.ide.eclipse.adt,0.9.1.v200905011822-1621,"com.android.ide.eclipse.adt",1256842540589
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256842541063
+started,bundle,org.eclipse.core.filesystem,1.2.0.v20090507,"org.eclipse.core.filesystem",1256842541308
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.0.v20090513-2000,"org.eclipse.ltk.core.refactoring",1256842541325

@@ -1,0 +1,11 @@
+#Mon Jan 04 14:20:58 GMT 2010
+Type=1,0,0,0,0,64,0,200
+SQLEditor.executeSelectedSQL.betweenDelimiter.delimiterType=go
+Keyword=1,0,0,0,0,127,0,85
+Others=0,0,0,0,1,0,0,0
+Identifier=0,0,0,0,0,0,0,128
+Single\ quoted\ string=0,0,0,0,0,0,0,255
+Double\ quoted\ string=0,0,0,0,0,0,128,0
+eclipse.preferences.version=1
+Single-line\ comment=0,0,0,0,0,64,128,128
+Multi-line\ comment=0,0,0,0,0,64,128,128

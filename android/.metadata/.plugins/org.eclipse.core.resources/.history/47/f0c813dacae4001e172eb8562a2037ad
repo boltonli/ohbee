@@ -1,0 +1,8 @@
+package ob.streamer;
+
+import android.app.Application;
+
+public class StreamerApplication extends Application
+{
+
+}

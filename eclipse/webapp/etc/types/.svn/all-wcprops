@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types
+END
+ob.webapp.db.Metadata.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Metadata.xml
+END
+ob.webapp.rpc.TagList.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.TagList.xml
+END
+ob.webapp.db.Annotation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Annotation.xml
+END
+ob.webapp.rpc.XYZ.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.XYZ.xml
+END
+ob.webapp.rpc.Scene.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.Scene.xml
+END
+ob.webapp.db.Person.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Person.xml
+END
+ob.webapp.db.Camera.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Camera.xml
+END
+ob.webapp.db.Location.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Location.xml
+END
+ob.webapp.db.Tag.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Tag.xml
+END
+ob.webapp.rpc.MobileUpload.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.MobileUpload.xml
+END
+ob.webapp.rpc.SensorData.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.SensorData.xml
+END
+ob.webapp.db.Locatable.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.db.Locatable.xml
+END
+ob.webapp.rpc.MobileDeviceInfo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.MobileDeviceInfo.xml
+END
+ob.webapp.rpc.MobileDeviceList.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ob/!svn/ver/10/trunk/webapp/etc/types/ob.webapp.rpc.MobileDeviceList.xml
+END

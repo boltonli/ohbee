@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	
+	<class name="equip2.spring.db.NextID" table="nextid">
+		<id name="prefix" type="string">
+			<column name="prefix" length="20" />
+			<generator class="assigned" />
+		</id>
+		<property name="count" type="integer">
+			<column name="ccount" />
+		</property>
+	</class>
+
+	<database-object>
+		<create>
+			delimiter //
+			CREATE FUNCTION getnextid (prefix1 VARCHAR(20)) RETURNS int
+			begin
+			DECLARE count1 INT;
+			IF (SELECT COUNT(*) FROM nextid WHERE prefix=prefix1)=0 THEN
+			INSERT INTO nextid VALUES(prefix1,500);
+			END IF;
+			UPDATE nextid SET ccount=ccount+1 WHERE prefix=prefix1;
+			SELECT ccount INTO count1 FROM nextid WHERE prefix=prefix1;
+			RETURN count1;
+			end;
+			//
+			delimiter ;
+    	</create>
+		<drop>DROP FUNCTION getnextid;</drop>
+	</database-object>
+
+</hibernate-mapping>

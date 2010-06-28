@@ -1,0 +1,155 @@
+import sys
+sys.path.append("e:\\Python")
+
+import appuifw
+import e32
+import logging
+import misc
+import ui
+import sensors
+import time
+import traceback
+import threading
+import httplib
+
+appuifw.app.title = u"Pungi"
+appuifw.app.exit_key_handler = misc.exitApplication
+
+logging.basicConfig(stream = sys.stdout, \
+                    level = misc.Config.logLevel, \
+                    format = misc.Config.logFormat)
+
+def excHandler(exc_type, exc_obj, exc_tb):
+    traceback.print_exception(exc_type, exc_obj, exc_tb)
+    print str(exc_tb)
+    time.sleep(30)
+    sys.exit(0)
+    
+def report(sens, responseCode):
+    print ""
+    print "========================="
+    print "Time: %s" % (time.asctime())
+    if "position" in sens:
+        print "Vertical accuracy: %f" % (sens["position"]["vertical_accuracy"])
+        print "Horizontal accuracy: %f" % (sens["position"]["horizontal_accuracy"])
+    else:
+        print "GPS: No location"
+    success = "Upload succeeded"
+    if responseCode != httplib.OK:
+        success = "Upload failed" 
+    print "Response code: %d (%s)" % (responseCode, success)
+    print ""
+
+sys.excepthook = excHandler
+
+readings = {}
+
+nexttime = time.clock() + 10
+
+allowedAttributes = ["ambient_light", "proximity_state", \
+                     "device_orientation", "azimuth", "x", \
+                     "y", "z", "direction"]
+
+def serialize(s):
+    serialized = "{"
+    serialized = serialized + "\"timestamp\" : 0,"
+    serialized = serialized + "\"sensorData\" : {"
+    serialized = serialized + "\"orientation\" : "
+    if "OrientationData" in s:
+        serialized = serialized + str(s["OrientationData"]["device_orientation"])
+    else:
+        serialized = serialized + "null"
+    serialized = serialized + ","
+    serialized = serialized + "\"azimuth\" : "
+    if "MagneticNorthData" in s:
+        serialized = serialized + str(s["MagneticNorthData"]["azimuth"])
+    else:
+        serialized = serialized + "null"
+    serialized = serialized + ","
+    serialized = serialized + "\"doubleTapDirection\" : "
+    if "AccelerometerDoubleTappingData" in s:
+        serialized = serialized + str(s["AccelerometerDoubleTappingData"]["direction"])
+    else:
+        serialized = serialized + "null"
+    serialized = serialized + ","
+    serialized = serialized + "\"magnetometerXYZ\" : "
+    if "MagnetometerXYZAxisData" in s:
+        serialized = serialized + "{"
+        serialized = serialized + "\"x\" : " + str(s["MagnetometerXYZAxisData"]["x"]) + ","
+        serialized = serialized + "\"y\" : " + str(s["MagnetometerXYZAxisData"]["y"]) + ","
+        serialized = serialized + "\"z\" : " + str(s["MagnetometerXYZAxisData"]["z"])
+        serialized = serialized + "}"
+    else:
+        serialized = serialized + "null"
+    serialized = serialized + ","
+    serialized = serialized + "\"accelerometerXYZ\" : "
+    if "AccelerometerXYZAxisData" in s:
+        serialized = serialized + "{"
+        serialized = serialized + "\"x\" : " + str(s["AccelerometerXYZAxisData"]["x"]) + ","
+        serialized = serialized + "\"y\" : " + str(s["AccelerometerXYZAxisData"]["y"]) + ","
+        serialized = serialized + "\"z\" : " + str(s["AccelerometerXYZAxisData"]["z"])
+        serialized = serialized + "}"
+    else:
+        serialized = serialized + "null"
+    serialized = serialized + ","
+    serialized = serialized + "\"rotationXYZ\" : "
+    if "RotationData" in s:
+        serialized = serialized + "{"
+        serialized = serialized + "\"x\" : " + str(s["RotationData"]["x"]) + ","
+        serialized = serialized + "\"y\" : " + str(s["RotationData"]["y"]) + ","
+        serialized = serialized + "\"z\" : " + str(s["RotationData"]["z"])
+        serialized = serialized + "}"
+    else:
+        serialized = serialized + "null"
+    serialized = serialized + "},"
+    serialized = serialized + "\"location\" : "
+    if "position" in s:
+        serialized = serialized + "{"
+        serialized = serialized + "\"verticalAccuracy\" : " + str(s["position"]["vertical_accuracy"]) + ","
+        serialized = serialized + "\"time\" : " + str(s["position"]["time"]) + ","
+        serialized = serialized + "\"latitude\" : " + str(s["position"]["latitude"]) + ","
+        serialized = serialized + "\"altitude\" : " + str(s["position"]["altitude"]) + ","
+        serialized = serialized + "\"horizontalAccuracy\" : " + str(s["position"]["horizontal_accuracy"]) + ","
+        serialized = serialized + "\"longitude\" : " + str(s["position"]["longitude"])
+        serialized = serialized + "}"
+    else:
+        serialized = serialized + "null"    
+    serialized = serialized + "}"
+    return serialized
+
+lock = threading.RLock()
+
+connection = httplib.HTTPConnection(misc.Config.uploadHost, misc.Config.uploadPort)
+connection.connect()
+
+def sensorCallback(sens):
+    global nexttime, readings, allowedAttributes, lock, connection
+    lock.acquire()
+    if hasattr(sens, "channelName"):
+        r = {}
+        for attr in dir(sens):
+            if attr in allowedAttributes:
+                r[attr] = getattr(sens, attr)
+        readings[sens.channelName] = r  
+    elif isinstance(sens, dict):
+        if "position" in sens:
+            readings["position"] = sens["position"]
+            readings["position"]["time"] = sens["satellites"]["time"]
+    if time.clock() < nexttime:
+        lock.release()
+        return
+    nexttime = time.clock() + 10
+    serd = serialize(readings) 
+    connection.request("POST", misc.Config.uploadURL, serd)
+    response = connection.getresponse()
+    response.read()
+    #connection.close()
+    report(readings, response.status)
+    lock.release()
+        
+position = sensors.Position()
+position.callbacks.append(sensorCallback)
+position.startListening()
+sensor = sensors.Sensors()
+sensor.callbacks.append(sensorCallback)
+sensor.startListening()

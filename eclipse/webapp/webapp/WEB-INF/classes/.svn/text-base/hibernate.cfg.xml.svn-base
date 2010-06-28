@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.c3p0.idleConnectionTestPeriod">300</property>
+<property name="hibernate.c3p0.timeout">100</property>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+<property name="hibernate.current_session_context_class">thread</property>
+<property name="hibernate.c3p0.max_statements">0</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.c3p0.max_size">5</property>
+<property name="hibernate.c3p0.idle_test_period">100</property>
+<property name="hibernate.c3p0.min_size">1</property>
+<property name="hibernate.connection.username">ob</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<property name="hibernate.c3p0.acquire_increment">1</property>
+<property name="hibernate.connection.url">jdbc:mysql://mccaffrey.mrl.nott.ac.uk/ob</property>
+<property name="hibernate.show_sql">false</property>
+<property name="hibernate.connection.password">ob09@MRL!</property>
+<mapping resource="equip2/spring/db/NextID.hbm.xml"/>
+<mapping resource="ob/webapp/db/Annotation.hbm.xml"/>
+<mapping resource="ob/webapp/db/Camera.hbm.xml"/>
+<mapping resource="ob/webapp/db/Location.hbm.xml"/>
+<mapping resource="ob/webapp/db/Person.hbm.xml"/>
+<mapping resource="ob/webapp/db/Tag.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>

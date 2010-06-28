@@ -1,0 +1,52 @@
+import logging
+import sys
+
+class Config(object):
+    logLevel = logging.DEBUG
+    logFormat = "%(levelname)s : %(asctime)s : %(module)s\n%(message)s"
+    uploadHost = "www.mrl.nott.ac.uk"
+    uploadPort = 80
+    uploadURL = "/~djp/location.php"
+    uploadInterval = 10
+
+def exitApplication():
+    logging.debug("exitApplication() called")
+    sys.exit()
+    
+"""class InterruptableThread(threading.Thread):
+    
+    def __init__(self):
+        threading.Thread.__init__(self)
+        self.sync = threading.Event()
+
+    def run(self):
+        logging.debug("Thread %s started" % self.getName())
+        while not self.sync.isSet():
+            interval = self.runTask()
+            if not interval:
+                break
+            self.sync.wait(interval)
+        logging.debug("Thread %s stopped" % self.getName())
+    
+    def runTask(self):
+        return None
+    
+    def stop(self):
+        logging.debug("Thread %s stopping" % self.getName())
+        self.sync.set()
+
+    
+class UploaderThread(InterruptableThread):
+    
+    def __init__(self):
+        InterruptableThread.__init__(self)
+        
+    def run(self):
+        return Config.uploadInterval
+    
+    def upload(self, data):
+        connection = httplib.HTTPConnection(Config.uploadHost, Config.uploadPort)
+        connection.request("POST", Config.uploadURL, data)
+        response = connection.getresponse()
+        connection.close()"""
+    

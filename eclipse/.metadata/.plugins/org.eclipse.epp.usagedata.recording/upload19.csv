@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248726243387
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248726243401
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248726255401
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248726255471
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1248726674090
+started,bundle,org.eclipse.mtj.core.hooks,1.0.0.v200906121354,"org.eclipse.mtj.core.hooks",1248726681672
+started,bundle,org.eclipse.mtj.core,1.0.0.v200906121354,"org.eclipse.mtj.core",1248726681690
+started,bundle,org.eclipse.mtj.ui,1.0.0.v200906121354,"org.eclipse.mtj.ui",1248726681737
+started,bundle,org.eclipse.jdt.launching,3.5.0.v20090527,"org.eclipse.jdt.launching",1248726681825
+started,bundle,org.eclipse.mtj.toolkit.microemu,1.0.0.v200906121354,"org.eclipse.mtj.toolkit.microemu",1248726740967
+started,bundle,org.eclipse.mtj.toolkit.mpowerplayer,1.0.0.v200906121354,"org.eclipse.mtj.toolkit.mpowerplayer",1248726740997
+started,bundle,org.eclipse.mtj.toolkit.uei,1.0.0.v200906121354,"org.eclipse.mtj.toolkit.uei",1248726741049
+error,log,,,"Error retrieving UEI importer extensions",1248726759274
+error,log,,,"Error retrieving UEI importer extensions",1248726759344
+error,log,,,"Error retrieving UEI importer extensions",1248726759643
+error,log,,,"Error retrieving UEI importer extensions",1248726759741
+error,log,,,"Error retrieving UEI importer extensions",1248726827304
+error,log,,,"Error retrieving UEI importer extensions",1248726827359
+error,log,,,"Error retrieving UEI importer extensions",1248726827581
+error,log,,,"Error retrieving UEI importer extensions",1248726827637
+started,bundle,org.eclipse.jst.j2ee.core,1.1.300.v200905060430,"org.eclipse.jst.j2ee.core",1248726972682
+started,bundle,org.eclipse.jem,2.0.300.v200901272200,"org.eclipse.jem",1248726972720
+started,bundle,org.eclipse.jst.jee,1.0.200.v200905290632,"org.eclipse.jst.jee",1248726972776
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.0.v200906080500,"org.eclipse.jst.common.project.facet.core",1248726972902
+started,bundle,org.eclipse.jpt.core,2.2.0.v200906070220,"org.eclipse.jpt.core",1248726972908

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256929071318
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1256929076063
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256929077609
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1256929079643
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256929082483
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256929084440
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1256929087430
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929088097
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929097221
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1256929099408
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1256929106787
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1256929113605
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256929116721
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.lineStart",1256929120742
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1256929121844
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1256929130082
+error,log,,,"Could not create action delegate for id: com.android.ide.eclipse.adt.project.NewXmlFileWizardAction",1256929130894
+error,log,,,"Plug-in com.android.ide.eclipse.adt was unable to load class com.android.ide.eclipse.adt.project.NewXmlFileWizardAction.",1256929130902
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929138555
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929143439
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929147755
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929150257
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929152869
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1256929160552
+opened,view,com.android.ide.eclipse.ddms,0.9.1.v200905011822-1621,"com.android.ide.eclipse.ddms.views.LogCatView",1256929171077

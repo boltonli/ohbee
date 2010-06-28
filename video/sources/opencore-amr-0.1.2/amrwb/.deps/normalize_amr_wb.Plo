@@ -1,0 +1,30 @@
+normalize_amr_wb.lo: \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/normalize_amr_wb.cpp \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h \
+ ../oscl/oscl_base.h /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/wchar.h \
+ ../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/normalize_amr_wb.h
+
+../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h:
+
+../oscl/oscl_base.h:
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/predefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/wchar.h:
+
+../opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/normalize_amr_wb.h:

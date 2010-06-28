@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+closed,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854526066
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1257854528577
+opened,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854528679
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854528766
+error,log,,,"File not found: /home/djp/projects/ob/android/streamer/jni/config-$(TARGET_ARCH).mak.",1257854534573
+error,log,,,"File not found: /home/djp/projects/ob/android/streamer/jni/$(LOCAL_PATH)/Makefile.",1257854534587
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854577445
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257854578943
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257854585720
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854585883
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854586914
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854587767
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854588399
+error,log,,,"File not found: /home/djp/projects/ob/android/streamer/jni/config-$(TARGET_ARCH).mak.",1257854611004
+error,log,,,"File not found: /home/djp/projects/ob/android/streamer/jni/$(LOCAL_PATH)/Makefile.",1257854611020
+started,bundle,org.eclipse.mylyn.java.tasks,3.3.0.v20091015-0500-e3x,"org.eclipse.mylyn.java.tasks",1257854611386
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.copy",1257854611506
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854612160
+activated,editor,org.eclipse.cdt.make.ui,6.0.0.200906161748,"org.eclipse.cdt.make.editor",1257854616972
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1257854618354
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1257854620258
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257854621195
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1257854626002
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1257854626844
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257854627636

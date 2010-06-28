@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="bean2java.xsd"
+		package="ob.webapp.db"
+		class="Location">
+
+	<property name="time" 
+			javatype="double"
+			nicename="Time">
+		<description>Time.</description>
+	</property>
+	
+	<property name="latitude" 
+			javatype="double"
+			nicename="Latitude">
+		<description>Latitude.</description>
+	</property>
+	
+	<property name="longitude" 
+			javatype="double"
+			nicename="Longitude">
+		<description>Longitude.</description>
+	</property>
+	
+	<property name="altitude" 
+			javatype="double"
+			nicename="Altitude">
+		<description>Altitude.</description>
+	</property>
+	
+	<property name="heading" 
+			javatype="double"
+			nicename="Heading">
+		<description>Heading.</description>
+	</property>	
+
+	<property name="elevation" 
+			javatype="double"
+			nicename="Elevation">
+		<description>Elevation.</description>
+	</property>	
+
+	<property name="roll" 
+			javatype="double"
+			nicename="Roll">
+		<description>Roll.</description>
+	</property>	
+
+	<property name="horizontalAccuracy" 
+			javatype="double"
+			nicename="Horizontal Accuracy">
+		<description>Horizontal accuracy.</description>
+	</property>
+	
+	<property name="verticalAccuracy" 
+			javatype="double"
+			nicename="Vertical Accuracy">
+		<description>Vertical accuracy.</description>
+	</property>
+
+</bean>

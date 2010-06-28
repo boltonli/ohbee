@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.jst.j2ee.core,1.1.301.v200908181930,"org.eclipse.jst.j2ee.core",1257776326278
+started,bundle,org.eclipse.jem,2.0.300.v200901272200,"org.eclipse.jem",1257776326349
+started,bundle,org.eclipse.emf.ecore.xmi,2.5.0.v200906151043,"org.eclipse.emf.ecore.xmi",1257776326365
+started,bundle,org.eclipse.jst.jee,1.0.201.v200909030330,"org.eclipse.jst.jee",1257776326440
+started,bundle,org.eclipse.wst.common.frameworks.ui,1.1.301.v200908101600,"org.eclipse.wst.common.frameworks.ui",1257776326477
+started,bundle,org.eclipse.wst.common.emfworkbench.integration,1.1.301.v200908101600,"org.eclipse.wst.common.emfworkbench.integration",1257776326611
+started,bundle,org.eclipse.wst.common.modulecore,1.1.301.v200908101600,"org.eclipse.wst.common.modulecore",1257776326632
+started,bundle,org.eclipse.jst.j2ee,1.1.301.v200909030330,"org.eclipse.jst.j2ee",1257776326668
+started,bundle,org.eclipse.jem.workbench,2.0.201.v200908271530,"org.eclipse.jem.workbench",1257776326720
+started,bundle,org.eclipse.wst.xsd.core,1.1.401.v200903020335,"org.eclipse.wst.xsd.core",1257776326735
+started,bundle,org.eclipse.jst.j2ee.web,1.1.301.v200908270924,"org.eclipse.jst.j2ee.web",1257776326803
+started,bundle,org.eclipse.jst.j2ee.jca,1.1.300.v200903120000,"org.eclipse.jst.j2ee.jca",1257776326953
+started,bundle,org.eclipse.jst.jsf.ui,1.2.1.v20090827,"org.eclipse.jst.jsf.ui",1257776327013
+started,bundle,org.eclipse.wst.dtd.core,1.1.300.v200904181727,"org.eclipse.wst.dtd.core",1257776327081
+started,bundle,org.eclipse.wst.wsi.ui,1.0.500.v200901141851,"org.eclipse.wst.wsi.ui",1257776327086
+started,bundle,org.eclipse.wst.wsdl.validation,1.1.401.v200902271605,"org.eclipse.wst.wsdl.validation",1257776327248
+started,bundle,org.eclipse.wst.html.ui,1.0.401.v200908111935,"org.eclipse.wst.html.ui",1257776327312
+started,bundle,org.eclipse.wst.jsdt.web.core,1.0.200.v200905120445,"org.eclipse.wst.jsdt.web.core",1257776327366
+started,bundle,org.eclipse.jst.j2ee.ejb,1.1.300.v200904230730,"org.eclipse.jst.j2ee.ejb",1257776327501
+started,bundle,org.eclipse.jst.common.frameworks,1.1.300.v200904132230,"org.eclipse.jst.common.frameworks",1257776327534
+started,bundle,org.eclipse.wst.internet.cache,1.0.301.v200805140020,"org.eclipse.wst.internet.cache",1257776327693
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776328694
+error,log,,,"Malformed javadoc, rejected by FormText for node uses-permission: 'The <code>uses-permission</code> tag requests a {@link #AndroidManifestPermission &lt;permission&gt;} that the containing package must be granted in order for it to operate correctly.'",1257776331968
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1257776332083
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1257776384353

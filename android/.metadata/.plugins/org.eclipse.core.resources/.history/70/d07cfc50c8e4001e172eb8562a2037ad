@@ -1,0 +1,6 @@
+package ob.streamer;
+
+public class Logger
+{
+
+}

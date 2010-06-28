@@ -1,0 +1,38 @@
+package jnix;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Test
+{
+	static
+	{
+		System.load("/home/djp/projects/ob/android/jnix-native/Debug/libjnix-native.so");
+	}
+	
+	public static void main(String[] args)
+	{
+		final Pipe pipe = new Pipe();
+		new Thread(new Runnable(){
+			public void run()
+			{
+				BufferedReader in = new BufferedReader(
+						new InputStreamReader(
+								new FileInputStream(pipe.getInputFileDescriptor())));
+				String line;
+				try
+				{
+					while((line = in.readLine()) != null)
+						System.out.println(line);
+				} 
+				catch(IOException e)
+				{
+					throw new RuntimeException(e);
+				}
+			}
+		}).start();
+	}
+}

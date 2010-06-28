@@ -1,0 +1,16 @@
+#Tue Jan 05 00:16:40 GMT 2010
+useQuickDiffPrefPage=true
+wizard.preferred.toolchains=cdt.managedbuild.toolchain.gnu.base cdt.managedbuild.toolchain.gnu.lib.debug cdt.managedbuild.toolchain.gnu.so.debug cdt.managedbuild.toolchain.gnu.exe.debug
+useAnnotationsPrefPage=true
+spelling_locale=en_GB
+sourceHoverBackgroundColor=255,230,196
+org.eclipse.cdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+formatter_settings_version=1
+formatter_profile=org.eclipse.cdt.ui.default.allman_profile
+properties.multi.write.mode=4
+spelling_locale_initialized=true
+eclipse.preferences.version=1
+org.eclipse.cdt.ui.text.templates.custom=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+properties.multi.displ.mode=1
+hoverModifierMasks=org.eclipse.cdt.ui.BestMatchHover;0;org.eclipse.cdt.debug.internal.ui.editors.DebugTextHover;0;org.eclipse.cdt.ui.ProblemHover;0;org.eclipse.cdt.ui.CDocHover;0;org.eclipse.cdt.ui.CMacroExpansionHover;0;org.eclipse.cdt.ui.CSourceHover;131072;org.eclipse.cdt.ui.AnnotationHover;0;
+hoverModifiers=org.eclipse.cdt.ui.BestMatchHover;0;org.eclipse.cdt.debug.internal.ui.editors.DebugTextHover;\!0;org.eclipse.cdt.ui.ProblemHover;\!0;org.eclipse.cdt.ui.CDocHover;\!0;org.eclipse.cdt.ui.CMacroExpansionHover;\!0;org.eclipse.cdt.ui.CSourceHover;Shift;org.eclipse.cdt.ui.AnnotationHover;\!0;
